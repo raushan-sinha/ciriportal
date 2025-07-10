@@ -1,0 +1,243 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1200px;
+    padding: 15px 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Logo */
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #6366f1;
+}
+
+/* Right section: Signup + Hamburger */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.signup-btn .btn {
+    background-color: #6366f1;
+    padding: 10px 16px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- REFACTOR NAVBAR FLEX LAYOUT FOR DESKTOP --- */
+
+.nav-container {
+    max-width: 1200px;
+    padding: 15px 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+/* Place nav links in the flex row */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+    justify-content: flex-start;
+    margin-left: 40px;
+}
+
+.navbar-nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.navbar-nav a:hover {
+    background: #222;
+}
+
+.navbar-nav .icon {
+    margin-left: 5px;
+    font-size: 0.75rem;
+}
+
+/* Dropdown styles */
+.navbar-nav .dropdown {
+    position: relative;
+}
+
+.navbar-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    min-width: 180px;
+    background-color: #111;
+    border-radius: 6px;
+    padding: 10px 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    z-index: 100;
+}
+
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.navbar-nav .dropdown-menu li {
+    padding: 8px 20px;
+}
+
+.navbar-nav .dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.navbar-nav .dropdown-menu li a:hover {
+    background: #222;
+}
+
+/* Hide old desktop-menu nav */
+.desktop-menu {
+    display: none !important;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    background-color: #111;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+.mobile-nav li {
+    margin-bottom: 10px;
+}
+
+.mobile-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.mobile-nav .dropdown-menu {
+    display: none;
+}
+
+.mobile-nav .dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.mobile-nav .btn {
+    background-color: #6366f1;
+    padding: 10px 16px;
+    color: #fff;
+    display: inline-block;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav.open {
+        display: flex;
+        flex-direction: column;
+    }
+}
