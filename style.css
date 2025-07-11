@@ -36,12 +36,12 @@ body {
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-    font-family: monospace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .logo span {
     color: orangered;
-    font-family: monospace;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Right section: Signup + Hamburger */
@@ -57,8 +57,9 @@ body {
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
-    font-size:1rem;
+    font-size: 1rem;
     font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .hamburger {
@@ -156,11 +157,11 @@ body {
     background-color: #111;
     border-radius: 6px;
     padding: 10px 0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     z-index: 100;
 }
 
-.navbar-nav .dropdown:hover > .dropdown-menu {
+.navbar-nav .dropdown:hover>.dropdown-menu {
     display: block;
 }
 
