@@ -36,10 +36,12 @@ body {
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+    font-family: monospace;
 }
 
 .logo span {
     color: orangered;
+    font-family: monospace;
 }
 
 /* Right section: Signup + Hamburger */
