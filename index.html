@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CiriPortal</title>
+    <link rel="shortcut icon" href="Images/cp-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,48 +13,58 @@
     <!-- Navbar -->
     <header class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <a href="index.html">Ciri<span>Portal</span></a>
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciriUAE-Img.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
             </div>
 
             <nav class="navbar-nav">
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="#">About Us <span class="icon">▼</span></a>
+                        <a href="food.html">Foods & Drinks<span class="icon">▼</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="vision.html">Vision & Values</a></li>
-                            <li><a href="leadership.html">Leadership</a></li>
-                            <li><a href="history.html">Our Journey</a></li>
+                            <li><a href="fmcg.html">Ciri Flour</a></li>
+                            <li><a href="chips.html">Ciri Chips</a></li>
+                            <li><a href="candyman.html">Ciri Candyman</a></li>
+                            <li><a href="rice.html">Ciri Rice</a></li>
+                            <li><a href="coldDrinks.html">Ciri Cold Drinks</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#">Businesses <span class="icon">▼</span></a>
+                        <a href="personalCare.html">Personal care <span class="icon">▼</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="fmcg.html">FMCG</a></li>
-                            <li><a href="hotels.html">Hotels</a></li>
-                            <li><a href="paperboards.html">Paperboards</a></li>
-                            <li><a href="agribusiness.html">Agri Business</a></li>
+                            <li><a href="facewash.html">Ciri Face Wash</a></li>
+                            <li><a href="facecream.html">Ciri Face Cream</a></li>
+                            <li><a href="handwash.html">Ciri Hand wash</a></li>
+                            <li><a href="perfume.html">Ciri Perfumes</a></li>
+                            <li><a href="medicalKit.html">Ciri Medical Kit</a></li>
                         </ul>
                     </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
                     <li class="dropdown">
-                        <a href="#">Brands <span class="icon">▼</span></a>
+                        <a href="#">Education <span class="icon">▼</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="brand-1.html">Brand One</a></li>
-                            <li><a href="brand-2.html">Brand Two</a></li>
-                            <li><a href="brand-3.html">Brand Three</a></li>
+                            <li><a href="notebook.html">Ciri NoteBook</a></li>
+                            <li><a href="pen.html">Ciri Pen & Pencils</a></li>
+                            <li><a href="geometry.html">Ciri GeometryBox</a></li>
                         </ul>
                     </li>
-                    <li><a href="sustainability.html">Sustainability</a></li>
                     <li><a href="media.html">Media</a></li>
                     <li class="dropdown">
-                        <a href="#">Careers <span class="icon">▼</span></a>
+                        <a href="#">Contact <span class="icon">▼</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="life-at-ciri.html">Life at Ciri</a></li>
-                            <li><a href="openings.html">Job Openings</a></li>
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Call</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">WhatsApp</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <select id="countrySelect">
+                    <option value="">Select Region</option>
+                </select>
             </nav>
 
             <div class="nav-right">
@@ -72,48 +83,51 @@
         <!-- Mobile Nav -->
         <nav class="mobile-nav" id="mobile-nav">
             <ul>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#">About Us <span class="icon">▼</span></a>
+                    <a href="food.html">Foods & Drinks<span class="icon">▼</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="vision.html">Vision & Values</a></li>
-                        <li><a href="leadership.html">Leadership</a></li>
-                        <li><a href="history.html">Our Journey</a></li>
+                        <li><a href="fmcg.html">Ciri Flour</a></li>
+                        <li><a href="chips.html">Ciri Chips</a></li>
+                        <li><a href="candyman.html">Ciri Candyman</a></li>
+                        <li><a href="rice.html">Ciri Rice</a></li>
+                        <li><a href="coldDrinks.html">Ciri Cold Drinks</a></li>
                     </ul>
                 </li>
-
                 <li class="dropdown">
-                    <a href="#">Businesses <span class="icon">▼</span></a>
+                    <a href="personalCare.html">Personal care <span class="icon">▼</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="fmcg.html">FMCG</a></li>
-                        <li><a href="hotels.html">Hotels</a></li>
-                        <li><a href="paperboards.html">Paperboards</a></li>
-                        <li><a href="agribusiness.html">Agri Business</a></li>
+                        <li><a href="facewash.html">Ciri Face Wash</a></li>
+                        <li><a href="facecream.html">Ciri Face Cream</a></li>
+                        <li><a href="handwash.html">Ciri Hand wash</a></li>
+                        <li><a href="perfume.html">Ciri Perfumes</a></li>
+                        <li><a href="medicalKit.html">Ciri Medical Kit</a></li>
                     </ul>
                 </li>
-
+                <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
                 <li class="dropdown">
-                    <a href="#">Brands <span class="icon">▼</span></a>
+                    <a href="#">Education <span class="icon">▼</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="brand-1.html">Brand One</a></li>
-                        <li><a href="brand-2.html">Brand Two</a></li>
-                        <li><a href="brand-3.html">Brand Three</a></li>
+                        <li><a href="notebook.html">Ciri NoteBook</a></li>
+                        <li><a href="pen.html">Ciri Pen & Pencils</a></li>
+                        <li><a href="geometry.html">Ciri GeometryBox</a></li>
                     </ul>
                 </li>
-
-                <li><a href="sustainability.html">Sustainability</a></li>
                 <li><a href="media.html">Media</a></li>
-
                 <li class="dropdown">
-                    <a href="#">Careers <span class="icon">▼</span></a>
+                    <a href="#">Contact <span class="icon">▼</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="life-at-ciri.html">Life at Ciri</a></li>
-                        <li><a href="openings.html">Job Openings</a></li>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Call</a></li>
+                        <li><a href="#">X</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+
                     </ul>
                 </li>
-
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="#" class="btn">Sign Up</a></li>
             </ul>
+            <select id="countrySelect">
+                <option value="">Select Region</option>
+            </select>
         </nav>
     </header>
 
