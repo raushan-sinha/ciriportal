@@ -634,19 +634,20 @@ select:hover {
     }
 }
 
-/* facewash *//* Facewash Section */
-.facewash-section {
+/* handwash */
+/* Handwash Section */
+.handwash-section {
     padding: 40px 20px;
-    background-color: #eaf9ff;
+    background-color: #f0fcfa;
     text-align: center;
 }
 
-.facewash-scroll-wrapper {
+.handwash-scroll-wrapper {
     overflow-x: auto;
     padding-bottom: 10px;
 }
 
-.facewash-container {
+.handwash-container {
     display: flex;
     gap: 20px;
     width: max-content;
@@ -654,7 +655,7 @@ select:hover {
     padding: 10px;
 }
 
-.facewash-card {
+.handwash-card {
     min-width: 180px;
     max-width: 200px;
     background: #ffffff;
@@ -665,19 +666,19 @@ select:hover {
     transition: transform 0.3s ease;
 }
 
-.facewash-card img {
+.handwash-card img {
     width: 100%;
-    height: 240px;
-    object-fit: fill;
+    height: 150px;
+    object-fit: cover;
 }
 
-.facewash-card p {
+.handwash-card p {
     padding: 10px;
     font-weight: 600;
     font-size: 1rem;
 }
 
-.facewash-card span {
+.handwash-card span {
     display: block;
     font-weight: 400;
     color: #444;
@@ -686,7 +687,7 @@ select:hover {
 .order-btn {
     margin: 10px auto 15px;
     padding: 8px 18px;
-    background-color: #00acc1;
+    background-color: #00bfa5;
     color: white;
     border: none;
     border-radius: 25px;
@@ -696,7 +697,7 @@ select:hover {
 }
 
 .order-btn:hover {
-    background-color: #00838f;
+    background-color: #00897b;
 }
 
 /* Rules Section */
@@ -732,13 +733,13 @@ select:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .facewash-container {
+    .handwash-container {
         animation: none;
         flex-wrap: nowrap;
         overflow-x: auto;
     }
 
-    .facewash-card {
+    .handwash-card {
         min-width: 160px;
     }
 
@@ -800,23 +801,4 @@ select:hover {
     font-size: 0.85rem;
     border-top: 1px solid #333;
     color: #aaa;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .foods-container {
-        animation: none;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .food-card {
-        min-width: 150px;
-    }
 }
