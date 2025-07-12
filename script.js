@@ -15,10 +15,10 @@ dropdownToggleLinks.forEach(link => {
         if (window.innerWidth <= 992) {
             e.preventDefault();
             e.stopPropagation();
-            
+
             const parentLi = this.parentElement;
             console.log('Dropdown clicked:', parentLi); // Debug log
-            
+
             // Close other open dropdowns
             document.querySelectorAll('.navbar-nav .dropdown.open').forEach(openLi => {
                 if (openLi !== parentLi) {
@@ -26,7 +26,7 @@ dropdownToggleLinks.forEach(link => {
                     console.log('Closed other dropdown:', openLi); // Debug log
                 }
             });
-            
+
             // Toggle current dropdown
             parentLi.classList.toggle('open');
             console.log('Toggled dropdown:', parentLi.classList.contains('open')); // Debug log
@@ -41,13 +41,13 @@ submenuLinks.forEach(link => {
     link.addEventListener('click', function (e) {
         // Allow navigation for submenu links
         console.log('Submenu link clicked:', this.href); // Debug log
-        
+
         // Close mobile menu after clicking a submenu link
         if (window.innerWidth <= 992) {
             setTimeout(() => {
                 hamburger.classList.remove("active");
                 navbarNav.classList.remove("open");
-                
+
                 // Close all dropdowns
                 document.querySelectorAll('.navbar-nav .dropdown.open').forEach(dropdown => {
                     dropdown.classList.remove('open');
@@ -64,7 +64,7 @@ document.addEventListener('click', (e) => {
         if (!navbarNav.contains(e.target) && !hamburger.contains(e.target)) {
             hamburger.classList.remove("active");
             navbarNav.classList.remove("open");
-            
+
             // Close all dropdowns when closing menu
             document.querySelectorAll('.navbar-nav .dropdown.open').forEach(dropdown => {
                 dropdown.classList.remove('open');
@@ -81,7 +81,7 @@ window.addEventListener('orientationchange', () => {
             // Close mobile menu on desktop
             hamburger.classList.remove("active");
             navbarNav.classList.remove("open");
-            
+
             // Close all dropdowns
             document.querySelectorAll('.navbar-nav .dropdown.open').forEach(dropdown => {
                 dropdown.classList.remove('open');
@@ -96,7 +96,7 @@ window.addEventListener('resize', () => {
         // Close mobile menu on desktop
         hamburger.classList.remove("active");
         navbarNav.classList.remove("open");
-        
+
         // Close all dropdowns
         document.querySelectorAll('.navbar-nav .dropdown.open').forEach(dropdown => {
             dropdown.classList.remove('open');
@@ -105,25 +105,24 @@ window.addEventListener('resize', () => {
 });
 
 //todo: Select a Country Region  by API -
-const countrySelect = document.querySelector('#countrySelect');
-async function loadCountriesName() {
-    try {
-        const data = await fetch('countries.json');
-        if (!data.ok) {
-            throw new Error(`Your Internet connection is Poor! ${data.status}`);
-        }
-        const result = await data.json();
-        countrySelect.innerHTML = '<option value="">Country</option>';
-        //? Access each Countries using forEach() -
-        result.forEach((country) => {
+const countrySelect = document.getElementById('countrySelect');
+
+fetch('https://restcountries.com/v3.1/all?fields=name,flags')
+    .then(response => response.json())
+    .then(data => {
+        // Sort countries alphabetically by name
+        data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+        data.forEach(country => {
             const option = document.createElement('option');
-            option.value = country;
-            option.textContent = country;
+            option.value = country.name.common;
+            option.textContent = country.name.common;
             countrySelect.appendChild(option);
-        })
-    } catch (error) {
-        console.error('Failed to load countries', error);
-        countrySelect.innerHTML = '<option value="">Country</option>';
-    }
-}
-loadCountriesName();
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching countries:', error);
+        const errorOption = document.createElement('option');
+        errorOption.textContent = 'Error loading countries';
+        countrySelect.appendChild(errorOption);
+    });
