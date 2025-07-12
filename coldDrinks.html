@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciri Cold Drinks</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="coldDrinks.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
+
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flour.html">Ciri Flour</a></li>
+                            <li><a href="candyman.html">Ciri Chips</a></li>
+                            <li><a href="candyman.html">Ciri Candyman</a></li>
+                            <li><a href="rice.html">Ciri Rice</a></li>
+                            <li><a href="coldDrinks.html">Ciri Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="personalCare.html">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Ciri Face Wash</a></li>
+                            <li><a href="facecream.html">Ciri Face Cream</a></li>
+                            <li><a href="handwash.html">Ciri Hand wash</a></li>
+                            <li><a href="perfume.html">Ciri Perfumes</a></li>
+                            <li><a href="medicalKit.html">Ciri Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">Ciri NoteBook</a></li>
+                            <li><a href="pen.html">Ciri Pen & Pencils</a></li>
+                            <li><a href="geometry.html">Ciri GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                    <li class="dropdown">
+                        <a href="#">Contact <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Call</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <select id="countrySelect">
+                    <option value="">Country</option>
+                </select>
+            </nav>
+
+            <div class="nav-right">
+                <div class="signup-btn">
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cold Drinks Products Section -->
+    <section class="colddrinks-section" id="colddrinks">
+        <h2 class="section-title">CiriPortal - Cold Drinks</h2>
+        <div class="colddrinks-scroll-wrapper animate-left-right">
+            <div class="colddrinks-container">
+                <div class="colddrink-card"><img src="Images/cocacola.jpeg" alt="Cola"><p>Cola<br><span>&#8377;40</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/orangesoda.jpeg" alt="Orange Soda"><p>Orange Soda<br><span>&#8377;35</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/lemondrink.jpeg" alt="Lemon Drink"><p>Lemon Drink<br><span>&#8377;30</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/energydrink.jpeg" alt="Energy Drink"><p>Energy Drink<br><span>&#8377;60</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/mango juice.jpeg" alt="Mango Juice"><p>Mango Juice<br><span>&#8377;25</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/applejuice.jpeg" alt="Apple Juice"><p>Apple Juice<br><span>&#8377;30</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/sprite.jpeg" alt="Sprite"><p>Sprite<br><span>&#8377;40</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/plainsoda.jpeg" alt="Plain Soda"><p>Plain Soda<br><span>&#8377;20</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/grapefizz.jpeg" alt="Grape Fizz"><p>Grape Fizz<br><span>&#8377;30</span></p><button class="order-btn">Order Now</button></div>
+                <div class="colddrink-card"><img src="Images/watermelon.jpeg" alt="Watermelon Juice"><p>Watermelon Juice<br><span>&#8377;35</span></p><button class="order-btn">Order Now</button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cold Drinks Purchasing Rules Section -->
+    <section class="rules-section" id="colddrinks-rules">
+        <h2 class="section-title">Cold Drinks Purchase Guidelines</h2>
+        <div class="rules-content">
+            <ul>
+                <li>Cold drinks must be stored at temperatures below 10°C.</li>
+                <li>Minimum order: 3 bottles per variant.</li>
+                <li>Buy 5 or more bottles to receive a 10% discount.</li>
+                <li>Do not shake bottles before opening. Handle with care.</li>
+                <li>Return policy applicable only for damaged or expired items on delivery.</li>
+                <li>Delivery within 24 hours in metro cities; 2-3 days in other locations.</li>
+                <li>All beverages are FSSAI certified and sealed for freshness.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>CiriPortal</h4>
+                <p>Empowering lives through quality food, care, education, and media.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#foods">Foods</a></li>
+                    <li><a href="#personal-care">Personal Care</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#media">Media</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
