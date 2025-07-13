@@ -656,8 +656,8 @@ select:hover {
 }
 
 .facecream-card {
-    min-width: 180px;
-    max-width: 200px;
+    min-width: 280px;
+    max-width: 250px;
     background: #ffffff;
     border-radius: 12px;
     overflow: hidden;

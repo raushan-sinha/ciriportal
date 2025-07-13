@@ -655,8 +655,8 @@ select:hover {
 }
 
 .rice-card {
-    min-width: 180px;
-    max-width: 200px;
+    min-width: 280px;
+    max-width: 250px;
     background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
@@ -668,7 +668,7 @@ select:hover {
 .rice-card img {
     width: 100%;
     height: 240px;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .rice-card p {
