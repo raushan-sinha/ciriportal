@@ -126,3 +126,20 @@ fetch('https://restcountries.com/v3.1/all?fields=name,flags')
         errorOption.textContent = 'Error loading countries';
         countrySelect.appendChild(errorOption);
     });
+
+
+
+//todo: Footer Explore Links - 
+const exploreLinks = [
+    'flour.html',
+    'facewash.html',
+    'notebook.html',
+    'media.html'
+];
+
+document.querySelectorAll('footer .explore-links a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(exploreLinks[idx], '_self');
+    });
+});

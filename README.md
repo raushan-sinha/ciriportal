@@ -1,12 +1,14 @@
 <h1 align='center'>CiriPortal</h1>
-
+<br>
 ## Description
-A brief overview of what your project does. Explain the problem it solves or its main purpose in 2-3 sentences.
+At CiriPortal, we combine tradition with innovation. Our carefully curated range of food and beverage
+            products are crafted with the finest ingredients to meet global quality standards. In personal care, we
+            promote wellness through nature-powered formulations. Through our education and media channels, we foster
+            informed communities and empower the next generation. Join us on this journey towards healthier living,
+            smarter learning, and better being – only at CiriPortal.
 
 ## Features
-- Feature 1: Description of what this feature does.
-- Feature 2: Description of another key functionality.
-- Feature 3: Add more as needed.
+- Empowering lives through quality food, care, education, and media.
 
 ## Tech Stack
 - Language: HTML, CSS, JavaScript
