@@ -143,3 +143,17 @@ document.querySelectorAll('footer .explore-links a').forEach((link, idx) => {
         open(exploreLinks[idx], '_self');
     });
 });
+
+
+//todo: Login Portal -
+const loginPages = [
+    'distributor.html',
+    'retailer.html'
+];
+
+document.querySelectorAll('.login-btn ul a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(loginPages[idx], '_blank');
+    });
+});
