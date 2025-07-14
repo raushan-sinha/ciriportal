@@ -1,0 +1,132 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5faff;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+.admin-header {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #00796b;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Panel Layout */
+.admin-panel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Image Styling */
+.admin-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 1s ease;
+}
+
+/* Options Section */
+.admin-options {
+    max-width: 400px;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    animation: slideInRight 1s ease;
+}
+
+.admin-options h2 {
+    margin-bottom: 20px;
+    color: #004d40;
+}
+
+.admin-options ul {
+    list-style: none;
+}
+
+.admin-options li {
+    margin-bottom: 15px;
+}
+
+.admin-options a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #00796b;
+    border-bottom: 1px dashed transparent;
+    transition: all 0.3s ease;
+}
+
+.admin-options a:hover {
+    color: #004d40;
+    border-bottom: 1px dashed #004d40;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-panel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admin-options {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .admin-image img {
+        max-width: 100%;
+    }
+}

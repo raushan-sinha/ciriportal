@@ -865,3 +865,7 @@ select:hover {
     border-top: 1px solid #333;
     color: #aaa;
 }
+
+.fa-user {
+    font-size: 2rem;
+}

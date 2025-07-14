@@ -894,3 +894,7 @@ select:hover {
 .dropdown:hover .arrow {
     transform: rotate(180deg);
 }
+
+.fa-user {
+    font-size: 2rem;
+}

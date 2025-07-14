@@ -1,0 +1,194 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px 40px;
+}
+
+/* Header */
+.admin-header {
+    background-color: #00796b;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1 1 250px;
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    min-width: 220px;
+    animation: fadeIn 0.6s ease;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00796b;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+}
+
+.user-role {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Sidebar nav */
+.sidebar h2 {
+    font-size: 1.2rem;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.sidebar a:hover {
+    color: #00796b;
+    font-weight: 600;
+}
+
+/* Main Panel */
+.main-panel {
+    flex: 3 1 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Cards */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 200px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #00796b;
+}
+
+/* Dashboard image */
+.dashboard-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .main-panel {
+        flex: 1 1 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-header {
+        font-size: 1.3rem;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .user-info {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,135 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #fff);
+    padding: 30px;
+}
+
+/* Container */
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Image Box */
+.admin-image-box img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+/* Form Box */
+.admin-form-box {
+    max-width: 400px;
+    flex: 1;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.admin-form-box h2 {
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+form input {
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 12px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004d40;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-login-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .admin-image-box img {
+        max-width: 100%;
+    }
+
+    .admin-form-box {
+        width: 100%;
+    }
+}

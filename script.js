@@ -157,3 +157,18 @@ document.querySelectorAll('.login-btn ul a').forEach((link, idx) => {
         open(loginPages[idx], '_blank');
     });
 });
+
+
+//todo: Admin Control -
+const adminLinks = [
+    'adminLogin.html',
+    'adminPanel.html',
+    'adminDashboard.html'
+];
+
+document.querySelectorAll('.admin-btn a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(adminLinks[idx], '_self');
+    });
+});

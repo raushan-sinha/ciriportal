@@ -133,6 +133,10 @@ body {
     border: 1px solid #eee;
 }
 
+.fa-user {
+    font-size: 2rem;
+}
+
 /* Desktop hover behavior */
 @media (min-width: 993px) {
     .navbar-nav .dropdown:hover>.dropdown-menu {
@@ -526,6 +530,10 @@ select:hover {
     .nav-logo {
         gap: 8px;
         padding: 6px 0;
+    }
+
+    .fa-user {
+        font-size: 1.5rem;
     }
 
     .logo {

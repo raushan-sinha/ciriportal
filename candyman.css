@@ -886,3 +886,7 @@ select:hover {
         min-width: 150px;
     }
 }
+
+.fa-user {
+    font-size: 2rem;
+}
