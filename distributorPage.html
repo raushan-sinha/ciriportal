@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Distributor Dashboard</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="distributorPage.css">
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <img src="" alt="Distributor Avatar" class="avatar" id="avatarPreview">
+            <div>
+                <h1>Welcome, Distributor John</h1>
+                <p>Distributor Code: CIRI-D001</p>
+                <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile Image</button>
+                <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
+            </div>
+        </div>
+        <button class="logout-btn">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="summary-cards">
+            <div class="card">Total Orders: <strong>145</strong></div>
+            <div class="card">Pending Deliveries: <strong>12</strong></div>
+            <div class="card">Earnings This Month: <strong>₹52,300</strong></div>
+            <div class="card">Distributor Code: <strong>CIRI-D001</strong></div>
+        </section>
+
+        <section class="orders-section">
+            <h2>Order Management</h2>
+            <ul>
+                <li>Order #1001 - Status: <strong>Pending</strong> <button>Mark Delivered</button></li>
+                <li>Order #1002 - Status: <strong>In Transit</strong> <button>Mark Delivered</button></li>
+                <li>Order #1003 - Status: <strong>Delivered</strong></li>
+            </ul>
+        </section>
+
+        <section class="inventory-section">
+            <h2>Product Inventory</h2>
+            <ul>
+                <li>Flour - Qty: 120 <button>Request More</button></li>
+                <li>Rice - Qty: 85 <button>Request More</button></li>
+                <li>Chips - Qty: 300 <button>Request More</button></li>
+            </ul>
+            <div class="product-images">
+                <img src="Images/bajra.jpeg" alt="Flour">
+                <img src="Images/rice.jpeg" alt="Rice">
+                <img src="Images/chips.jpeg" alt="Chips">
+            </div>
+        </section>
+
+        <section class="reports-section">
+            <h2>Reports & Earnings</h2>
+            <p>Monthly Earnings: ₹52,300</p>
+            <p>Weekly Avg: ₹12,000</p>
+            <p><button>Download Report</button></p>
+        </section>
+
+        <section class="support-section">
+            <h2>Support / Queries</h2>
+            <p>Need help? <button>Contact Support</button> <button>Live Chat</button></p>
+        </section>
+
+        <section class="settings-section">
+            <h2>Settings</h2>
+            <ul>
+                <li><button>Update Profile</button></li>
+                <li><button>Change Password</button></li>
+                <li><button>Bank Account Settings</button></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="distributorPage.js"></script>
+</body>
+
+</html>
