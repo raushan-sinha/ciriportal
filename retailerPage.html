@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Retailer Dashboard</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="retailerPage.css">
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <div class="header-left">
+            <img src="" alt="Retailer Avatar" class="avatar" id="avatarPreview">
+            <div>
+                <h1>Welcome, Retailer</h1>
+                <p>Retailer Code: CIRI-R001</p>
+                <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile
+                    Image</button>
+                <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
+            </div>
+        </div>
+        <button class="logout-btn">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+        <section class="summary-cards">
+            <div class="card">Total Orders: <strong>80</strong></div>
+            <div class="card">Pending Deliveries: <strong>5</strong></div>
+            <div class="card">Earnings This Month: <strong>₹20,500</strong></div>
+            <div class="card">Retailer Code: <strong>CIRI-R001</strong></div>
+        </section>
+
+        <section class="orders-section">
+            <h2>Order History</h2>
+            <ul>
+                <li>Order #2001 - Delivered</li>
+                <li>Order #2002 - In Transit</li>
+                <li>Order #2003 - Pending</li>
+            </ul>
+        </section>
+
+        <section class="product-shop">
+            <h2>Shop Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="Images/chips.jpeg" alt="Chips">
+                    <p>Chips - ₹20</p>
+                    <button>Order Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="Images/rice.jpeg" alt="Rice">
+                    <p>Rice - ₹45</p>
+                    <button>Order Now</button>
+                </div>
+                <!-- Add more product-card blocks as needed -->
+            </div>
+        </section>
+
+        <section class="reports-section">
+            <h2>Sales Reports</h2>
+            <p>This Month: ₹20,500</p>
+            <p><button>Download Invoice</button></p>
+        </section>
+
+        <section class="support-section">
+            <h2>Need Help?</h2>
+            <button>Chat Support</button>
+            <button>Email Us</button>
+        </section>
+
+        <section class="settings-section">
+            <h2>Retailer Settings</h2>
+            <ul>
+                <li><button>Update Profile</button></li>
+                <li><button>Change Password</button></li>
+                <li><button>Bank Details</button></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="retailerPage.js"></script>
+</body>
+
+</html>
