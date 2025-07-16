@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiriPortal - Manage Products</title>
+    <link rel="stylesheet" href="manageProd.css" />
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Manage Products</h1>
+        <p class="subtitle">Dashboard / Manage Products</p>
+        <input type="search" placeholder="Search Products..." class="search-bar">
+        <button class="add-btn">+ Add New Product</button>
+    </header>
+
+    <main class="product-container">
+        <!-- Example Product Card -->
+        <div class="product-card">
+            <img src="Images/chips.jpeg" alt="Chips" class="product-img">
+            <div class="product-info">
+                <h2>Chips</h2>
+                <p>Category: Food</p>
+                <p>Price: ₹20</p>
+                <p>Quantity: 150</p>
+                <p>Status: <span class="active">Active</span></p>
+                <div class="product-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Images/besan.jpeg" alt="Besan" class="product-img">
+            <div class="product-info">
+                <h2>Besan</h2>
+                <p>Category: Food</p>
+                <p>Price: ₹210</p>
+                <p>Quantity: 190</p>
+                <p>Status: <span class="active">Active</span></p>
+                <div class="product-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="Images/minthanwash.jpeg" alt="Hand wash" class="product-img">
+            <div class="product-info">
+                <h2>Hand wash</h2>
+                <p>Category: Food</p>
+                <p>Price: ₹20</p>
+                <p>Quantity: 50</p>
+                <p>Status: <span class="active">Active</span></p>
+                <div class="product-actions">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat above card for other products -->
+    </main>
+
+    <!-- Add/Edit Product Modal (basic structure, to be enhanced with JS) -->
+    <div class="modal hidden" id="productModal">
+        <div class="modal-content">
+            <h2>Add / Edit Product</h2>
+            <form class="product-form">
+                <input type="text" placeholder="Product Name" required />
+                <select>
+                    <option disabled selected>Select Category</option>
+                    <option>Food</option>
+                    <option>Personal Care</option>
+                    <option>Education</option>
+                    <option>Media</option>
+                </select>
+                <input type="number" placeholder="Price (₹)" required />
+                <input type="number" placeholder="Quantity" required />
+                <input type="file" accept="image/*" />
+                <textarea placeholder="Product Description"></textarea>
+                <button type="submit">Save</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Basic toggle logic for modal (add your own enhancements)
+        document.querySelector('.add-btn').onclick = () => {
+            document.getElementById('productModal').classList.remove('hidden');
+        };
+        document.querySelector('.cancel-btn').onclick = () => {
+            document.getElementById('productModal').classList.add('hidden');
+        };
+    </script>
+</body>
+
+</html>

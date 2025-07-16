@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiriPortal - Orders</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="order.css" />
+</head>
+
+<body>
+    <header class="orders-header">
+        <h1>Orders Dashboard</h1>
+        <p>Track and manage all customer orders below.</p>
+    </header>
+
+    <section class="orders-summary">
+        <div class="summary-card">Total Orders <strong>340</strong></div>
+        <div class="summary-card">Pending <strong>25</strong></div>
+        <div class="summary-card">Delivered <strong>290</strong></div>
+        <div class="summary-card">Cancelled <strong>25</strong></div>
+        <div class="summary-card">Revenue <strong>₹76,450</strong></div>
+    </section>
+
+    <section class="filter-bar">
+        <input type="text" placeholder="Search by Order ID or Name" />
+        <select>
+            <option>Status Filter</option>
+            <option>Pending</option>
+            <option>In Transit</option>
+            <option>Delivered</option>
+            <option>Cancelled</option>
+        </select>
+    </section>
+
+    <section class="orders-list">
+        <div class="order-box">
+            <div class="order-header">
+                <span><strong>Order ID:</strong> CIRI1001</span>
+                <span class="badge pending">Pending</span>
+            </div>
+            <div class="order-body">
+                <p><strong>Customer:</strong> John Kumar</p>
+                <p><strong>Date:</strong> 10 July 2025</p>
+                <p><strong>Total:</strong> ₹975</p>
+                <p><strong>Payment:</strong> Online</p>
+            </div>
+            <div class="order-actions">
+                <button class="view-btn">View</button>
+                <button class="update-btn">Mark as Delivered</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <div class="order-box">
+            <div class="order-header">
+                <span><strong>Order ID:</strong> CIRI1002</span>
+                <span class="badge delivered">Delivered</span>
+            </div>
+            <div class="order-body">
+                <p><strong>Customer:</strong> Priya Sharma</p>
+                <p><strong>Date:</strong> 09 July 2025</p>
+                <p><strong>Total:</strong> ₸185</p>
+                <p><strong>Payment:</strong> COD</p>
+            </div>
+            <div class="order-actions">
+                <button class="view-btn">View</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+
+        <!-- Add more order boxes here -->
+    </section>
+
+    <footer class="orders-footer">
+        <p>© 2025 CiriPortal. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

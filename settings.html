@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Settings</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+    <header class="settings-header">
+        <h1>Account Settings</h1>
+    </header>
+
+    <main class="settings-container">
+        <!-- Personal Info -->
+        <section class="settings-box">
+            <h2>Personal Information</h2>
+            <div class="form-grid">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Business Name">
+                <input type="file">
+            </div>
+        </section>
+
+        <!-- Change Password -->
+        <section class="settings-box">
+            <h2>Change Password</h2>
+            <div class="form-grid">
+                <input type="password" placeholder="Old Password">
+                <input type="password" placeholder="New Password">
+                <input type="password" placeholder="Confirm New Password">
+            </div>
+        </section>
+
+        <!-- Notification Preferences -->
+        <section class="settings-box">
+            <h2>Notification Preferences</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Email Alerts</label>
+                <label><input type="checkbox"> SMS Notifications</label>
+                <label><input type="checkbox"> Order Updates</label>
+                <label><input type="checkbox"> Promotional Messages</label>
+            </div>
+        </section>
+
+        <!-- Banking Details -->
+        <section class="settings-box">
+            <h2>Banking Details</h2>
+            <div class="form-grid">
+                <input type="text" placeholder="Bank Name">
+                <input type="text" placeholder="Account Number">
+                <input type="text" placeholder="IFSC Code">
+                <input type="text" placeholder="UPI ID">
+            </div>
+        </section>
+
+        <!-- Privacy Settings -->
+        <section class="settings-box">
+            <h2>Privacy & Security</h2>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Enable Two-Factor Authentication</label>
+                <label><input type="checkbox"> Allow Profile Visibility</label>
+                <label><input type="checkbox"> Enable Login Notifications</label>
+            </div>
+        </section>
+
+        <!-- Legal -->
+        <section class="settings-box">
+            <h2>Legal</h2>
+            <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            <button class="danger-btn">Request Account Deletion</button>
+        </section>
+
+        <!-- Save Button -->
+        <div class="save-section">
+            <button class="save-btn">Save Changes</button>
+        </div>
+    </main>
+</body>
+
+</html>
