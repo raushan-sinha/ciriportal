@@ -20,6 +20,7 @@ complaintForm.addEventListener('submit', async (e) => {
     formResponse.textContent = 'Sending Message ....';
     formResponse.className = 'form-response';
     formResponse.style.display = 'block';
+    formResponse.style.color = 'black';
 
     try {
         const formData = new FormData(complaintForm);
