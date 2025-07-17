@@ -19,11 +19,11 @@
         <section class="settings-box">
             <h2>Personal Information</h2>
             <div class="form-grid">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-                <input type="tel" placeholder="Phone Number">
+                <input type="text" placeholder="Full Name" id="name">
+                <input type="email" placeholder="Email Address" id="email">
+                <input type="tel" placeholder="Phone Number" id="phone">
                 <input type="text" placeholder="Business Name">
-                <input type="file">
+                <!-- <input type="file"> -->
             </div>
         </section>
 
@@ -32,8 +32,8 @@
             <h2>Change Password</h2>
             <div class="form-grid">
                 <input type="password" placeholder="Old Password">
-                <input type="password" placeholder="New Password">
-                <input type="password" placeholder="Confirm New Password">
+                <input type="password" placeholder="New Password" id="newPass">
+                <input type="password" placeholder="Confirm New Password" id="confirmPass">
             </div>
         </section>
 
@@ -41,8 +41,8 @@
         <section class="settings-box">
             <h2>Notification Preferences</h2>
             <div class="checkbox-group">
-                <label><input type="checkbox"> Email Alerts</label>
-                <label><input type="checkbox"> SMS Notifications</label>
+                <label><input type="checkbox" id="emailNotify"> Email Alerts</label>
+                <label><input type="checkbox" id="smsNot"> SMS Notifications</label>
                 <label><input type="checkbox"> Order Updates</label>
                 <label><input type="checkbox"> Promotional Messages</label>
             </div>
@@ -78,9 +78,11 @@
 
         <!-- Save Button -->
         <div class="save-section">
-            <button class="save-btn">Save Changes</button>
+            <button class="save-btn" id="saveBtn">Save Changes</button>
         </div>
     </main>
+
+    <script src="settings.js"></script>
 </body>
 
 </html>
