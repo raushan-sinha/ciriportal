@@ -203,13 +203,6 @@ window.addEventListener('load', () => {
 });
 
 
-//todo: Cookies Privacy link -
-document.querySelector('#privacyCookies').addEventListener('click', (e) => {
-    e.preventDefault();
-    open('https://policies.google.com/privacy?hl=en-US', '_self');
-});
-
-
 //todo: Privacy Policy -
 document.querySelector('#privacyPolicy').addEventListener('click', (e) => {
     e.preventDefault();
