@@ -202,3 +202,9 @@ window.addEventListener('load', () => {
     }, 3000);
 });
 
+
+//todo: Cookies Privacy link -
+document.querySelector('#privacyCookies').addEventListener('click', (e) => {
+    e.preventDefault();
+    open('https://policies.google.com/privacy?hl=en-US', '_self');
+});

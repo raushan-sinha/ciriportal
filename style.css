@@ -1140,7 +1140,7 @@ h2 {
 
 .cookie-banner a {
     color: #0ea5e9;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .cookie-buttons button {
