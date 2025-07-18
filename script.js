@@ -172,3 +172,10 @@ document.querySelectorAll('.admin-btn a').forEach((link, idx) => {
         open(adminLinks[idx], '_self');
     });
 });
+
+
+//todo: Offers & Promotions -
+document.querySelector('#offers').addEventListener('click', (e) => {
+    e.preventDefault();
+    open('offers.html', '_blank');
+});
