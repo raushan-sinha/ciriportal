@@ -162,7 +162,7 @@ document.querySelectorAll('.login-btn ul a').forEach((link, idx) => {
 //todo: Admin Control -
 const adminLinks = [
     'adminLogin.html',
-    'adminPanel.html',
+    // 'adminPanel.html',
     'adminDashboard.html'
 ];
 

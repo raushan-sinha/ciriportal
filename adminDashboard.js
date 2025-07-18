@@ -4,7 +4,9 @@ const navLinks = [
     'order.html',
     'customer.html',
     'helpDesk.html',
-    'settings.html'
+    'settings.html',
+    'faqs.html',
+    'returnPolicy.html'
 ];
 document.querySelectorAll('.navLinks a').forEach((link, idx) => {
     link.addEventListener('click', (e) => {
