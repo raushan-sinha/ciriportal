@@ -1118,3 +1118,42 @@ h2 {
         font-size: .75rem;
     }
 }
+
+/* Cookies */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1e293b;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    z-index: 9999;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.cookie-banner a {
+    color: #0ea5e9;
+    text-decoration: underline;
+}
+
+.cookie-buttons button {
+    background: #0ea5e9;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cookie-buttons button:hover {
+    background: #0284c7;
+}

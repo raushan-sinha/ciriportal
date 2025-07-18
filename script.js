@@ -179,3 +179,26 @@ document.querySelector('#offers').addEventListener('click', (e) => {
     e.preventDefault();
     open('offers.html', '_blank');
 });
+
+
+//todo: Cookie Settings -
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        if (!localStorage.getItem('cookies')) {
+            document.querySelector('#cookieBanner').style.display = 'flex';
+            document.querySelector('#cookieBanner').style.flexDirection = 'column';
+        }
+
+        //? set storage when user accepted Cookies -
+        document.querySelector('#acceptCookies').addEventListener('click', () => {
+            localStorage.setItem('cookies', 'accepted');
+            document.querySelector('#cookieBanner').style.display = 'none';
+        });
+
+        document.querySelector('#rejectCookies').addEventListener('click', () => {
+            localStorage.setItem('cookies', 'rejected');
+            document.querySelector('#cookieBanner').style.display = 'none';
+        });
+    }, 3000);
+});
+
