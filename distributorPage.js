@@ -58,3 +58,17 @@ new Chart(ctx2, {
         }
     }
 });
+
+
+//todo: dashboard Nav -
+const dashboardNavLinks = [
+    'distributorOrder.html',
+    'inventory.html'
+];
+
+document.querySelectorAll('.dashboard-nav a').forEach((link, idx) => {
+    link.addEventListener('click',  (e) => {
+        e.preventDefault();
+        open(dashboardNavLinks[idx], '_self');
+    })
+})

@@ -1,0 +1,166 @@
+/* inventory.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f2f6ff;
+    padding: 1rem;
+}
+
+.inventory-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #1a2b6d;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.inventory-summary {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.summary-card {
+    flex: 1 1 150px;
+    padding: 1rem;
+    background: #f8faff;
+    border-left: 5px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.summary-card h3 {
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.summary-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.summary-card.in-stock {
+    border-color: green;
+}
+
+.summary-card.low-stock {
+    border-color: orange;
+}
+
+.summary-card.out-stock {
+    border-color: red;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.inventory-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: auto;
+}
+
+.inventory-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.inventory-details {
+    display: grid;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.inventory-details strong {
+    color: #1a2b6d;
+}
+
+.inventory-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.status.in {
+    background-color: #e0f7e9;
+    color: green;
+}
+
+.status.low {
+    background-color: #fff8e1;
+    color: orange;
+}
+
+.status.out {
+    background-color: #ffe5e5;
+    color: red;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0f5bd3;
+}
+
+@media screen and (max-width: 768px) {
+    .inventory-summary {
+        flex-direction: column;
+    }
+
+    .inventory-item {
+        padding: 1rem;
+    }
+
+    .inventory-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

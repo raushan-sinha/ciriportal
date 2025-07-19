@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiriPortal - Distributor Order</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="distributorOrder.css" />
+</head>
+
+<body>
+    <div class="order-container">
+        <h2>Order Placement</h2>
+
+        <!-- Product Cards -->
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-info">
+                    <img src="Images/kids.jpg" class="product-img" alt="Product" />
+                    <div class="product-meta">
+                        <h3>Product: Geometry Box</h3>
+                        <p>$30.00</p>
+                    </div>
+                </div>
+                <span class="remove-product">&times;</span>
+            </div>
+            <div class="qty-section">
+                <div>
+                    <label>Quantity</label>
+                    <input type="number" value="10" min="5" />
+                </div>
+                <div>
+                    <label>MOQ</label>
+                    <p>10 units</p>
+                </div>
+            </div>
+            <p class="moq-text">MOQ: 5 units</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-info">
+                    <img src="Images/energydrink.jpeg" class="product-img" alt="Product" />
+                    <div class="product-meta">
+                        <h3>Product Name: Energy Drink</h3>
+                        <p>$20.00</p>
+                    </div>
+                </div>
+                <span class="remove-product">&times;</span>
+            </div>
+            <div class="qty-section">
+                <div>
+                    <label>Quantity</label>
+                    <input type="number" value="10" min="10" />
+                </div>
+                <div>
+                    <label>MOQ</label>
+                    <p>10 units</p>
+                </div>
+            </div>
+            <p class="moq-text">MOQ: 10 units</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-header">
+                <div class="product-info">
+                    <img src="Images/bodylotion.jpeg" class="product-img" alt="Product" />
+                    <div class="product-meta">
+                        <h3>Product Name : Body Lotion</h3>
+                        <p>$20.00</p>
+                    </div>
+                </div>
+                <span class="remove-product">&times;</span>
+            </div>
+            <div class="qty-section">
+                <div>
+                    <label>Quantity</label>
+                    <input type="number" value="10" min="10" />
+                </div>
+                <div>
+                    <label>MOQ</label>
+                    <p>10 units</p>
+                </div>
+            </div>
+            <p class="moq-text">MOQ: 10 units</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="order-footer">
+            <div>
+                <label for="shipping">Shipping Method</label>
+                <select id="shipping">
+                    <option>Standard Shipping</option>
+                    <option>Express Shipping</option>
+                </select>
+            </div>
+            <div class="summary-row">
+                <span>Summary</span>
+                <span>$700.00</span>
+            </div>
+            <button class="place-order">Place Order</button>
+        </div>
+    </div>
+</body>
+
+</html>
