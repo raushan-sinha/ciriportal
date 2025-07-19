@@ -16,31 +16,37 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="dashboard-header">
-        <div class="header-left">
-            <img src="" alt="Distributor Avatar" class="avatar" id="avatarPreview">
-            <div>
-                <h1>Welcome, Distributor</h1>
-                <p>Distributor Code: CIRI-D001</p>
-                <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile
-                    Image</button>
-                <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
-            </div>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">CiriPortal</span>
         </div>
-        <button class="logout-btn">Logout</button>
-    </header>
-
-    <!-- Dashboard Navigation Links -->
-    <nav class="dashboard-nav">
-        <a href="#orders">Orders</a>
-        <a href="#inventory">Inventory</a>
-        <a href="#retailers">Retailers</a>
-        <a href="#products">Products</a>
-    </nav>
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="#manufacturer"><span class="sidebar-icon">📦</span> Manufacturer</a>
+            <a href="#orders"><span class="sidebar-icon">📝</span> Orders</a>
+            <a href="#inventory"><span class="sidebar-icon">📊</span> Inventory</a>
+            <a href="#retailers"><span class="sidebar-icon">🛒</span> Retailers</a>
+        </nav>
+    </aside>
+    <!-- Hamburger for mobile -->
+    <button class="sidebar-toggle" id="sidebarToggleBtn"><</button>
 
     <!-- MAIN WRAPPER -->
     <main class="dashboard">
+        <!-- HEADER -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="" alt="Distributor Avatar" class="avatar" id="avatarPreview">
+                <div>
+                    <h1>Welcome, Distributor</h1>
+                    <p>Distributor Code: CIRI-D001</p>
+                    <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile Image</button>
+                    <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
+                </div>
+            </div>
+            <!-- <button class="logout-btn">Logout</button> -->
+        </header>
         <!-- KPI CARDS -->
         <section class="kpi-grid">
             <div class="card">
@@ -65,7 +71,10 @@
         <section class="dashboard-flex">
             <div class="sales-overview">
                 <h3>Sales Overview</h3>
-                <canvas id="salesChart" width="350" height="180"></canvas>
+                <div class="chart-wrapper">
+                    <canvas id="salesChart"></canvas>
+                  </div>
+                  
             </div>
             <div class="inventory-status">
                 <h3>Inventory Status</h3>

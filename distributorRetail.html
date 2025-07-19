@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retailer Order – CiriPortal</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="distributorRetail.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">CiriPortal</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="#manufacturer"><span class="sidebar-icon">📦</span> Manufacturer</a>
+            <a href="#orders"><span class="sidebar-icon">📝</span> Orders</a>
+            <a href="#inventory"><span class="sidebar-icon">📊</span> Inventory</a>
+            <a href="#retailers"><span class="sidebar-icon">🛒</span> Retailers</a>
+        </nav>
+    </aside>
+    <!-- Hamburger for mobile -->
+    <!-- <button class="sidebar-toggle" id="sidebarToggleBtn"><</button> -->
+
+    <main class="dashboard">
+        <div class="dashboard-header">
+            <h1>Retailer Dashboard</h1>
+            <div>
+                <img src="Images/" alt="" class="avatar-icon">
+            </div>
+        </div>
+        <section class="retail-graph-section">
+            <div class="chart-wrapper">
+                <canvas id="retailOrderChart"></canvas>
+            </div>
+        </section>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Products</h3>
+                <p>350</p>
+            </div>
+            <div class="stat-card">
+                <h3>Orders Pending</h3>
+                <p>5</p>
+            </div>
+            <div class="stat-card">
+                <h3>Orders Completed</h3>
+                <p>84</p>
+            </div>
+        </div>
+
+        <div class="overview-section">
+            <div class="overview-card">
+                <h3>Notifications</h3>
+                <ul>
+                    <li>30 items shipped<br /><small>by Apex Industries</small></li>
+                    <li>Price drop on Solar Panel 300W<br /><small>2 hours ago</small></li>
+                    <li>New product added by MaxSolar<br /><small>1 day ago</small></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="overview-card">
+                <h3>Top Products</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Solar Panel 300W</td>
+                            <td>Energy</td>
+                        </tr>
+                        <tr>
+                            <td>Ladder 10 ft</td>
+                            <td>Tools</td>
+                        </tr>
+                        <tr>
+                            <td>LED Bulb 9W</td>
+                            <td>Lighting</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="overview-card">
+                <h3>Recent Orders</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order</th>
+                            <th>Manufacturer</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-08956</td>
+                            <td>Apex Industries</td>
+                            <td><span class="badge shipped">Shipped</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-08854</td>
+                            <td>Global Dynamics</td>
+                            <td><span class="badge pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-08940</td>
+                            <td>Visionary Electric</td>
+                            <td><span class="badge shipped">Shipped</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="distributorRetail.js"></script>
+</body>
+
+</html>

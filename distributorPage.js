@@ -62,13 +62,66 @@ new Chart(ctx2, {
 
 //todo: dashboard Nav -
 const dashboardNavLinks = [
+    'distributorPage.html',
+    'manufacturerPage.html',
     'distributorOrder.html',
-    'inventory.html'
+    'inventory.html',
+    'distributorRetail.html'
 ];
 
-document.querySelectorAll('.dashboard-nav a').forEach((link, idx) => {
-    link.addEventListener('click',  (e) => {
+document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
         e.preventDefault();
         open(dashboardNavLinks[idx], '_self');
     })
 })
+
+
+const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+const sidebar = document.getElementById('sidebar');
+
+sidebarToggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+
+
+const ctx = document.getElementById('salesChart').getContext('2d');
+
+const salesChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+            label: 'Sales ($)',
+            data: [1200, 1900, 3000, 2200, 3500, 4200],
+            fill: true,
+            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+            borderColor: '#3b82f6',
+            tension: 0.3
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    color: '#0f172a'
+                }
+            },
+            x: {
+                ticks: {
+                    color: '#0f172a'
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#0f172a'
+                }
+            }
+        }
+    }
+});
