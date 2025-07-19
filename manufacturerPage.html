@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="manufacturerPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
@@ -15,91 +17,99 @@
             <span class="sidebar-title">CiriPortal</span>
         </div>
         <nav class="sidebar-nav">
-            <a href="#dashboard" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
-            <a href="#manufacturer"><span class="sidebar-icon">🏭</span> Manufacturer</a>
-            <a href="#orders"><span class="sidebar-icon">📝</span> Orders</a>
-            <a href="#inventory"><span class="sidebar-icon">📦</span> Inventory</a>
-            <a href="#retailers"><span class="sidebar-icon">🛒</span> Retailers</a>
+            <a href="distributorPage.html" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="manufacturerPage.html"><span class="sidebar-icon">🏭</span> Manufacturer</a>
+            <a href="distributorOrder.html"><span class="sidebar-icon">📝</span> Orders</a>
+            <a href="inventory.html"><span class="sidebar-icon">📦</span> Inventory</a>
+            <a href="distributorRetail.html"><span class="sidebar-icon">🛒</span> Retailers</a>
         </nav>
     </aside>
+    <!-- Hamburger for mobile -->
+    <button class="sidebar-toggle" id="sidebarToggleBtn">
+        < </button>
 
-    <main class="dashboard">
-        <div class="dashboard-header">
-            <div>
-                <h1>MANUFACTURER DASHBOARD</h1>
-            </div>
-            <div>
-                <img src="Images/ciri-logo.png" alt="Avatar" class="avatar-icon">
-            </div>
-        </div>
-        <section class="chart-wrapper">
-            <canvas id="priceChart" height="180"></canvas>
-        </section>
-        <div class="cards-grid">
-            <div class="card">
-                <h3>Total SKUs Listed</h3>
-                <p>850</p>
-            </div>
-            <div class="card">
-                <h3>Active Distributors</h3>
-                <p>42</p>
-            </div>
-            <div class="card">
-                <h3>Stock Updates</h3>
-                <p style="color: green; font-size: 1.2rem;">+20</p>
-            </div>
-        </div>
-        <div class="grid-section">
-            <div class="notification-card card">
-                <h3>Notifications</h3>
-                <ul>
-                    <li>Distributor <strong>Summit Trading</strong> has completed verification<br /><small>6 min ago</small></li>
-                    <li>New retailer registration approved. <strong>Mart Bazaar</strong><br /><small>2 hrs ago</small></li>
-                    <li>Inventory low for <strong>Product E</strong>, please update<br /><small>1 day ago</small></li>
-                    <li>Monthly sales report for March is available<br /><small>3 days ago</small></li>
-                </ul>
-            </div>
-        </div>
-        <div class="orders-overview">
-            <div class="card">
-                <h3>Orders Overview</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Order</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ORD-01248</td>
-                            <td>Mar 12, 2024</td>
-                            <td><span class="badge dispatched">Dispatched</span></td>
-                        </tr>
-                        <tr>
-                            <td>Apex Distribution</td>
-                            <td>Mar 22, 2024</td>
-                            <td><span class="badge pending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>Summit Trading</td>
-                            <td>31 day ago</td>
-                            <td><span class="badge delivered">Delivered</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="notification-filter card">
-                <h3>Notifications</h3>
-                <ul>
-                    <li><input type="radio" name="notif" checked /> Distributor Summit Trading completed verification</li>
-                    <li><input type="radio" name="notif" /> New retailer registration approved</li>
-                </ul>
-            </div>
-        </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="manufacturerPage.js"></script>
+            <main class="dashboard">
+                <div class="dashboard-header">
+                    <div>
+                        <h1>MANUFACTURER DASHBOARD</h1>
+                    </div>
+                    <div>
+                        <img src="Images/ciri-logo.png" alt="Avatar" class="avatar-icon">
+                    </div>
+                </div>
+                <section class="chart-wrapper">
+                    <canvas id="priceChart" height="180"></canvas>
+                </section>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Total SKUs Listed</h3>
+                        <p>850</p>
+                    </div>
+                    <div class="card">
+                        <h3>Active Distributors</h3>
+                        <p>42</p>
+                    </div>
+                    <div class="card">
+                        <h3>Stock Updates</h3>
+                        <p style="color: green; font-size: 1.2rem;">+20</p>
+                    </div>
+                </div>
+                <div class="grid-section">
+                    <div class="notification-card card">
+                        <h3>Notifications</h3>
+                        <ul>
+                            <li>Distributor <strong>Summit Trading</strong> has completed verification<br /><small>6 min
+                                    ago</small></li>
+                            <li>New retailer registration approved. <strong>Mart Bazaar</strong><br /><small>2 hrs
+                                    ago</small></li>
+                            <li>Inventory low for <strong>Product E</strong>, please update<br /><small>1 day
+                                    ago</small></li>
+                            <li>Monthly sales report for March is available<br /><small>3 days ago</small></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="orders-overview">
+                    <div class="card">
+                        <h3>Orders Overview</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ORD-01248</td>
+                                    <td>Mar 12, 2024</td>
+                                    <td><span class="badge dispatched">Dispatched</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Apex Distribution</td>
+                                    <td>Mar 22, 2024</td>
+                                    <td><span class="badge pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Summit Trading</td>
+                                    <td>31 day ago</td>
+                                    <td><span class="badge delivered">Delivered</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="notification-filter card">
+                        <h3>Notifications</h3>
+                        <ul>
+                            <li><input type="radio" name="notif" checked /> Distributor Summit Trading completed
+                                verification</li>
+                            <li><input type="radio" name="notif" /> New retailer registration approved</li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="manufacturerPage.js"></script>
 </body>
+
 </html>

@@ -12,6 +12,7 @@ body {
 }
 
 /* Sidebar and dashboard styles copied from distributorPage.css */
+/* Sidebar Styles */
 .sidebar {
     width: 240px;
     background-color: #1e293b;
@@ -25,42 +26,67 @@ body {
 
 .sidebar-header {
     font-size: 1.5rem;
+    font-weight: bold;
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .sidebar-nav a {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem;
-    color: #fff;
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 0.5rem;
-    transition: background 0.3s;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: background 0.2s;
 }
 
 .sidebar-nav a:hover,
 .sidebar-nav a.active {
-    background: #334155;
+    background-color: #0d5e57;
 }
 
 .sidebar-icon {
     margin-right: 10px;
 }
 
+/* Toggle button for mobile */
 .sidebar-toggle {
     display: none;
     position: fixed;
-    top: 3rem;
-    right: 1rem;
-    font-size: 1.3rem;
-    background-color: #1e293b;
+    top: 15px;
+    right: 15px;
+    background-color: #000;
     color: white;
     border: none;
-    padding: 0.5rem 0.75rem;
+    padding: 10px 14px;
+    font-size: 1.3rem;
     border-radius: 5px;
-    z-index: 1100;
     cursor: pointer;
+    z-index: 1001;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
 }
 
 .dashboard {
@@ -75,17 +101,15 @@ body {
         margin-left: 0;
         padding: 1rem;
     }
+
     .sidebar {
         transform: translateX(-100%);
         width: 220px;
         padding: 1rem;
     }
-    .sidebar.active {
-        transform: translateX(0);
-    }
-    .sidebar-toggle {
-        display: block;
-    }
+
+    
+
     .dashboard-header {
         flex-direction: column;
         align-items: flex-start;
@@ -119,7 +143,7 @@ body {
 
 .stat-card,
 .overview-card {
-    background: white;
+    background: rgb(192, 182, 182);
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -182,6 +206,7 @@ td {
 .retail-graph-section {
     margin: 2rem 0 1.5rem 0;
 }
+
 .chart-wrapper {
     position: relative;
     width: 100%;
@@ -189,27 +214,29 @@ td {
     margin: 0 auto;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     padding: 1rem;
 }
+
 .chart-wrapper canvas {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 3 / 2;
     max-height: 260px;
 }
+
 @media (max-width: 768px) {
-    aside.sidebar {
-        display: none;
-    }
+  
 
     .overview-section,
     .bottom-section {
         grid-template-columns: 1fr;
     }
+
     .retail-graph-section {
         margin: 1rem 0;
     }
+
     .chart-wrapper {
         max-width: 100%;
         padding: 0.5rem;

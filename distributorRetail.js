@@ -26,13 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Sidebar toggle logic
-    const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
-    const sidebar = document.getElementById('sidebar');
-    if (sidebarToggleBtn && sidebar) {
-        sidebarToggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
-    }
+    const sidebarToggleBtn = document.getElementById("sidebarToggleBtn");
+    const sidebar = document.getElementById("sidebar");
+    
+    sidebarToggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("show");
+    });
+    
+
 
     // Dashboard nav logic
     const dashboardNavLinks = [
@@ -48,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
             open(dashboardNavLinks[idx], '_self');
         })
     });
-}); 
+});
 
 
-    

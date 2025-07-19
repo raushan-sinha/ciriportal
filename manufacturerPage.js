@@ -1,27 +1,28 @@
 // Sidebar toggle logic
-const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
-const sidebar = document.getElementById('sidebar');
-if (sidebarToggleBtn && sidebar) {
-    sidebarToggleBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
+// Sidebar toggle logic for mobile
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebarToggleBtn = document.getElementById("sidebarToggleBtn");
+    const sidebar = document.getElementById("sidebar");
+
+    sidebarToggleBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
     });
-}
+
+    // Optional: Hide sidebar when clicking outside (for better UX)
+    document.addEventListener("click", (e) => {
+        if (
+            window.innerWidth <= 768 &&
+            !sidebar.contains(e.target) &&
+            !sidebarToggleBtn.contains(e.target)
+        ) {
+            sidebar.classList.remove("open");
+        }
+    });
+});
+
 
 // Dashboard nav logic
-const dashboardNavLinks = [
-    'distributorPage.html',
-    'manufacturerPage.html',
-    'distributorOrder.html',
-    'inventory.html',
-    'distributorRetail.html'
-];
 
-document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        open(dashboardNavLinks[idx], '_self');
-    })
-})
 
 // Main Price Chart (top section)
 const priceChartElem = document.getElementById('priceChart');

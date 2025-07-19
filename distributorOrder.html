@@ -10,6 +10,22 @@
 </head>
 
 <body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">CiriPortal</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="distributorPage.html" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="manufacturerPage.html"><span class="sidebar-icon">📦</span> Manufacturer</a>
+            <a href="distributorOrder.html"><span class="sidebar-icon">📝</span> Orders</a>
+            <a href="inventory.html"><span class="sidebar-icon">📊</span> Inventory</a>
+            <a href="distributorRetail.html"><span class="sidebar-icon">🛒</span> Retailers</a>
+        </nav>
+    </aside>
+    <!-- Hamburger for mobile -->
+    <button class="sidebar-toggle" id="sidebarToggleBtn"><</button>
+    
     <div class="order-container">
         <h2>Order Placement</h2>
 
@@ -102,6 +118,8 @@
             <button class="place-order">Place Order</button>
         </div>
     </div>
+
+    <script src="distributorOrder.js"></script>
 </body>
 
 </html>
