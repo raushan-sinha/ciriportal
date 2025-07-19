@@ -2,80 +2,162 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiriPortal - Distributor Dashboard</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distributor Dashboard – CiriPortal</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <!-- External fonts & icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
     <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="distributorPage.css">
+
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="dashboard-header">
         <div class="header-left">
             <img src="" alt="Distributor Avatar" class="avatar" id="avatarPreview">
             <div>
                 <h1>Welcome, Distributor</h1>
                 <p>Distributor Code: CIRI-D001</p>
-                <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile Image</button>
+                <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile
+                    Image</button>
                 <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
             </div>
         </div>
         <button class="logout-btn">Logout</button>
     </header>
 
-    <main class="dashboard-container">
-        <section class="summary-cards">
-            <div class="card">Total Orders: <strong>145</strong></div>
-            <div class="card">Pending Deliveries: <strong>12</strong></div>
-            <div class="card">Earnings This Month: <strong>₹52,300</strong></div>
-            <div class="card">Distributor Code: <strong>CIRI-D001</strong></div>
-        </section>
-
-        <section class="orders-section">
-            <h2>Order Management</h2>
-            <ul>
-                <li>Order #1001 - Status: <strong>Pending</strong> <button>Mark Delivered</button></li>
-                <li>Order #1002 - Status: <strong>In Transit</strong> <button>Mark Delivered</button></li>
-                <li>Order #1003 - Status: <strong>Delivered</strong></li>
-            </ul>
-        </section>
-
-        <section class="inventory-section">
-            <h2>Product Inventory</h2>
-            <ul>
-                <li>Flour - Qty: 120 <button>Request More</button></li>
-                <li>Rice - Qty: 85 <button>Request More</button></li>
-                <li>Chips - Qty: 300 <button>Request More</button></li>
-            </ul>
-            <div class="product-images">
-                <img src="Images/bajra.jpeg" alt="Flour">
-                <img src="Images/rice.jpeg" alt="Rice">
-                <img src="Images/chips.jpeg" alt="Chips">
+    <!-- MAIN WRAPPER -->
+    <main class="dashboard">
+        <!-- KPI CARDS -->
+        <section class="kpi-grid">
+            <div class="card">
+                <h2>Products Listed</h2>
+                <p class="huge">240</p>
+            </div>
+            <div class="card">
+                <h2>Manufacturers</h2>
+                <p class="huge">18</p>
+            </div>
+            <div class="card">
+                <h2>Orders Pending</h2>
+                <p class="huge">10</p>
+            </div>
+            <div class="card">
+                <h2>Revenue</h2>
+                <p class="huge">$4,455</p>
             </div>
         </section>
 
-        <section class="reports-section">
-            <h2>Reports & Earnings</h2>
-            <p>Monthly Earnings: ₹52,300</p>
-            <p>Weekly Avg: ₹12,000</p>
-            <p><button>Download Report</button></p>
+        <!-- Sales Overview and Inventory Status Section (Responsive Flexbox) -->
+        <section class="dashboard-flex">
+            <div class="sales-overview">
+                <h3>Sales Overview</h3>
+                <canvas id="salesChart" width="350" height="180"></canvas>
+            </div>
+            <div class="inventory-status">
+                <h3>Inventory Status</h3>
+                <div class="inventory-bar">
+                    <span>In Stock</span>
+                    <div class="bar-bg"><div class="bar-fill in-stock"></div></div>
+                    <span class="inv-count">195</span>
+                </div>
+                <div class="inventory-bar">
+                    <span>Low Stock</span>
+                    <div class="bar-bg"><div class="bar-fill low-stock"></div></div>
+                    <span class="inv-count">35</span>
+                </div>
+                <div class="inventory-bar">
+                    <span>Out of Stock</span>
+                    <div class="bar-bg"><div class="bar-fill out-stock"></div></div>
+                    <span class="inv-count">8</span>
+                </div>
+                <div class="inventory-loading-line"></div>
+            </div>
         </section>
 
-        <section class="support-section">
-            <h2>Support / Queries</h2>
-            <p>Need help? <button>Contact Support</button> <button>Live Chat</button></p>
+        <!-- ANALYTICS BELOW -->
+        <section class="analytics">
+            <div class="analytics-card">
+                <h3>Retailers</h3>
+                <p class="big">1,400</p>
+            </div>
+            <div class="analytics-card">
+                <h3>Orders</h3>
+                <p class="big">2,000</p>
+            </div>
         </section>
 
-        <section class="settings-section">
-            <h2>Settings</h2>
-            <ul>
-                <li><button>Update Profile</button></li>
-                <li><button>Change Password</button></li>
-                <li><button>Bank Account Settings</button></li>
-            </ul>
+        <!-- RECENT ORDERS & REGISTRATIONS -->
+        <section class="tables">
+            <div class="table-container">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order #</th>
+                            <th>Retailer</th>
+                            <th>Manufacturer</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ORD-08956</td>
+                            <td>Mart Bazear</td>
+                            <td>Apex Industries</td>
+                            <td><span class="badge pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>ORD-08912</td>
+                            <td>ShopEase</td>
+                            <td>Prime Manufacturing</td>
+                            <td><span class="badge completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>ORD-08905</td>
+                            <td>Visionary Electric</td>
+                            <td>Visionary Electric</td>
+                            <td><span class="badge dispatched">Dispatched</span></td>
+                        </tr>
+                        <!-- Add more rows here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h2>Retailer Registrations</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Retailer Name</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jul 17, 2025</td>
+                            <td>QuickMart</td>
+                            <td>Texas, USA</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 16, 2025</td>
+                            <td>GigaStore</td>
+                            <td>California, USA</td>
+                        </tr>
+                        <!-- Add more rows here -->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="distributorPage.js"></script>
 </body>
 
