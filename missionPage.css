@@ -1,0 +1,166 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: wheat;
+    color: #1e293b;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+/* Header Section */
+.csr-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    animation: fadeInDown 1s ease;
+}
+
+.csr-header h1 {
+    font-size: 2.4rem;
+    color: #0f172a;
+}
+
+.csr-header .tagline {
+    font-size: 1.2rem;
+    color: #475569;
+    margin: 0.5rem 0;
+}
+
+.csr-header .description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #334155;
+    font-size: 1rem;
+}
+
+/* Content Section */
+.csr-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    animation: fadeInUp 1.2s ease;
+}
+
+/* Box Styling */
+.csr-box {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+    flex: 1 1 350px;
+    max-width: 480px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.csr-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.csr-box h2 {
+    margin-bottom: 1rem;
+    color: #1d4ed8;
+}
+
+.csr-box p {
+    font-size: 1rem;
+    color: #334155;
+    margin-bottom: 1rem;
+}
+
+.csr-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.csr-box li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: #1e293b;
+}
+
+.contact a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Section Coloring (Optional Theme Colors) */
+.green h2 {
+    color: #059669;
+}
+
+.community h2 {
+    color: #e11d48;
+}
+
+.giving h2 {
+    color: #f59e0b;
+}
+
+.mission h2 {
+    color: #0f766e;
+}
+
+.awards h2 {
+    color: #7c3aed;
+}
+
+.contact h2 {
+    color: #2563eb;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .csr-box {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .csr-box {
+        flex: 1 1 100%;
+    }
+
+    .csr-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .csr-box {
+        padding: 1.5rem;
+    }
+}
