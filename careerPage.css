@@ -1,0 +1,249 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+    color: #1e293b;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+/* Headers */
+h1,
+h2 {
+    color: #1d4ed8;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Header Section */
+.career-header {
+    text-align: center;
+    animation: fadeInDown 0.8s ease;
+    max-width: 800px;
+    margin: auto;
+}
+
+.career-header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #1e3a8a, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    color: #475569;
+}
+
+.description {
+    margin-top: 0.8rem;
+    color: #334155;
+}
+
+/* Benefits Section */
+.benefits-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.benefit {
+    background: #ffffff;
+    border-left: 6px solid #0ea5e9;
+    padding: 1.2rem;
+    border-radius: 10px;
+    flex: 1 1 250px;
+    max-width: 350px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-4px);
+}
+
+/* Job Openings */
+.job-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.job-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: 0.2s ease-in-out;
+}
+
+.job-row:hover {
+    transform: scale(1.01);
+    background: #f8fafc;
+}
+
+.job-row.header {
+    font-weight: bold;
+    background: #e2e8f0;
+}
+
+.job-row span {
+    flex: 1 1 20%;
+    text-align: left;
+    margin: 0.3rem 0;
+}
+
+.more-roles {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #475569;
+}
+
+/* Application Form */
+.application-form form {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+    padding: 0.9rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    font-size: 1rem;
+}
+
+.application-form button {
+    padding: 0.9rem;
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.application-form button:hover {
+    background: linear-gradient(to right, #1e40af, #1d4ed8);
+}
+
+.direct-email {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+/* Culture Section */
+.culture-section blockquote {
+    font-style: italic;
+    margin-top: 1rem;
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Mission & CTA */
+.mission-section,
+.cta-section {
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta-section .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cta-section a {
+    display: inline-block;
+    background: #e0f2fe;
+    padding: 0.9rem;
+    border-radius: 8px;
+    color: #0369a1;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.cta-section a:hover {
+    background: #bae6fd;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .job-row span {
+        flex: 1 1 100%;
+    }
+
+    .benefits-boxes {
+        flex-direction: row;
+    }
+
+    .cta-section .links {
+        flex-direction: column;
+    }
+}
