@@ -1,0 +1,133 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+/* Header */
+.security-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    animation: fadeInDown 0.6s ease;
+}
+
+.security-header h1 {
+    font-size: 2.4rem;
+    color: #1e3a8a;
+}
+
+.security-header p {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-top: 0.5rem;
+}
+
+/* Sections */
+.security-section,
+.contact-section,
+.trust-section {
+    max-width: 800px;
+    margin: 2.5rem auto;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+}
+
+.security-section h2,
+.contact-section h2,
+.trust-section h2 {
+    color: #1d4ed8;
+    margin-bottom: 1rem;
+}
+
+.security-section p,
+.contact-section p {
+    font-size: 1rem;
+    color: #334155;
+    margin-bottom: 1rem;
+}
+
+.security-section ul,
+.contact-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.security-section li,
+.contact-section li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.security-section li::before,
+.contact-section li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+}
+
+/* Trust Badges */
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.badge {
+    background: #e0f2fe;
+    color: #0c4a6e;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Links */
+a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .badge-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .security-header h1 {
+        font-size: 1.8rem;
+    }
+}

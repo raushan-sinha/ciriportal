@@ -166,7 +166,9 @@ const exploreLinks = [
     'flour.html',
     'facewash.html',
     'notebook.html',
-    'media.html'
+    'media.html',
+    'blogs.html',
+    'security.html'
 ];
 
 document.querySelectorAll('footer .explore-links a').forEach((link, idx) => {
