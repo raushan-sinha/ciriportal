@@ -6,6 +6,38 @@ hamburger.addEventListener("click", () => {
     navbarNav.classList.toggle("open");
 });
 
+
+//todo: Sidebar toggle -
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    // Toggle sidebar
+    toggleBtn.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('active');
+    });
+
+    // Close sidebar when clicking on overlay
+    overlay.addEventListener('click', function () {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function (event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickOnToggle = toggleBtn.contains(event.target);
+
+        if (!isClickInsideSidebar && !isClickOnToggle && sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+    });
+});
+
+
 // Dropdown toggle for mobile - only for main dropdown links
 const dropdownToggleLinks = document.querySelectorAll('.navbar-nav .dropdown > a');
 
@@ -207,4 +239,20 @@ window.addEventListener('load', () => {
 document.querySelector('#privacyPolicy').addEventListener('click', (e) => {
     e.preventDefault();
     open('privacyPolicy.html', '_blank');
+});
+
+
+//todo: Sidebar Links access -
+const sideBarLinks = [
+    'referralPage.html',
+    'missionPage.html',
+    'helpCenter.html',
+    'careerPage.html'
+];
+
+document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(sideBarLinks[idx], '_self');
+    });
 });

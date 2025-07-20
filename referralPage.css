@@ -1,0 +1,176 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Body */
+body {
+    background: #f5f9ff;
+    color: #1e293b;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+.referral-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.8s ease-in-out;
+}
+
+.referral-header h1 {
+    font-size: 2.5rem;
+    color: #0f172a;
+}
+
+.referral-header p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #475569;
+}
+
+/* Container */
+.referral-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Boxes */
+.referral-box {
+    background: #5aaedf;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    flex: 1 1 300px;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.referral-box:hover {
+    transform: translateY(-5px);
+}
+
+.referral-box h2 {
+    margin-bottom: 1rem;
+    color: #1e40af;
+}
+
+.code-box .referral-code {
+    font-size: 1.5rem;
+    background: #e2e8f0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    word-break: break-all;
+}
+
+.copy-btn {
+    padding: 0.6rem 1rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #1d4ed8;
+}
+
+.share-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.share-options button {
+    flex: 1 1 40%;
+    padding: 0.6rem;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.share-options button:hover {
+    background: #e2e8f0;
+}
+
+.rewards-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.rewards-box li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+}
+
+/* Footer */
+.referral-footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: #080808;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .referral-header h1 {
+        font-size: 2rem;
+    }
+
+    .referral-box {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .referral-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .referral-box {
+        padding: 1.2rem;
+    }
+
+    .share-options {
+        flex-direction: column;
+    }
+
+    .share-options button {
+        flex: 1 1 100%;
+    }
+}
