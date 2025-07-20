@@ -1414,3 +1414,107 @@ h2 {
 .cookie-buttons button:hover {
     background: #0284c7;
 }
+
+/* Robot Chat Icon */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#chatbotToggle {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.9rem 1rem;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#chatbotToggle:hover {
+    background-color: #2563eb;
+}
+
+/* Chatbox Styling */
+.chatbox {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    max-width: 95%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.chatbox-header {
+    background: #1d4ed8;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-header h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.chatbox-header span {
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.chatbox-body {
+    padding: 1rem;
+    font-size: 0.95rem;
+    height: 150px;
+    overflow-y: auto;
+}
+
+.chatbox-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 0.5rem;
+    background: #f3f4f6;
+}
+
+.chatbox-footer input {
+    flex: 1;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+}
+
+.chatbox-footer button {
+    background: #1d4ed8;
+    color: white;
+    border: none;
+    margin-left: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatbox-footer button:hover {
+    background: #2563eb;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 500px) {
+    .chatbox {
+        right: 10px;
+        width: 95%;
+        bottom: 90px;
+    }
+}

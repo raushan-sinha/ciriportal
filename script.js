@@ -256,3 +256,17 @@ document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
         open(sideBarLinks[idx], '_self');
     });
 });
+
+
+// Chatbot toggle and close
+const chatbotToggle = document.getElementById("chatbotToggle");
+const chatbox = document.getElementById("chatbox");
+const closeChatbox = document.getElementById("closeChatbox");
+
+chatbotToggle.addEventListener("click", () => {
+    chatbox.style.display = chatbox.style.display === "flex" ? "none" : "flex";
+});
+
+closeChatbox.addEventListener("click", () => {
+    chatbox.style.display = "none";
+});
