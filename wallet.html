@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiriPortal Wallet</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="wallet.css" />
+</head>
+
+<body>
+
+    <header class="wallet-header">
+        <h1>🔐 CiriPortal Wallet</h1>
+    </header>
+
+    <!-- 1. Wallet Overview -->
+    <section class="wallet-box overview">
+        <h2>Wallet Overview</h2>
+        <p><strong>Wallet Balance:</strong> ₹2,500.00</p>
+        <p><strong>Wallet ID:</strong> CIRI-WLT-9876</p>
+        <p><strong>Last Updated:</strong> 12 July 2025, 1:20 PM</p>
+    </section>
+
+    <!-- 2. Add Money -->
+    <section class="wallet-box add-money">
+        <h2>💸 Add Money to Wallet</h2>
+        <input type="number" placeholder="Enter amount" />
+        <select>
+            <option>Select Payment Method</option>
+            <option>UPI / QR Code</option>
+            <option>Debit/Credit Card</option>
+            <option>Net Banking</option>
+        </select>
+        <button class="submit-btn">Add Money</button>
+        <p class="success-message">✅ Money Added Successfully!</p>
+    </section>
+
+    <!-- 3. Recent Transactions -->
+    <section class="wallet-box transactions">
+        <h2>💳 Recent Transactions</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12 July 25</td>
+                        <td>Credit</td>
+                        <td>₹1,000</td>
+                        <td>Successful</td>
+                        <td>Added via UPI</td>
+                    </tr>
+                    <tr>
+                        <td>11 July 25</td>
+                        <td>Debit</td>
+                        <td>₹450</td>
+                        <td>Successful</td>
+                        <td>Order ID #1256</td>
+                    </tr>
+                    <tr>
+                        <td>10 July 25</td>
+                        <td>Cashback</td>
+                        <td>₹150</td>
+                        <td>Completed</td>
+                        <td>Promo Offer – Chips</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 4. Offers -->
+    <section class="wallet-box offers">
+        <h2>🎁 Wallet Cashback / Offers</h2>
+        <p class="offer-text">💥 Add ₹500 or more and get ₹50 cashback instantly!</p>
+    </section>
+
+    <!-- 5. Transfer to Bank -->
+    <section class="wallet-box bank-transfer">
+        <h2>🔄 Transfer to Bank</h2>
+        <input type="number" placeholder="Enter amount" />
+        <input type="text" placeholder="Bank Account Details" />
+        <button class="submit-btn">Transfer</button>
+    </section>
+
+    <!-- 6. Wallet Security -->
+    <section class="wallet-box security">
+        <h2>📱 Wallet Security</h2>
+        <ul>
+            <li>🔒 OTP for transactions</li>
+            <li>🛡️ 2FA options</li>
+            <li>🔑 Wallet PIN (optional)</li>
+            <li>📩 Transaction Notifications</li>
+        </ul>
+    </section>
+
+    <!-- 7. Settings -->
+    <section class="wallet-box settings">
+        <h2>⚙️ Settings / Preferences</h2>
+        <ul>
+            <li>✅ Set auto-pay for orders</li>
+            <li>🔗 Link UPI ID or Bank</li>
+            <li>💳 Set default payment preference</li>
+        </ul>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="wallet-box use-cases">
+        <h2>✅ Use Cases in CiriPortal</h2>
+        <ul>
+            <li>🛒 Retailers pay for bulk orders</li>
+            <li>🎉 Customers get cashback</li>
+            <li>💼 Distributors earn commissions</li>
+            <li>💰 Refunds credited instantly</li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
