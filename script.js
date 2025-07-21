@@ -272,3 +272,23 @@ chatbotToggle.addEventListener("click", () => {
 closeChatbox.addEventListener("click", () => {
     chatbox.style.display = "none";
 });
+
+
+//todo: Search box Camera Open -
+const video = document.querySelector('#cameraPreview');
+const cameraBtn = document.querySelector('#cameraBtn');
+
+if (video && cameraBtn) {
+    cameraBtn.addEventListener('click', async () => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            video.srcObject = stream;
+            video.style.display = 'block';
+        } catch (error) {
+            alert('Camera access is unavailable in your devices');
+            console.error('Camera Access Denied:', error);
+        }
+    });
+}
+
+
