@@ -11,90 +11,30 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <!-- Logo -->
-            <div class="nav-logo">
-                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
-                <span class="logo-text">CiriPortal</span>
-            </div>
-
-            <nav class="navbar-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="flour.html">Ciri Flour</a></li>
-                            <li><a href="candyman.html">Ciri Chips</a></li>
-                            <li><a href="candyman.html">Ciri Candyman</a></li>
-                            <li><a href="rice.html">Ciri Rice</a></li>
-                            <li><a href="coldDrinks.html">Ciri Cold Drinks</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Personal care <span class="icon">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="facewash.html">Ciri Face Wash</a></li>
-                            <li><a href="facecream.html">Ciri Face Cream</a></li>
-                            <li><a href="handwash.html">Ciri Hand wash</a></li>
-                            <li><a href="perfume.html">Ciri Perfumes</a></li>
-                            <li><a href="medicalKit.html">Ciri Medical Kit</a></li>
-                        </ul>
-                    </li>
-                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
-                    <li class="dropdown">
-                        <a href="#">Education <span class="icon">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="notebook.html">Ciri NoteBook</a></li>
-                            <li><a href="pen.html">Ciri Pen & Pencils</a></li>
-                            <li><a href="geometry.html">Ciri GeometryBox</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="media.html">Media</a></li>
-                    <li class="dropdown">
-                        <a href="#">Contact <span class="icon">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Email</a></li>
-                            <li><a href="#">Call</a></li>
-                            <li><a href="#">X</a></li>
-                            <li><a href="#">WhatsApp</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <select id="countrySelect">
-                    <option value="">Country</option>
-                </select>
-            </nav>
-
-            <div class="nav-right">
-                <div class="login-btn dropdown">
-                    <button class="btn dropdown-toggle">Login for CiriPortal <span class="arrow"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Distributor Login</a></li>
-                        <li><a href="#">Retailer Login</a></li>
-                    </ul>
-                </div>
-
-                <div class="admin-btn dropdown">
-                    <i class="fa-solid fa-user"></i>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Admin Login</a></li>
-                        <li><a href="#">Admin Panel</a></li>
-                        <li><a href="#">Admin Dashboard</a></li>
-                    </ul>
-                </div>
-
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+    <!-- Search with Camera and Mic -->
+    <div class="search-box">
+        <div>
+            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
         </div>
-    </header>
-
+        <div>
+            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="product-filter">
+            <h3>Filter Products & Price: </h3>
+            <select id="priceFilter">
+                <option value="">Filter by Price</option>
+                <option value="low">Below ₹100</option>
+                <option value="medium">₹100–₹500</option>
+                <option value="high">Above ₹500</option>
+            </select>
+        </div>
+    </div>
+    <!-- Video element for camera preview -->
+    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    <!-- Product list display -->
+    <div class="product-results" id="productResults"></div>
     <!-- Facewash Products Section -->
     <section class="facewash-section" id="facewash">
         <h2 class="section-title">CiriPortal - Facewash Products</h2>
@@ -184,7 +124,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="facewash.js"></script>
 </body>
 
 </html>

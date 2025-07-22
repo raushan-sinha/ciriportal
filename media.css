@@ -11,7 +11,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: white;
+    background: linear-gradient(to bottom, #b9e9f0, #d6ecf0);
     color: #000;
     position: sticky;
     top: 0;
