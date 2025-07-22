@@ -1,227 +1,137 @@
-/* Reset default styles */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f5f7fa;
-    color: #1a202c;
-    line-height: 1.6;
-    padding: 20px;
+    background: #f3f4f6;
+    padding: 1rem;
+    color: #1f2937;
 }
 
-/* Header Styling */
 .wallet-header {
     text-align: center;
-    padding: 2rem 1rem;
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    background: linear-gradient(to right, #2563eb, #1d4ed8);
     color: white;
+    padding: 1.5rem;
     border-radius: 12px;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.wallet-header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-/* Wallet Box Styling */
 .wallet-box {
-    background: white;
-    border-radius: 12px;
+    background: #ffffff;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform 0.2s ease;
-}
-
-.wallet-box:hover {
-    transform: translateY(-4px);
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .wallet-box h2 {
-    font-size: 1.5rem;
-    color: #1a202c;
     margin-bottom: 1rem;
-    font-weight: 600;
+    color: #1e40af;
 }
 
-/* Overview Section */
-.overview p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: #4a5568;
-}
-
-.overview p strong {
-    color: #1a202c;
-}
-
-/* Add Money Section */
-.add-money input,
-.add-money select,
-.bank-transfer input {
-    display: block;
+input,
+select {
     width: 100%;
     padding: 0.75rem;
-    margin-bottom: 1rem;
-    border: 1px solid #d1d5db;
+    margin: 0.6rem 0;
+    border: 1px solid #cbd5e1;
     border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.2s ease;
-}
-
-.add-money input:focus,
-.add-money select:focus,
-.bank-transfer input:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .submit-btn {
-    background-color: #3b82f6;
+    padding: 0.8rem 1.2rem;
+    background: #2563eb;
     color: white;
-    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
-    width: 100%;
-    max-width: 200px;
+    transition: background 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #2563eb;
+    background: #1e3a8a;
 }
 
 .success-message {
-    color: #10b981;
-    margin-top: 1rem;
+    color: green;
+    margin-top: 0.5rem;
     font-weight: 500;
 }
 
-/* Transactions Table */
 .table-container {
     overflow-x: auto;
 }
 
-table {
+.table-container table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 0.95rem;
+    margin-top: 1rem;
 }
 
-th,
-td {
-    padding: 0.75rem;
+.table-container th,
+.table-container td {
+    padding: 0.8rem;
     text-align: left;
     border-bottom: 1px solid #e5e7eb;
 }
 
-th {
-    background-color: #f9fafb;
-    color: #1a202c;
-    font-weight: 600;
+.table-container th {
+    background-color: #f1f5f9;
+    color: #1f2937;
 }
 
-td {
-    color: #4a5568;
-}
-
-/* Offers Section */
 .offer-text {
-    font-size: 1.1rem;
     color: #d97706;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1.05rem;
 }
 
-/* Security, Settings, and Use Cases */
-.security ul,
-.settings ul,
-.use-cases ul {
-    list-style: none;
-    font-size: 1rem;
-    color: #4a5568;
+ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
 }
 
-.security ul li,
-.settings ul li,
-.use-cases ul li {
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+ul li {
+    margin-bottom: 0.6rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .wallet-header h1 {
-        font-size: 1.5rem;
-    }
-
-    .wallet-box h2 {
-        font-size: 1.25rem;
-    }
-
     .wallet-box {
         padding: 1rem;
     }
 
+    input,
+    select,
     .submit-btn {
-        max-width: 100%;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    th,
-    td {
-        padding: 0.5rem;
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
     .wallet-header {
-        padding: 1.5rem 0.5rem;
-    }
-
-    .wallet-box {
-        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        padding: 1rem;
     }
 
     .wallet-box h2 {
         font-size: 1.1rem;
     }
 
-    .overview p,
-    .offer-text,
-    .security ul li,
-    .settings ul li,
-    .use-cases ul li {
+    input,
+    select,
+    .submit-btn {
         font-size: 0.9rem;
     }
-}
 
-/* Accessibility Enhancements */
-:focus {
-    outline: 3px solid #3b82f6;
-    outline-offset: 2px;
+    .table-container table {
+        font-size: 0.85rem;
+    }
 }

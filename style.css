@@ -971,7 +971,7 @@ select:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     flex-wrap: wrap;
     gap: 150px;
     background: linear-gradient(135deg, #00ffff, #87ceeb);
@@ -1447,7 +1447,7 @@ h2 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 10px 20px;
+        padding: 5px 1px;
         flex-wrap: wrap;
         gap: 10px;
     }

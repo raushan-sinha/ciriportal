@@ -1,142 +1,158 @@
-/* Reset and Basics */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-    background-color: #f1f5f9;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  body {
+    background: #f9fafb;
     color: #1e293b;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+  
+  /* Header */
+  .help-header {
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    text-align: center;
     padding: 2rem 1rem;
-}
-
-/* Header */
-.help-header {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.help-header h1 {
-    color: #1d4ed8;
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.help-header p {
-    font-size: 1.05rem;
-    color: #334155;
-}
-
-/* Search */
-.search-section {
-    max-width: 700px;
-    margin: 2rem auto;
-    text-align: center;
-}
-
-.search-input {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* FAQ Container */
-.faq-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-/* FAQ Box */
-.faq-box {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    flex: 1 1 400px;
-    max-width: 480px;
-    transition: transform 0.3s ease;
-}
-
-.faq-box:hover {
-    transform: translateY(-5px);
-}
-
-.faq-box h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .help-header h1 {
+    font-size: 2.2rem;
     color: #0f172a;
     margin-bottom: 1rem;
-}
-
-.faq-box ul {
-    list-style-type: disc;
-    padding-left: 1.2rem;
-}
-
-.faq-box li {
-    margin-bottom: 0.7rem;
+  }
+  
+  .help-header p {
     font-size: 1rem;
-    color: #334155;
-}
-
-/* Highlight Box */
-.faq-box.highlight {
-    background-color: #e0f2fe;
-    border-left: 5px solid #0284c7;
-}
-
-/* Contact Section */
-.contact-section {
+    color: #475569;
+  }
+  
+  /* Search Bar */
+  .search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* FAQ Section */
+  .faq-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .faq-box {
     background: #ffffff;
-    margin: 3rem auto 0;
-    padding: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease;
+  }
+  
+  .faq-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .faq-box h2 {
+    color: #0f172a;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .faq-box ul {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    color: #334155;
+  }
+  
+  .faq-box ul li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .highlight {
+    background: #fef9c3;
+    border-left: 5px solid #facc15;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background: #e0f2fe;
+    margin-top: 3rem;
+    padding: 2rem 1rem;
     border-radius: 12px;
-    max-width: 700px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
     text-align: center;
-}
-
-.contact-section h2 {
-    color: #1d4ed8;
+  }
+  
+  .contact-section h2 {
+    color: #0c4a6e;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
-}
-
-.contact-section ul {
+  }
+  
+  .contact-section ul {
     list-style: none;
     padding: 0;
-}
-
-.contact-section li {
-    margin: 0.5rem 0;
+    color: #1e293b;
+  }
+  
+  .contact-section ul li {
+    margin-bottom: 0.5rem;
     font-size: 1rem;
-}
-
-.contact-section a {
-    color: #2563eb;
+  }
+  
+  .contact-section a {
+    color: #0ea5e9;
     text-decoration: none;
-}
-
-.contact-section a:hover {
+  }
+  
+  .contact-section a:hover {
     text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .faq-box {
-        flex: 1 1 100%;
-    }
-
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .help-header h1 {
-        font-size: 1.6rem;
+      font-size: 1.8rem;
     }
-
+  
+    .faq-box h2 {
+      font-size: 1.2rem;
+    }
+  
     .search-input {
-        font-size: 0.95rem;
+      padding: 0.7rem;
+      font-size: 0.95rem;
     }
-}
+  }
+  
+  @media (max-width: 480px) {
+    .faq-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .help-header {
+      padding: 1.5rem 1rem;
+    }
+  
+    .search-input {
+      width: 90%;
+    }
+  }
