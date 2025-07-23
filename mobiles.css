@@ -155,108 +155,96 @@ select:hover {
     }
 }
 
-.shoes-header {
+.header {
     text-align: center;
-    padding: 20px 20px;
+    margin-bottom: 30px;
 }
 
-.shoes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-.shoe-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    width: 80%;
-    margin: auto;
-}
-
-.shoe-card:hover {
-    transform: translateY(-5px);
-}
-
-.shoe-card img {
-    width: 100%;
-    height: auto;
-    max-height: 160px;
-    /* Ensures it doesn’t become too tall */
-    object-fit: contain;
-    padding: 10px;
-}
-
-.shoe-info {
-    padding: 16px;
-    text-align: center;
-}
-
-.shoe-info h2 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+.header h1 {
+    font-size: 2rem;
     color: #222;
 }
 
+.header p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.mobile-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.mobile-card:hover {
+    transform: scale(1.02);
+}
+
+.mobile-card img {
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+    object-fit: fill;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
 .price {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #28a745;
-}
-
-.discount {
-    font-size: 0.9rem;
-    color: #888;
-    text-decoration: line-through;
-    margin-left: 8px;
-}
-
-.offer {
-    margin-top: 6px;
-    font-size: 0.95rem;
-    color: #e91e63;
+    color: #e53935;
+    margin: 10px 0;
 }
 
 .buy-btn {
-    padding: 0.5rem 1.2rem;
-    background: #2563eb;
+    padding: 8px 16px;
+    background-color: #003366;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: background 0.3s ease;
 }
 
 .buy-btn:hover {
-    background: #1d4ed8;
+    background-color: #00509e;
 }
 
-/* Responsive adjustments */
+.mobile-footer {
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Tweaks */
 @media (max-width: 768px) {
-    .shoe-info h2 {
-        font-size: 1rem;
+    .mobile-card {
+        padding: 0.8rem;
     }
 
-    .price {
-        font-size: 1rem;
+    .buy-btn {
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .shoes-header h1 {
-        font-size: 1.4rem;
+    .mobile-header h1 {
+        font-size: 1.3rem;
     }
 
-    .shoe-info h2 {
-        font-size: 0.95rem;
-    }
-
-    .buy-btn {
-        font-size: 0.8rem;
-        padding: 0.4rem 1rem;
+    .price {
+        font-size: 1rem;
     }
 }
 
