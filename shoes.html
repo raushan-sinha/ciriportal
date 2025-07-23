@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciri Shoes</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="shoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Search with Camera and Mic -->
+    <div class="search-box">
+        <div>
+            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div>
+            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="product-filter">
+            <h3>Filter Products & Price: </h3>
+            <select id="priceFilter">
+                <option value="">Filter by Price</option>
+                <option value="low">Below ₹100</option>
+                <option value="medium">₹100–₹500</option>
+                <option value="high">Above ₹500</option>
+            </select>
+        </div>
+    </div>
+    <!-- Video element for camera preview -->
+    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+
+    <header class="shoes-header">
+        <h1>CiriPortal - Shoes Collection</h1>
+    </header>
+
+    <section class="shoes-container">
+        <!-- 10 Shoe Cards -->
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520477394_24037801762549353_7290135007616065105_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=joyaqZY3LusQ7kNvwH64H-a&_nc_oc=AdlAWIAMd50xZheh0tRbI0VVVGTGkgbx09IW-Qt7WxalRVKkbE1rThyOe5nvlifnrz27CpA6UZpzRVGa_RNfksfJ&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wFJ1c3m4aSNAFyYUBOAi3Tu4xXcLARS_IV5vrFThEbbRA&oe=68A803DF"
+                alt="Shoe 1" />
+            <div class="shoe-info">
+                <h2>Running Shoes</h2>
+                <p class="price">₹2,499 <span class="discount">₹3,999</span></p>
+                <p class="offer">🔥 35% OFF + Free Delivery</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520676895_1174830924683185_2204544392000089697_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=u9akfuL98J8Q7kNvwHAR6Uu&_nc_oc=AdnpCiCqhavAqHD4hHUGWh5cbBXBDkIAOJgCUpa-Dz7SVUWN38XPUzxVJOonO7N0wqTBzWBy7lMTzLZ4DXQAhdUf&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGEw7WnJADYKUjEzvQM7DLB1qV0PWqmOdcjrymcLyu8Tw&oe=68A7E0C6"
+                alt="Shoe 2" />
+            <div class="shoe-info">
+                <h2>Casual Sneakers</h2>
+                <p class="price">₹1,999 <span class="discount">₹2,799</span></p>
+                <p class="offer">🎁 28% OFF + Cashback ₹100</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519457290_1136056268577948_6748637248233066896_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=u2rykZDMnzoQ7kNvwHPtWs7&_nc_oc=AdlEO6RDer4Uk6rbCIJi16kt0GtjTE4IQTpEpZ2fGLMXFID-9NU8i89V-9TWUf6niDSUDCpSAKEi5uM3tBsyw2uw&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wEklch5YitiaNwauS5-YThk4lvxESXTYCNRpzIYLD4uUg&oe=68A7F17C"
+                alt="Shoe 3" />
+            <div class="shoe-info">
+                <h2>Formal Leather</h2>
+                <p class="price">₹2,799 <span class="discount">₹3,299</span></p>
+                <p class="offer">💼 Office Wear + Free Socks</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521670788_1924564178325239_3285036193285998963_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=kvMDdWI3SF0Q7kNvwHgK07o&_nc_oc=AdlnjyXqU9Xz2VS36ZkXOnPwqywz9UlQyTRzd_yPa2C557aEjAbIi6akEM6w-QQMlt7woKTB7FSdlZFv9_Mzc-0H&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wEHh0ddEL6FMamKE0ONVAn0UJNqBzTMJgitX3NnSLmHlw&oe=68A7EBE3"
+                alt="Shoe 4" />
+            <div class="shoe-info">
+                <h3>Air Max Runner</h3>
+                <p class="price">₹3,999 <span class="discount">₹5,499</span></p>
+                <p class="offer">Save 27%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521556441_1845513119708070_8044361752119713394_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FMWyNvkdkHQQ7kNvwEdHin0&_nc_oc=Admwu5Wo2H9AXo266p6SvrQo_hwEwFj5iHcC0YCjFCOWaqQqIrc4s6ULwRa7e77O5c-4n5z1L6xghESgYIN_vTP3&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHyL-uGIWTcUIxBqLGk9ydDT5jGBaWBvbhnWbG2uj9apw&oe=68A7F7E3"
+                alt="Shoe 5" />
+            <div class="shoe-info">
+                <h3>Classic Loafers</h3>
+                <p class="price">₹2,199 <span class="discount">₹3,000</span></p>
+                <p class="offer">Save 27%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/519639690_765691126030060_5592013197668614991_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7e1ONG1O_jMQ7kNvwEO_m-f&_nc_oc=AdmS225W7Pfi0jm20FHIyQscgRg36280yFWuTzPtF4EBYHWi8FBrZnKizbEh6Mguq-fXEgBtOfYMs6aA9uUDUVS2&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wEcj4aPpch1DM51kk-5J69E63V6uGGm3aQwLm2CU0xPog&oe=68A80023"
+                alt="Shoe 6" />
+            <div class="shoe-info">
+                <h3>Street Style Sneakers</h3>
+                <p class="price">₹2,999 <span class="discount">₹4,000</span></p>
+                <p class="offer">Save 25%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519679623_1417876586096642_7083529571674087644_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=GlnTGpOpHjAQ7kNvwHq32DQ&_nc_oc=AdlzS80vV7sN0FeF7pCBQbzj9bllv8UA01jdV0ehBAUdyWHUgnyhBJL1v4PgCC13cY3cTBCvd-LjcI5IMz1utSbz&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wFn-b6IDa0gh_vbTLdmZGAdFA-RKox5vEpu5Ekv8hk6zA&oe=68A7D630"
+                alt="Shoe 7" />
+            <div class="shoe-info">
+                <h3>Men's Formal Shoe</h3>
+                <p class="price">₹1,799 <span class="discount">₹2,400</span></p>
+                <p class="offer">Save 25%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/521034442_738921545451796_3004292870861678977_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=hqTA3gGMCAcQ7kNvwHXO1d4&_nc_oc=Adk0gzXNlVRx_wLoiKv-Q-Bj-MwMEGvxh_i6n-Xn6w_7pdLA_nwcnWyiXkP6TscW-oYilGwWZb9nRw0x7vltPfT3&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wG6ZdmXdyhqSQAnJX58bffwpdSDz1tv9Wvw5GGDI7UzSA&oe=68A7EC67"
+                alt="Shoe 8" />
+            <div class="shoe info">
+                <h3>Women's Heels</h3>
+                <p class="price">₹2,599 <span class="discount">₹3,200</span></p>
+                <p class="offer">Save 19%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/523367882_1149771723629843_7812823912362973282_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EZakRYiQotIQ7kNvwE40Q_w&_nc_oc=Adn5ch64GO23tLU7qy9jsZrShJe1r8wFdec9W3KI38dpJ6jDuCI_8SHy_AsFVJ5f7tUmJV1ZmnI84bGYu6xBIpNM&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHBe3Y-wRxBaRmw0aVgqe8RHb62B07AQxSNZ12xnPi5rw&oe=68A7F366"
+                alt="Shoe 9" />
+            <div class="shoe-info">
+                <h3>Lightweight Sports Shoe</h3>
+                <p class="price">₹2,199 <span class="discount">₹2,999</span></p>
+                <p class="offer">Save 27%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/520995388_633995323053476_3716552629539865116_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=CxRwecDMNUUQ7kNvwF7Fssn&_nc_oc=AdmGcDexRPptd7cF3awSHKHS4Hutpo0AKDPblwH5VPExT9bEmRXmccj6jgBw26ZxfmyVdB3KAhrxqZoWb7u5slHu&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHS2HG387Cp7eImnM3aTOUMqTqcBlqFwF_P6VL5xpVZDA&oe=68A806AF"
+                alt="Shoe 10" />
+            <div class="shoe-info">
+                <h3>Casual Canvas</h3>
+                <p class="price">₹1,299 <span class="discount">₹1,899</span></p>
+                <p class="offer">Save 32%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/520559551_763312836152089_8923063826151666643_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=DfB61iwGfWsQ7kNvwGOJe5l&_nc_oc=Adn-SluDOo0zP5KIXcFrwYbl6Bg7T1aPDKgiQ0S4smGfl0Cr9WYhKUsweonY0wurzITdQTBTmBEWQWiQQhZPTxQH&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wEku30GrLjKbP6N6h2cmaKStX99z9JSoRbmLNJXW7yskg&oe=68A7E097"
+                alt="Shoe 11" />
+            <div class="shoe-info">
+                <h3>Party Pumps</h3>
+                <p class="price">₹2,999 <span class="discount">₹3,999</span></p>
+                <p class="offer">Save 25%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="shoe-card">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520002630_1247905043536230_4510321603650484900_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=B7o5Hh4tI2gQ7kNvwFXnAMG&_nc_oc=AdkrNhBu1_vVw_Oj232FpVfqxNQyAUwl3lqhbEO-m7oRXfCSnYSxkA6q4KyPTMHvNupu86vmVglcAWhiKoPc54br&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wG7j03GqjQAzXkHpeW5AaWS6LiSFC5K6v-6YgibV69BSA&oe=68A7E5D1"
+                alt="Shoe 12" />
+            <div class="shoe-info">
+                <h3>All-Terrain Boots</h3>
+                <p class="price">₹4,999 <span class="discount">₹6,499</span></p>
+                <p class="offer">Save 23%</p>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="shoes.js"></script>
+</body>
+
+</html>
