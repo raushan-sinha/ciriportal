@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refrigerators - CiriPortal</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="refrigerator.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Search with Camera and Mic -->
+    <div class="search-box">
+        <div>
+            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div>
+            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="product-filter">
+            <h3>Filter Products & Price: </h3>
+            <select id="priceFilter">
+                <option value="">Filter by Price</option>
+                <option value="low">Below ₹100</option>
+                <option value="medium">₹100–₹500</option>
+                <option value="high">Above ₹500</option>
+            </select>
+        </div>
+    </div>
+    <!-- Video element for camera preview -->
+    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    <header class="header">
+        <h1>CiriPortal - Refrigerators</h1>
+        <p>Explore the latest Refrigerators with powerful features</p>
+    </header>
+    <section class="refrigerator-container">
+        <div class="refrigerator-box">
+            <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/520183788_1258852798981493_8736634188153669124_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ozMEV_TgFvAQ7kNvwGBDsOJ&_nc_oc=Adm6MbByV3-M_-EaBxFR4oqyQueKrC2a5LGwHuQnno3ysKSUhbA_MmVRTN9LH78-GmU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD2wHhKRZsrE_KA_D_gTIjH6qDgm-rs7m37SeK_90-tzM35g&oe=68A8482D" alt="Refrigerator 1" />
+            <h3>Samsung 253L 3 Star</h3>
+            <p><strong>₹24,990</strong></p>
+            <ul>
+                <li>Capacity: 253 Litres</li>
+                <li>Type: Double Door</li>
+                <li>Compressor: Digital Inverter</li>
+                <li>Energy Rating: 3 Star</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="refrigerator-box">
+            <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/519781473_1985724145487222_9101924464825656007_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9IVxO-WgFucQ7kNvwEK8Zkn&_nc_oc=AdmZJmBC1AbsRvzTwVmtO-4mQL4t-5ofbA7q1haFpg1mXaRBFCpLjf8Ptt5yJe2-aLQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD2wGdG4XvH0aG9DdFne0UReiWy5ljtA7Py3sYeNlTzZnPOg&oe=68A82288" alt="Refrigerator 2" />
+            <h3>LG 190L Single Door</h3>
+            <p><strong>₹17,990</strong></p>
+            <ul>
+                <li>Capacity: 190 Litres</li>
+                <li>Compressor: Smart Inverter</li>
+                <li>Energy Rating: 4 Star</li>
+                <li>Color: Scarlet Plumeria</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="refrigerator-box">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/521430741_1454998359178863_8045938812870807928_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=XG_MX_ZOU-0Q7kNvwGgSRNe&_nc_oc=AdlLMZG5RRDaPFDc6p8hmfXe9HQWynCqMh7Rnb2FmpcWUttZlFqQi3gP9zxiIEVSDoQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wHhAx7WxnWcolW1uPnKDzvxb71C-gbPNBUFe0IBnWP7FQ&oe=68A829D2" alt="Refrigerator 3" />
+            <h3>Whirlpool 265L 3 Star</h3>
+            <p><strong>₹22,500</strong></p>
+            <ul>
+                <li>Capacity: 265 Litres</li>
+                <li>Convertible: Yes</li>
+                <li>FreshFlow Air Tower</li>
+                <li>Auto Defrost</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="refrigerator-box">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519410660_749240034423111_6102104522844634396_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=MKI2KCC_c4oQ7kNvwGXVRSY&_nc_oc=AdlX8P3kxPorFAPdzDuzecLOi3BwyDXvZF_OCVDVMslOrh3DUdeKs3xhRYJ-4vYGsvI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wFW0tLl1A1UaYykJZCtKVs6sUS5yNKMgAqReIqJmylk8Q&oe=68A84960" alt="Refrigerator 4" />
+            <h3>Godrej 185L Direct Cool</h3>
+            <p><strong>₹14,790</strong></p>
+            <ul>
+                <li>Capacity: 185 Litres</li>
+                <li>Type: Single Door</li>
+                <li>Compressor: Normal</li>
+                <li>Energy Rating: 4 Star</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="refrigerator-box">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521452721_1610369203255691_7319598066941328590_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ErOHz--uAiQQ7kNvwGmkTYm&_nc_oc=AdkRmxbUPXT17fiVaDr8HqQBJiaauM4P7TXjnUOGEZWIcoB99KU5CbNFvV3nqsS4RUw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wFJBSAmx-aytu0xANX52HjXLHToh2OW9zf1ru9MWqxHGw&oe=68A8469B" alt="Refrigerator 5" />
+            <h3>Haier 320L Double Door</h3>
+            <p><strong>₹27,400</strong></p>
+            <ul>
+                <li>Capacity: 320 Litres</li>
+                <li>Type: Frost Free</li>
+                <li>Compressor: Twin Inverter</li>
+                <li>Energy Rating: 2 Star</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        <p>Contact us: ciriportal@gmail.com</p>
+    </footer>
+
+    <script src="refrigerator.js"></script>
+</body>
+
+</html>
