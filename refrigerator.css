@@ -157,30 +157,33 @@ select:hover {
 
 .header {
     text-align: center;
-    margin-bottom: 30px;
+    background-color: #004d99;
+    color: white;
+    padding: 30px 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .header h1 {
     font-size: 2rem;
-    color: #222;
+    margin-bottom: 8px;
 }
 
 .header p {
-    color: #555;
     font-size: 1rem;
+    color: #d9e6f2;
 }
 
 .refrigerator-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    gap: 24px;
     padding: 40px 20px;
     max-width: 1200px;
     margin: auto;
 }
 
 .refrigerator-box {
-    background: #fff;
+    background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     padding: 20px;
@@ -194,43 +197,41 @@ select:hover {
 
 .refrigerator-box img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 220px;
     object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .refrigerator-box h3 {
     font-size: 1.1rem;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: #1a1a1a;
 }
 
 .refrigerator-box p {
     font-size: 1rem;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.refrigerator-box strong {
+    font-weight: 600;
     color: #e60023;
+    margin-bottom: 10px;
 }
 
 .refrigerator-box ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style: disc;
+    padding-left: 18px;
     margin-bottom: 15px;
 }
 
 .refrigerator-box ul li {
     font-size: 0.95rem;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
+    color: #555;
 }
 
 .buy-btn {
     padding: 10px 16px;
-    background-color: #0d6efd;
-    color: #fff;
+    background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 6px;
     font-size: 0.95rem;
@@ -239,13 +240,13 @@ select:hover {
 }
 
 .buy-btn:hover {
-    background-color: #084298;
+    background-color: #0056b3;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .refrigerator-container {
         padding: 30px 15px;
-        gap: 16px;
     }
 
     .refrigerator-box {
@@ -269,11 +270,6 @@ select:hover {
 
     .buy-btn {
         width: 100%;
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .mobile-header h1 {
         font-size: 1rem;
     }
 }
