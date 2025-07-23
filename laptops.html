@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiriPortal - Laptops</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="laptops.css" />
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Search with Camera and Mic -->
+    <div class="search-box">
+        <div>
+            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div>
+            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="product-filter">
+            <h3>Filter Products & Price: </h3>
+            <select id="priceFilter">
+                <option value="">Filter by Price</option>
+                <option value="low">Below ₹100</option>
+                <option value="medium">₹100–₹500</option>
+                <option value="high">Above ₹500</option>
+            </select>
+        </div>
+    </div>
+    <!-- Video element for camera preview -->
+    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    <header class="laptop-header">
+        <h1>Explore Latest Laptops</h1>
+        <p>Choose from top brands and powerful specs</p>
+    </header>
+
+    <section class="laptop-container">
+
+        <!-- Laptop Item -->
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520035500_1569053254076704_4875280091808875327_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=wwJgeEnG3dEQ7kNvwHZ6mtv&_nc_oc=AdlKy2WhXthkF0JMuAUFMVP_NyvuiUF6__dFBQ8G5lRxRrLM1k5e4zTbIdvaEJ-V9K_XOzHbeioj8sOBeXMlaEbu&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wFQF96rA2la6hGJI7G9BPTqg0TUuzZN11JOViaGGmSGCw&oe=68A81DE3"
+                alt="Laptop 1">
+            <h3>Dell Inspiron 15</h3>
+            <p><strong>₹58,999</strong></p>
+            <ul>
+                <li>Intel i5 11th Gen</li>
+                <li>8GB RAM, 512GB SSD</li>
+                <li>15.6" FHD Display</li>
+                <li>Windows 11, 6hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/523369077_1698184807554308_6499289814752092757_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=jvOKONNiT8kQ7kNvwGkRjY7&_nc_oc=AdmcHWmvGQaIo_bcEDwhimbz4Lh0Me_8N4PIq2g4E1pg0YaXMCyX_uTcOIdUU7XLi18jQBWNIyeEqyr0MRiEK10z&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wFHvPBCHd-eLgM1AqOYNKBDNqetX2b2AY230Yu_XyS9xQ&oe=68A82490"
+                alt="Laptop 2">
+            <h3>HP Pavilion x360</h3>
+            <p><strong>₹72,499</strong></p>
+            <ul>
+                <li>Intel i7 12th Gen</li>
+                <li>16GB RAM, 1TB SSD</li>
+                <li>Touchscreen Convertible</li>
+                <li>Windows 11, 8hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521479152_1436060261038581_4788613543281287114_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=osseViDNzSUQ7kNvwFosdSw&_nc_oc=AdlhQSOwuHojUNkO3HGk2YlEWW0Jic8dNF4pdAJldr-Lv55xaj6ktnXd_nLt7BFm17WTTto88STnrLsPTW_IPVQR&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wGhk2k6JoJe2T4AzjiB6A6viT45wCxpnh_PFl6JzXxmJg&oe=68A82979"
+                alt="Laptop 3">
+            <h3>Lenovo IdeaPad Slim 3</h3>
+            <p><strong>₹47,999</strong></p>
+            <ul>
+                <li>AMD Ryzen 5</li>
+                <li>8GB RAM, 512GB SSD</li>
+                <li>15.6" Display, Radeon Graphics</li>
+                <li>Windows 11, 7hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520142159_24011738255178656_8930480870916186950_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=NFcD7AZulYIQ7kNvwEyh4J5&_nc_oc=AdmApWVWixeSC-I3J1dmoBtZlaSSzzG5GITRz-tNQzru9o_05GgyG04GaIWVDtsOShDUQ4L6DBadGwliRnnS8gS-&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wHVMawrwG_UPqGhQ04_4MwTVdJsWnA0L48To_VrbM3h-Q&oe=68A81D5B"
+                alt="Laptop 4">
+            <h3>ASUS VivoBook 14</h3>
+            <p><strong>₹39,999</strong></p>
+            <ul>
+                <li>Intel i3 10th Gen</li>
+                <li>8GB RAM, 256GB SSD</li>
+                <li>14" Compact Design</li>
+                <li>Windows 10, 6hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/520621945_1067387078855741_3784458965978826085_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=aD1Hv_BhmW0Q7kNvwFORTxp&_nc_oc=AdkSycoJePND98IrgZiy64pIx4R0fPQReeHTf2WEsSRIoCltNGzfqmhJkoJrS_fUROpLJJwxgXdmSMJYGMppPvRU&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wE9kOZLrIVu7J521coetHloBEBGq8t9Yi0xWwv7uNPXAQ&oe=68A81CBC"
+                alt="Laptop 5">
+            <h3>Apple MacBook Air M1</h3>
+            <p><strong>₹89,990</strong></p>
+            <ul>
+                <li>Apple M1 Chip</li>
+                <li>8GB RAM, 256GB SSD</li>
+                <li>13.3" Retina Display</li>
+                <li>macOS, 15hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <!-- 5 More Laptops -->
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521343178_1288850612836393_6321598971892364786_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LzpuWKXwYGYQ7kNvwFBAbOk&_nc_oc=AdmczsI4dNi2-kmk209u8BSqSUVtjfQ1WthNWMEqYBPuq5W7SSifHFX9Ge4nZFuyKh-4mffoHWD5_nF7Tjrhx3ry&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHAtc3CvE-kbD_n6Saq2LGdrh0XleK-fIzUzoeBbGhjfg&oe=68A80AB5"
+                alt="Laptop 6">
+            <h3>Acer Aspire 7</h3>
+            <p><strong>₹53,499</strong></p>
+            <ul>
+                <li>Ryzen 5 5500U</li>
+                <li>8GB RAM, 512GB SSD</li>
+                <li>NVIDIA GTX 1650</li>
+                <li>Windows 11, 9hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519536842_2123313734825781_6717843016676743579_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LQvse4axe_YQ7kNvwETGB5s&_nc_oc=AdnwN18hdsVIx01Ws9ZCBVvWLxr630cFzMqKEmKw3sUm8YloyWfeYbYziV8Y0u6aymqmUSe7zGdb2OIMsNWS4RYG&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wH1jr28zVX1ssdgmnDJejjroq64kUOCyOeEvOl0gwRHrQ&oe=68A80DA5"
+                alt="Laptop 7">
+            <h3>MSI GF63 Thin</h3>
+            <p><strong>₹64,990</strong></p>
+            <ul>
+                <li>Intel i5 11th Gen</li>
+                <li>8GB RAM, 512GB SSD</li>
+                <li>GTX 1650 Max-Q</li>
+                <li>Windows 10, 7hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/521502708_1073478231591877_4824316254523894872_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=gCSP2B948KIQ7kNvwFpoKcW&_nc_oc=Adk7Cek0saPpgVS_DPZ_0XpiObThjjz5qie6Iah4NMf1BkSb-OpI9H_dfb7Tt84dMqhSbsid98Jmz-E3NHroPoDh&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wHsitMba30W5CPexTTKgeaBXuAdPC4HJs4CC72LXa83rA&oe=68A810F8"
+                alt="Laptop 8">
+            <h3>Realme Book Slim</h3>
+            <p><strong>₹46,999</strong></p>
+            <ul>
+                <li>Intel i3 11th Gen</li>
+                <li>8GB RAM, 256GB SSD</li>
+                <li>2K Display, Lightweight</li>
+                <li>Windows 11, 9hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520023857_1366793337718479_4280151010494054055_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=1JRTTQcVQAoQ7kNvwFEw6B_&_nc_oc=AdkpeQhyMCH2-vodutteF7MbzWsux6Ju19Pv1jnvYoW-82MsHFW9O9Y4Fv8lQvOw0lHisiUxX8uNltoUuMMWiCL0&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wH_02kBPhtjZAmHX4kNn2B0V3J7jaupEjjightLVFbXQw&oe=68A81699"
+                alt="Laptop 9">
+            <h3>Samsung Galaxy Book 2</h3>
+            <p><strong>₹59,990</strong></p>
+            <ul>
+                <li>Intel i5 12th Gen</li>
+                <li>8GB RAM, 512GB SSD</li>
+                <li>Lightweight, FHD Display</li>
+                <li>Windows 11, 8hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="laptop-box">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520463189_1075767151166585_2741342010076905025_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=fSL0UPoo0PUQ7kNvwHAfYZ1&_nc_oc=Adm7yYX3W_UNZpuddulh-UqVj2fLCvU7Ix9lVJ7TvO8mg8lSwWzfpU_M7OXzUaR-5sqst1REOiN1IvN_Qct8fQn4&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wHw_wjHvBqc2WM9YAXgT1W52Pgj190TLzrgyzdgRimqZQ&oe=68A80781"
+                alt="Laptop 10">
+            <h3>LG Gram 16</h3>
+            <p><strong>₹1,04,999</strong></p>
+            <ul>
+                <li>Intel i7 12th Gen</li>
+                <li>16GB RAM, 1TB SSD</li>
+                <li>16" QHD Display</li>
+                <li>Windows 11, 19hr Battery</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        <p>Contact us: ciriportal@gmail.com</p>
+    </footer>
+
+    <script src="laptops.js"></script>
+</body>
+
+</html>
