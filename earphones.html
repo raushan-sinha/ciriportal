@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Ear Phones</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="earphones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Search with Camera and Mic -->
+    <div class="search-box">
+        <div>
+            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div>
+            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="product-filter">
+            <h3>Filter Products & Price: </h3>
+            <select id="priceFilter">
+                <option value="">Filter by Price</option>
+                <option value="low">Below ₹100</option>
+                <option value="medium">₹100–₹500</option>
+                <option value="high">Above ₹500</option>
+            </select>
+        </div>
+    </div>
+    <!-- Video element for camera preview -->
+    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+
+    <header>
+        <h1 class="header">Best Earphones Deals - Premium Sound, Pocket-Friendly 🎧</h1>
+        <p>Top Picks | Free Shipping | Buy Now!</p>
+    </header>
+
+    <main class="product-container">
+        <div class="product-card">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/520534796_765331503101656_9122400026651483355_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=wEzzQ2FaU8sQ7kNvwHDCKJX&_nc_oc=AdlIpAQ9buOjXrs5-NGy2p56lOwnNaqeAkEOZSoyQxpaKOroNv-tnraCQSS2ueLDhXYroxW_pNtqIPrfzWr8jZ9H&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wGmkHqGMGAWq7SuGtiFUCXuDHYcQUwH3P5dLbUC-V2iWg&oe=68A9A660"
+                alt="boAt Rockerz 255">
+            <h3>boAt Rockerz 255</h3>
+            <p>Price: ₹999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/521360698_597020503472288_5064702771564065101_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=5rzqWPG3vqoQ7kNvwGAxy1O&_nc_oc=AdlKaEYNQcYfsvBV-dXxmg9A37LHUBS_b3pflUQhrQT19sXVbhf8nb7AxRklBTiXZ7EUYF19XuljVvZgAu8Ga4Lv&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD2wHZDv3m2YumbiyGKihHAcH3TqYm_BZ_yMh8hf-YZMjYRA&oe=68A98E5B" alt="Realme Buds Wireless 2">
+            <h3>Realme Buds Wireless 2</h3>
+            <p>Price: ₹1,499</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/521955897_1693057491385133_3112472126742541747_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=oBv7BQXrnowQ7kNvwEH9aoj&_nc_oc=Adktp3-NM_uTF5e0c_5jC1BIct43lHrdL8uQk1iTEXgUWPX1ZQQZGMxsZRE4DUJiC1EGr4JDnRzP5rQuCEiXjJVE&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD2wH6EzNVQgT0jc6BPNtrKMOMmOVtT9goNm02vI3msMeX6g&oe=68A97C7C" alt="OnePlus Bullets Wireless Z2">
+            <h3>OnePlus Bullets Z2</h3>
+            <p>Price: ₹1,799</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521628969_1445418303040088_5000703468838727665_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=d4oQoLhC-7YQ7kNvwFgWMC1&_nc_oc=Adk4Sy_e5bC-Vm37BjrY8ZUPOBoh05_n1rEpVaXRYo34KTMPhiXY3ATG3dVDTYTz8zJIVvBiR6GTr5_xvgZpUFsI&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHvuJ5ntU3rpiVjyeH8PL7IH-iuXQtWTYo6OjrITpgYgw&oe=68A98716" alt="Sony WI-C100">
+            <h3>Sony WI-C100</h3>
+            <p>Price: ₹1,999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/520568486_1111151954194974_1846098161379780466_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=oF-A4kb5tHAQ7kNvwGi-H1u&_nc_oc=Adm3pcRna5FSzVpAIZTFN6lZ3aw5tv0hwvzL8QEgg96Ff8zrYiAILZ2GqyWWpd6wBFUfKKACz2BqVaKpDA0SFaRI&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD2wEmfoBXx1Q2WS24q-hvZ5fPW5JVcDkHl_pDgqW-bC3Odw&oe=68A98B4F" alt="Noise Buds VS201">
+            <h3>Noise Buds VS201</h3>
+            <p>Price: ₹1,199</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/522119327_1087328963372460_2216717558157338920_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Y6Cg3oMneD4Q7kNvwHE4mLP&_nc_oc=AdlihE7u09n9xwEoj45RKnMLMR5jzkMfPBRzEjSOReFAaL68mCZuxC_i-80VaNmm4FWf8h-iih_YGbkF_xLZhkZe&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wFIxVktPgWqn1BeBX40tNBWEHrOoWjDAZfQgDRj7_Hybg&oe=68A97F37" alt="JBL Endurance RunBT">
+            <h3>JBL Endurance BT</h3>
+            <p>Price: ₹1,699</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520697234_726937850117589_3393214016416411762_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=GSXKG1k4uk8Q7kNvwGsGNHA&_nc_oc=AdlrCQQix1HJUy4O2ACqN_wJh4LQF6jC9bWPWJqyx2FRk8T_jXFPEpo2w4zh7n_GTZ1v3xjAXuKC0dXq1vRveTPS&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGYHjtFKW8oLpzgN5QkGdSo3VPlfGjZYxF14T78OyYQHg&oe=68A9A2FF" alt="pTron Bassbuds Duo">
+            <h3>pTron Bassbuds Duo</h3>
+            <p>Price: ₹899</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521806044_608600305625593_7870644237824113385_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=jbip1Mq4RZcQ7kNvwGULIa1&_nc_oc=AdlMgPqamgi-6UPsq0_1Lb30_nh6zny2RLQiPoSaSYXhTuNF1Q05npb4hVTAb_tcKbI13xs3izDicDhJQLfdxek0&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHJdyayTWEQJmN18OvjNZgF3kpPnO8NNxdeqOiGVCHaYA&oe=68A9904A" alt="Redmi SonicBass">
+            <h3>Redmi SonicBass</h3>
+            <p>Price: ₹1,299</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        <p>Contact us: ciriportal@gmail.com</p>
+    </footer>
+
+    <script src="earphones.js"></script>
+</body>
+
+</html>
