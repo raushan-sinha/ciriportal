@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Televisions</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="television.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Search with Camera and Mic -->
+    <div class="search-box">
+        <div>
+            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div>
+            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="product-filter">
+            <h3>Filter Products & Price: </h3>
+            <select id="priceFilter">
+                <option value="">Filter by Price</option>
+                <option value="low">Below ₹100</option>
+                <option value="medium">₹100–₹500</option>
+                <option value="high">Above ₹500</option>
+            </select>
+        </div>
+    </div>
+    <!-- Video element for camera preview -->
+    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+
+    <header class="header">
+        <h1>Television Deals at CiriPortal</h1>
+        <p>Smart TVs with Ultra HD, Dolby Audio & Smart Features</p>
+    </header>
+
+    <section class="tv-container">
+        <div class="tv-box">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521978667_1439478317476689_3618100209738628727_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=sjYVVLo6XOkQ7kNvwE_Sc3D&_nc_oc=AdlHP0Dko2f7tFsiUSeVy1WfcpaYPNaPe6OUVZRjQ2rK221vAi8PJEHb7DP16TnwGvM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wE_GXZdyt3v0edxSI3YPwkYvXwwt1bNT678kVfi2pEWyg&oe=68A95430" alt="Samsung TV">
+            <h2>Samsung 43" Smart UHD</h2>
+            <p>Display: 4K Ultra HD | Sound: Dolby Digital Plus</p>
+            <p>Price: ₹32,499 <span class="discount">₹37,999</span></p>
+            <p class="offer">Save ₹5,500 + Free Wall Mount</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="tv-box">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/521670788_546127531822972_409669668684908526_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=MZA98wnBEogQ7kNvwGDNNFM&_nc_oc=AdlXg3eOAA-BnXi2L_UZt_QuDpoW6ncTYqSIsBp7iS4cbk4u75DY4h7jbj3fEocGXkQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wEjEZrpOBJ4prAVcwz72CCqS8zjosh2vtbPY9P4MtmdxA&oe=68A93E0C" alt="Sony Bravia TV">
+            <h2>Sony Bravia 50" LED TV</h2>
+            <p>Display: HDR 4K | Processor: X1 4K HDR</p>
+            <p>Price: ₹44,999 <span class="discount">₹52,999</span></p>
+            <p class="offer">₹8,000 off + 1 Year Warranty</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="tv-box">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519672389_1302420221451092_3268596841425522287_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IJm565myrWoQ7kNvwGNDt17&_nc_oc=AdlZ4Osm8Sohy3Hk0_YgnW3n7eM0PSRJRSpETa4VvQ_WmyNmnAp8pIFoqNPjd-st0Hc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wH1sJCn0XbrEDMKk2pBMMvJzrKAaf3sOPg7QTUcl5MLtw&oe=68A92B8F" alt="LG OLED">
+            <h2>LG 55" OLED AI ThinQ</h2>
+            <p>Display: OLED | AI Processor 4K | WebOS</p>
+            <p>Price: ₹89,990 <span class="discount">₹1,05,000</span></p>
+            <p class="offer">₹15,000 Off + Free Soundbar</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="tv-box">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519629118_3735028396794298_7786062628722123639_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=I3ChP3Zn-tQQ7kNvwFAN6LB&_nc_oc=AdmzTXITSaLiBw5lYEja9l-3Xw1DN1a_NGahAwKgntCyBZFFpUZE9MBsau5zt63kM_w&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGlmMJK7aa6htkNY0sNV6sb4YPbnwKUUyOgrCkyHCl0dA&oe=68A93CC1" alt="Mi TV">
+            <h2>Mi 40" Full HD Android</h2>
+            <p>Display: Full HD | Storage: 8GB | OS: Android</p>
+            <p>Price: ₹19,499 <span class="discount">₹24,999</span></p>
+            <p class="offer">Save ₹5,500 + 6 Months OTT</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="tv-box">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521479152_997175812376516_6112438609939919081_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=376LtWjmkXAQ7kNvwGq_G5N&_nc_oc=AdnrIA68L9yc_aR4vGvyo1VbfFxWniJBRYqFoEgFCAkTLKItNl4KIqtnqMFll3iFTLA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wFUTIKbge-ExPMUDQuF4ndm9QfroUYqg9iafSXGaLs8BQ&oe=68A942E0" alt="TCL Smart TV">
+            <h2>TCL 43" Ultra HD LED</h2>
+            <p>Display: 4K | OS: Google TV | Audio: 24W</p>
+            <p>Price: ₹26,990 <span class="discount">₹31,990</span></p>
+            <p class="offer">₹5,000 off + Free Installation</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        <p>Contact us: ciriportal@gmail.com</p>
+    </footer>
+
+    <script src="television.js"></script>
+</body>
+
+</html>
