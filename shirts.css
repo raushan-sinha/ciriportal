@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* SEARCH BOX */
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 150px;
+    background: linear-gradient(135deg, #00ffff, #87ceeb);
+}
+
+#searchBox {
+    min-width: 500px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 3px solid #000;
+    font-size: 1rem;
+}
+
+.icon-btn {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    transition: background 0.3s;
+}
+
+.icon-btn:hover {
+    background-color: #334155;
+}
+
+.product-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#priceFilter {
+    width: 120px;
+}
+
+select {
+    border-radius: 6px;
+    padding: 6px 10px;
+    background-color: black;
+    color: #fff;
+    border: 1px solid #ddd;
+    width: 110px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    border-color: #999;
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #searchBox {
+        width: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-box {
+        gap: 15px;
+        padding: 10px 2vw;
+    }
+
+    #searchBox {
+        min-width: 150px;
+        font-size: 0.95rem;
+    }
+
+    .icon-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+        padding: 7px;
+    }
+
+    .product-filter h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #searchBox {
+        width: 220px;
+    }
+}
+
+/* Back Page */
+#backPage {
+    border: none;
+    background-color: transparent;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #backPage {
+        border: none;
+        background-color: transparent;
+        display: block;
+        font-size: 1.28rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #backPage {
+        border: none;
+        background-color: transparent;
+        display: block;
+        font-size: 1.28rem;
+    }
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    font-size: 1rem;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product-card h2 {
+    margin: 0.8rem 0 0.3rem;
+    font-size: 1.2rem;
+    color: #1e293b;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0.2rem 0;
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2d6a4f;
+    margin-top: 0.5rem;
+}
+
+.discount {
+    font-size: 0.9rem;
+    color: #d00000;
+    margin-left: 0.3rem;
+}
+
+.buy-btn {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #0f172a;
+}
+
+.footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #eee;
+    padding: 40px 20px 20px;
+    text-align: center;
+}
