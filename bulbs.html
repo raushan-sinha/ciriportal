@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Bulbs</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="bulbs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Search with Camera and Mic -->
+    <div class="search-box">
+        <div>
+            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div>
+            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="product-filter">
+            <h3>Filter Products & Price: </h3>
+            <select id="priceFilter">
+                <option value="">Filter by Price</option>
+                <option value="low">Below ₹100</option>
+                <option value="medium">₹100–₹500</option>
+                <option value="high">Above ₹500</option>
+            </select>
+        </div>
+    </div>
+    <!-- Video element for camera preview -->
+    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+
+    <header>
+        <h1 class="header">CiriPortal - LED Bulbs Collection</h1>
+    </header>
+
+    <main class="product-container">
+        <div class="product-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521567608_4054619661416937_7043739161090231260_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9gP670g5zT8Q7kNvwHlxYsQ&_nc_oc=AdnEoWANmrxWr7li0hM_K-sHEH4aCxqOs3DMC_cCI9g31WYYcRc0m4tf-PMd3AcdO-4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wFD74xGNw5H2ydVPkdBpjwrpfU5ivuXGgYOT6H1sweXhQ&oe=68A979B1"
+                alt="LED Bulb 1" />
+            <h3>Philips 9W LED Bulb</h3>
+            <p>Price: ₹199</p>
+            <p>Offer: 15% Off</p>
+        </div>
+        <div class="product-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/520539028_2156212624878331_8156652218483114855_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_iW4BY7jBYMQ7kNvwFTskMP&_nc_oc=Adm2mOpMGTAekPH3n_Dpssst-gn2s7aoEM6M1dt-7ePVNtV1OBInYYnVIjIRxzmi50w&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wEEy8x2h43ZewYT3Kwe3E8Ae6Q2E8-NSHvN2qi8mW_o8w&oe=68A96D90"
+                alt="LED Bulb 2" />
+            <h3>Syska 10W LED Bulb</h3>
+            <p>Price: ₹189</p>
+            <p>Offer: 10% Off</p>
+        </div>
+        <div class="product-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521464573_765053609507490_4169067288923175089_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LkFSgiBYyH8Q7kNvwE26w1M&_nc_oc=AdmbpW-u-di-sPlT7TSuWAe4gS9lu0_i8tRBNaNOu6iUnxip1prAwxqC8WM-vdaanxs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wH9ip1EbXKfar5TBPiDusHl7ZP78jmoSzmjzT0ujvvmjw&oe=68A97174"
+                alt="LED Bulb 3" />
+            <h3>Wipro Garnet 12W</h3>
+            <p>Price: ₹239</p>
+            <p>Offer: 18% Off</p>
+        </div>
+        <div class="product-card">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/520554743_1860728884498350_3345800046393145377_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=fBYLLH_ZpqUQ7kNvwEdwead&_nc_oc=AdmMUOlAtGvFuKWhhte6ASy1Objza6tUrV5C39bAh19WzfXYmIO1FY-iwIvO50QNBSo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHk-sZJIMnvx-pd8kQrdfRF6Rd2jl2OCgdXD8J-bxrouA&oe=68A98E7E"
+                alt="LED Bulb 4" />
+            <h3>Eveready 7W Cool Daylight</h3>
+            <p>Price: ₹159</p>
+            <p>Offer: 20% Off</p>
+        </div>
+        <div class="product-card">
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/522744928_1251977306061158_6293016487318948779_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LJVNE6dIYwAQ7kNvwEmYpRu&_nc_oc=Adnb-tazQI4cv82priJdN_jKu-c4-ruvBwTF2x5LDpmFad8-LvnKJIF6tjzUwq1ZZdI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wFTg1yXyWVtJEm5UczQ3ldTsX939btVloPeJAAXPjNzyA&oe=68A98452"
+                alt="LED Bulb 5" />
+            <h3>Bajaj 9W LED</h3>
+            <p>Price: ₹175</p>
+            <p>Offer: 12% Off</p>
+        </div>
+        <div class="product-card">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521601818_3305992692881461_4009402003328769831_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=TtFrMT2JFIYQ7kNvwG36dyR&_nc_oc=AdkCDBilSbGCTHZJ77maSclfAmiyMxyIaLWhlvXDLqvVCkfmvSqn0m8XS5vxiMiMmJg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHVyDDafLj80J4bBAZKP1jEtOUMMRGzhGTVz-SNkFuwTw&oe=68A98C40"
+                alt="LED Bulb 6" />
+            <h3>Halonix Prime 10W</h3>
+            <p>Price: ₹185</p>
+            <p>Offer: 14% Off</p>
+        </div>
+        <div class="product-card">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520536734_573277039053761_7557912846306926541_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=4tpMyaxILzoQ7kNvwF69GAQ&_nc_oc=AdkMKpgA686GVGioXonS7SPC8a2KXw-SUjoUgEH2NY5JG1C8dzp7IJkfFcqKEgDx_bw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wFdCaTDQcbsx7cIdBRCNoZBHXGStqDH3KzAwyN1fC53Ww&oe=68A977BB"
+                alt="LED Bulb 7" />
+            <h3>Surya Neo 8W</h3>
+            <p>Price: ₹149</p>
+            <p>Offer: 17% Off</p>
+        </div>
+        <div class="product-card">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521582541_1405507293893916_1531100184410862819_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EX9a0eTnQusQ7kNvwEt4xP6&_nc_oc=AdmvQbya19mzTdyyjfrwcAwflfSYTw3LGMdchkwEUPR-bg57n-bpDgaqx6KBy2s3FMU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wGRnOkfSY_Rgzo7NKG9KMJR2zCzASpHDN2IS7W8FqxIpg&oe=68A96F47"
+                alt="LED Bulb 8" />
+            <h3>Luminos Bright 11W</h3>
+            <p>Price: ₹199</p>
+            <p>Offer: 16% Off</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        <p>Contact us: ciriportal@gmail.com</p>
+    </footer>
+
+    <script src="bulbs.js"></script>
+</body>
+
+</html>
