@@ -250,7 +250,8 @@ const sideBarLinks = [
     'missionPage.html',
     'helpCenter.html',
     'wallet.html',
-    'wishlist.html'
+    'wishlist.html',
+    'monthlyOffers.html'
 ];
 
 document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
