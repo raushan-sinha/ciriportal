@@ -905,12 +905,34 @@ select:hover {
     background-color: #00509e;
 }
 
-.mobile-footer {
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #eee;
+    padding: 40px 20px 20px;
     text-align: center;
-    background-color: #003366;
-    color: white;
-    padding: 1rem;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Footer Socials */
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-socials i {
+    font-size: 1.5rem;
+    color: cyan;
+
+    &:hover {
+        color: blue;
+        opacity: 0.64;
+    }
 }
 
 /* Responsive Tweaks */

@@ -932,11 +932,32 @@ select:hover {
     background-color: #1e293b;
 }
 
+/* Footer */
 .footer {
-    background-color: #1e293b;
-    color: white;
+    background-color: #111;
+    color: #eee;
+    padding: 40px 20px 20px;
     text-align: center;
-    padding: 1.2rem;
-    margin-top: 2rem;
-    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Footer Socials */
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-socials i {
+    font-size: 1.5rem;
+    color: cyan;
+
+    &:hover {
+        color: blue;
+        opacity: 0.64;
+    }
 }
