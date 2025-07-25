@@ -11,29 +11,109 @@
 </head>
 
 <body>
-    <!-- Search with Camera and Mic -->
-    <div class="search-box">
-        <div>
-            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
-        </div>
-        <div>
-            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
-            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
-            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
-        </div>
-        <div class="product-filter">
-            <h3>Filter Products & Price: </h3>
-            <select id="priceFilter">
-                <option value="">Filter by Price</option>
-                <option value="low">Below ₹100</option>
-                <option value="medium">₹100–₹500</option>
-                <option value="high">Above ₹500</option>
-            </select>
-        </div>
-    </div>
-    <!-- Video element for camera preview -->
-    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
 
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="chips.html">Chips</a></li>
+                            <li><a href="candyman.html">Candyman</a></li>
+                            <li><a href="rice.html">Rice</a></li>
+                            <li><a href="coldDrinks.html">Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Face Wash</a></li>
+                            <li><a href="facecream.html">Face Cream</a></li>
+                            <li><a href="handwash.html">Hand wash</a></li>
+                            <li><a href="perfume.html">Perfumes</a></li>
+                            <li><a href="medicalKit.html">Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Outfits & Devices<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="mobiles.html">Mobiles</a></li>
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                            <li><a href="shirts.html">Shirts</a></li>
+                            <li><a href="eyeGlass.html">Eye Glass</a></li>
+                            <li><a href="television.html">Televisions</a></li>
+                            <li><a href="handWatch.html">Hand Watches</a></li>
+                            <li><a href="bags.html">Bags</a></li>
+                            <li><a href="pants.html">Jeans & Pants</a></li>
+                            <li><a href="bulbs.html">Bulbs</a></li>
+                            <li><a href="earphones.html">Ear Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">NoteBook</a></li>
+                            <li><a href="pen.html">Pen & Pencils</a></li>
+                            <li><a href="geometry.html">GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                    <li class="dropdown">
+                        <a href="#">Contact <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Call</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search with Camera and Mic -->
+        <div class="search-box">
+            <div>
+                <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div>
+                <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+                <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+                <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="product-filter">
+                <h3>Filter Products & Price: </h3>
+                <select id="priceFilter">
+                    <option value="">Filter by Price</option>
+                    <option value="low">Below ₹100</option>
+                    <option value="medium">₹100–₹500</option>
+                    <option value="high">Above ₹500</option>
+                </select>
+            </div>
+        </div>
+        <!-- Video element for camera preview -->
+        <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    </header>
     <header class="header">
         <h1>Stylish Bags Collection</h1>
         <p>Choose from our exclusive collection of designer and casual bags.</p>
@@ -41,61 +121,71 @@
 
     <section class="bags-container">
         <div class="bag-card">
-            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519543073_1730496324275409_7932642841956319752_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=yp8bNwuaW68Q7kNvwFG7Lk5&_nc_oc=AdneBkei8tOc0gV7L3BzYnTmvKl2BL_McnCKQQLna83Sq6aNIgYg5kyrPj-iUdeFQ30&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wHgw2FtLtL6PMA1eWcHVvmYnCIE3U3cHL77OhEfQDQk5A&oe=68A96FA9" alt="Bag 1">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519543073_1730496324275409_7932642841956319752_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=yp8bNwuaW68Q7kNvwFG7Lk5&_nc_oc=AdneBkei8tOc0gV7L3BzYnTmvKl2BL_McnCKQQLna83Sq6aNIgYg5kyrPj-iUdeFQ30&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wHgw2FtLtL6PMA1eWcHVvmYnCIE3U3cHL77OhEfQDQk5A&oe=68A96FA9"
+                alt="Bag 1">
             <h2>Leather Handbag</h2>
             <p>Price: ₹1,599 <span class="offer">20% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521065815_1179976190598993_4744959646902142886_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9E3ZUFIiMoUQ7kNvwGrdQMh&_nc_oc=AdnI5yD_yElf0sBEoOP1GfMeknYav_iqdhQYeiOMo5qTGYg_e7Qp0Xw_ScaeEasO6KI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGr8iK27A8LzPMDYmgMTs0s8Qari4hO7UiM9JXGX9taNQ&oe=68A9638C" alt="Bag 2">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521065815_1179976190598993_4744959646902142886_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9E3ZUFIiMoUQ7kNvwGrdQMh&_nc_oc=AdnI5yD_yElf0sBEoOP1GfMeknYav_iqdhQYeiOMo5qTGYg_e7Qp0Xw_ScaeEasO6KI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGr8iK27A8LzPMDYmgMTs0s8Qari4hO7UiM9JXGX9taNQ&oe=68A9638C"
+                alt="Bag 2">
             <h2>Classic Tote Bag</h2>
             <p>Price: ₹899 <span class="offer">15% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519649428_558113860695446_2309776894035681847_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=BBzEnMcEfFkQ7kNvwHrOhzg&_nc_oc=AdlBRFoH8iK5LUQdQVq_4ij9YBqrumtFfcQh_iJa_cBBvW0opQH2yJVhzWFaWt66kr0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wGiduZ8_3WG9TQKlZwNe3wHkvk754YEOGu0KZFVzzYtLQ&oe=68A9581D" alt="Bag 3">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519649428_558113860695446_2309776894035681847_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=BBzEnMcEfFkQ7kNvwHrOhzg&_nc_oc=AdlBRFoH8iK5LUQdQVq_4ij9YBqrumtFfcQh_iJa_cBBvW0opQH2yJVhzWFaWt66kr0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wGiduZ8_3WG9TQKlZwNe3wHkvk754YEOGu0KZFVzzYtLQ&oe=68A9581D"
+                alt="Bag 3">
             <h2>College Backpack</h2>
             <p>Price: ₹1,199 <span class="offer">25% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519621584_1883538575550954_7150402071338057715_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=W6RjEIyShdcQ7kNvwE971t7&_nc_oc=AdnQy3jzzVYqmwiu7QaDN2057k3gtIWvcKPdfaxOAzN8sECgyQkultZnEAYo_vwMvvE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wHvG003I463802U_B0FRnKEfZeRu9HuP_S7S0cc_F2lkg&oe=68A94437" alt="Bag 4">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/519621584_1883538575550954_7150402071338057715_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=W6RjEIyShdcQ7kNvwE971t7&_nc_oc=AdnQy3jzzVYqmwiu7QaDN2057k3gtIWvcKPdfaxOAzN8sECgyQkultZnEAYo_vwMvvE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wHvG003I463802U_B0FRnKEfZeRu9HuP_S7S0cc_F2lkg&oe=68A94437"
+                alt="Bag 4">
             <h2>Stylish Sling Bag</h2>
             <p>Price: ₹749 <span class="offer">30% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520839234_1140199611268264_2148010460099756599_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7WeKYA4f-sQQ7kNvwFsvFGI&_nc_oc=AdlQh4xQ0HMReNwBir9u1NYV4B75XM1XYd73wrWvDNavxoXI4DoG1omyAft5OmCy9iI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wHPiOQU1zRzezce1L2Q8sTBlVdPg65twpA5dP8W9KuvgQ&oe=68A9699A" alt="Bag 5">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520839234_1140199611268264_2148010460099756599_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7WeKYA4f-sQQ7kNvwFsvFGI&_nc_oc=AdlQh4xQ0HMReNwBir9u1NYV4B75XM1XYd73wrWvDNavxoXI4DoG1omyAft5OmCy9iI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wHPiOQU1zRzezce1L2Q8sTBlVdPg65twpA5dP8W9KuvgQ&oe=68A9699A"
+                alt="Bag 5">
             <h2>Messenger Laptop Bag</h2>
             <p>Price: ₹1,999 <span class="offer">35% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519523508_1645947452734528_8620771445684958498_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=PypfEIBU8P8Q7kNvwFOjZJq&_nc_oc=Adn_IO89YxH0QLZsTR4RzLAUJhyTo8CwqbQ5s97Cejhm95baiIGXWNhHiS8CBke1gX4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wEE8ns-8mtcg0Gb-LKRCwfvVjlP6Ktbv9CjArv9SkPmmg&oe=68A957C8" alt="Bag 6">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519523508_1645947452734528_8620771445684958498_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=PypfEIBU8P8Q7kNvwFOjZJq&_nc_oc=Adn_IO89YxH0QLZsTR4RzLAUJhyTo8CwqbQ5s97Cejhm95baiIGXWNhHiS8CBke1gX4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wEE8ns-8mtcg0Gb-LKRCwfvVjlP6Ktbv9CjArv9SkPmmg&oe=68A957C8"
+                alt="Bag 6">
             <h2>Canvas Shoulder Bag</h2>
             <p>Price: ₹1,249 <span class="offer">18% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520615985_1474462927246936_2863674262823588904_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=J0Nv0SyX5eIQ7kNvwExD3mK&_nc_oc=AdlWEnwGHsIS6jsiEPFFDUOHKs5lzHguewKmxeFRZA7hDrS_TX3TPrgR6uWE7_dCYbo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wH-v3XSMJrzMm3Pf2UOvNPc3abyl5lItthueV1lCuq2mA&oe=68A97B43" alt="Bag 7">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520615985_1474462927246936_2863674262823588904_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=J0Nv0SyX5eIQ7kNvwExD3mK&_nc_oc=AdlWEnwGHsIS6jsiEPFFDUOHKs5lzHguewKmxeFRZA7hDrS_TX3TPrgR6uWE7_dCYbo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wH-v3XSMJrzMm3Pf2UOvNPc3abyl5lItthueV1lCuq2mA&oe=68A97B43"
+                alt="Bag 7">
             <h2>Travel Duffel Bag</h2>
             <p>Price: ₹1,799 <span class="offer">22% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521585575_1773969083325466_7713197688875983047_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=3sI_5PzbsusQ7kNvwEyGclO&_nc_oc=AdlzYJcwCEFqE8gHJu-FepT05fQJmnY9Vz-2O-swGrPoYOAjShNLGMDV1xPmiCnLFWM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGp8i3LbRD9N-N578_i_QUB9kVRd2xkuVAfRHASfSsWZA&oe=68A9440C" alt="Bag 8">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521585575_1773969083325466_7713197688875983047_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=3sI_5PzbsusQ7kNvwEyGclO&_nc_oc=AdlzYJcwCEFqE8gHJu-FepT05fQJmnY9Vz-2O-swGrPoYOAjShNLGMDV1xPmiCnLFWM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGp8i3LbRD9N-N578_i_QUB9kVRd2xkuVAfRHASfSsWZA&oe=68A9440C"
+                alt="Bag 8">
             <h2>Office Laptop Bag</h2>
             <p>Price: ₹2,499 <span class="offer">28% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521452721_1251009533157241_996564504454254979_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=gIpXmxV8Pp8Q7kNvwGniPMU&_nc_oc=AdnI3Q3Vmv-H_lTTr0vFU4qocD8qI8AnISzz0aeTBXu_RFc2xt6IiOVqFTGypa_4ZWg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHzPGFKRtqNe6QR9hem9xgydhutqTdoAvlUjcyuuLTtUA&oe=68A9731A" alt="Bag 9">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521452721_1251009533157241_996564504454254979_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=gIpXmxV8Pp8Q7kNvwGniPMU&_nc_oc=AdnI3Q3Vmv-H_lTTr0vFU4qocD8qI8AnISzz0aeTBXu_RFc2xt6IiOVqFTGypa_4ZWg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHzPGFKRtqNe6QR9hem9xgydhutqTdoAvlUjcyuuLTtUA&oe=68A9731A"
+                alt="Bag 9">
             <h2>Designer Clutch</h2>
             <p>Price: ₹1,099 <span class="offer">20% OFF</span></p>
             <button class="buy-btn">Buy Now</button>
         </div>
         <div class="bag-card">
-            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/519987087_1107547481262536_3961631647180351496_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=lRr11_SCBEAQ7kNvwE2FYVY&_nc_oc=AdnD9rNjSb-Qc5UWuurMjziDHP_KBrnq5O7LXfhw9VrMlQBRZsc1wNFygAImiUnyrF8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGM8zi1-afhwR1Dv0yEU4NI3zSmgWxTGl1T7e5nt83Ddg&oe=68A94975" alt="Bag 10">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/519987087_1107547481262536_3961631647180351496_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=lRr11_SCBEAQ7kNvwE2FYVY&_nc_oc=AdnD9rNjSb-Qc5UWuurMjziDHP_KBrnq5O7LXfhw9VrMlQBRZsc1wNFygAImiUnyrF8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGM8zi1-afhwR1Dv0yEU4NI3zSmgWxTGl1T7e5nt83Ddg&oe=68A94975"
+                alt="Bag 10">
             <h2>Foldable Shopping Bag</h2>
             <p>Price: ₹399 <span class="offer">40% OFF</span></p>
             <button class="buy-btn">Buy Now</button>

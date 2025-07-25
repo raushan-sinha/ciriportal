@@ -11,29 +11,109 @@
 </head>
 
 <body>
-    <!-- Search with Camera and Mic -->
-    <div class="search-box">
-        <div>
-            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
-        </div>
-        <div>
-            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
-            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
-            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
-        </div>
-        <div class="product-filter">
-            <h3>Filter Products & Price: </h3>
-            <select id="priceFilter">
-                <option value="">Filter by Price</option>
-                <option value="low">Below ₹100</option>
-                <option value="medium">₹100–₹500</option>
-                <option value="high">Above ₹500</option>
-            </select>
-        </div>
-    </div>
-    <!-- Video element for camera preview -->
-    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
 
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="chips.html">Chips</a></li>
+                            <li><a href="candyman.html">Candyman</a></li>
+                            <li><a href="rice.html">Rice</a></li>
+                            <li><a href="coldDrinks.html">Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Face Wash</a></li>
+                            <li><a href="facecream.html">Face Cream</a></li>
+                            <li><a href="handwash.html">Hand wash</a></li>
+                            <li><a href="perfume.html">Perfumes</a></li>
+                            <li><a href="medicalKit.html">Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Outfits & Devices<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="mobiles.html">Mobiles</a></li>
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                            <li><a href="shirts.html">Shirts</a></li>
+                            <li><a href="eyeGlass.html">Eye Glass</a></li>
+                            <li><a href="television.html">Televisions</a></li>
+                            <li><a href="handWatch.html">Hand Watches</a></li>
+                            <li><a href="bags.html">Bags</a></li>
+                            <li><a href="pants.html">Jeans & Pants</a></li>
+                            <li><a href="bulbs.html">Bulbs</a></li>
+                            <li><a href="earphones.html">Ear Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">NoteBook</a></li>
+                            <li><a href="pen.html">Pen & Pencils</a></li>
+                            <li><a href="geometry.html">GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                    <li class="dropdown">
+                        <a href="#">Contact <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Call</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search with Camera and Mic -->
+        <div class="search-box">
+            <div>
+                <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div>
+                <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+                <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+                <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="product-filter">
+                <h3>Filter Products & Price: </h3>
+                <select id="priceFilter">
+                    <option value="">Filter by Price</option>
+                    <option value="low">Below ₹100</option>
+                    <option value="medium">₹100–₹500</option>
+                    <option value="high">Above ₹500</option>
+                </select>
+            </div>
+        </div>
+        <!-- Video element for camera preview -->
+        <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    </header>
     <div class="header">
         <h1>Eye Glasses Collection</h1>
         <p>Explore stylish and affordable eyewear</p>
@@ -41,7 +121,8 @@
 
     <div class="product-container">
         <div class="product-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520826459_1809906016628204_463125996940888723_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IZ_UNJpb7I8Q7kNvwExB3R-&_nc_oc=AdkzapCyKa56_X_r9LH3Vm4QMyxUwdUcVk_sqQ1hHEKHmJjAIBjBFyvPiKpye21f3AA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wFzk_E3Rrrw4bWwZyPGo8DydqwxHdnxEVmD_7HaBMLawQ&oe=68A93A12" alt="Retro Frame" />
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520826459_1809906016628204_463125996940888723_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IZ_UNJpb7I8Q7kNvwExB3R-&_nc_oc=AdkzapCyKa56_X_r9LH3Vm4QMyxUwdUcVk_sqQ1hHEKHmJjAIBjBFyvPiKpye21f3AA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wFzk_E3Rrrw4bWwZyPGo8DydqwxHdnxEVmD_7HaBMLawQ&oe=68A93A12"
+                alt="Retro Frame" />
             <h2>Retro Frame</h2>
             <p>Unisex | UV Protected</p>
             <p class="price">₹799 <span class="discount">(20% OFF)</span></p>
@@ -49,7 +130,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/519638097_722791630637933_474830805298227509_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=TcNgxRvrPkwQ7kNvwGCEYQa&_nc_oc=AdnE4J8FRHN8qHaQIR5CgQsOJ-FhxK1ocDJvHHtYHOFvWCb1mjsZfxDrsioylduJDBM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wGC7xBmCEafIm_EMRJf1T4gjc8nfUmgH5-vXGRwiAYw2w&oe=68A94B84" alt="Blue Cut Glass" />
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/519638097_722791630637933_474830805298227509_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=TcNgxRvrPkwQ7kNvwGCEYQa&_nc_oc=AdnE4J8FRHN8qHaQIR5CgQsOJ-FhxK1ocDJvHHtYHOFvWCb1mjsZfxDrsioylduJDBM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wGC7xBmCEafIm_EMRJf1T4gjc8nfUmgH5-vXGRwiAYw2w&oe=68A94B84"
+                alt="Blue Cut Glass" />
             <h2>Blue Cut Glass</h2>
             <p>Anti-Glare | Computer Use</p>
             <p class="price">₹1,099 <span class="discount">(15% OFF)</span></p>
@@ -57,7 +139,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/520557060_765147532739492_3453149902468820349_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tFKNv4BmFFkQ7kNvwED5-yg&_nc_oc=Adm9IyMeVY-wNN2_0VVOaERQ0gvkYQ3nI-baBIQjMuWo7HhpeZ52h0Aj5oUrdGIMVAg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHZ4s89y7kCZKYrwRGo9P1sgLK0Ecm_iPTOHrPcMHbKXg&oe=68A9435B" alt="Rimless Design" />
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/520557060_765147532739492_3453149902468820349_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tFKNv4BmFFkQ7kNvwED5-yg&_nc_oc=Adm9IyMeVY-wNN2_0VVOaERQ0gvkYQ3nI-baBIQjMuWo7HhpeZ52h0Aj5oUrdGIMVAg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHZ4s89y7kCZKYrwRGo9P1sgLK0Ecm_iPTOHrPcMHbKXg&oe=68A9435B"
+                alt="Rimless Design" />
             <h2>Rimless Design</h2>
             <p>Lightweight | Classic Look</p>
             <p class="price">₹1,299 <span class="discount">(10% OFF)</span></p>
@@ -65,7 +148,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/522875173_1634394490589433_6585457150985326199_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EqVVImdnZ7oQ7kNvwGQfbKu&_nc_oc=AdkZOiM7fxCUWq3dwTsLtGUV5DbREg6YJ1ZoRBoD_xsxDvvb02BqQBUYOuJPMxTz0TE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wHAUEtt1ERhp-IPNckRDzbMetLFBLVVD34E2iirYipuoQ&oe=68A9327E" alt="Sports Eyewear" />
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/522875173_1634394490589433_6585457150985326199_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EqVVImdnZ7oQ7kNvwGQfbKu&_nc_oc=AdkZOiM7fxCUWq3dwTsLtGUV5DbREg6YJ1ZoRBoD_xsxDvvb02BqQBUYOuJPMxTz0TE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wHAUEtt1ERhp-IPNckRDzbMetLFBLVVD34E2iirYipuoQ&oe=68A9327E"
+                alt="Sports Eyewear" />
             <h2>Sports Eyewear</h2>
             <p>Impact Resistant | Wrap Around</p>
             <p class="price">₹999 <span class="discount">(25% OFF)</span></p>
@@ -73,7 +157,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/521397545_1415621303027408_8947863014898323290_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tau9mA8fulUQ7kNvwEWlYE5&_nc_oc=AdnF7G4GR_k-SOgZ9dMJE0Gw78cib7P6ALHJGF9bGSUaiY-k47M3hxCIqZJiwYXXbJo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wE9OIVbGRGUKbLnbv4Cux0KPOE-Rzeiz6BmjIzis9WAtA&oe=68A92D06" alt="Transparent Frame" />
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/521397545_1415621303027408_8947863014898323290_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tau9mA8fulUQ7kNvwEWlYE5&_nc_oc=AdnF7G4GR_k-SOgZ9dMJE0Gw78cib7P6ALHJGF9bGSUaiY-k47M3hxCIqZJiwYXXbJo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wE9OIVbGRGUKbLnbv4Cux0KPOE-Rzeiz6BmjIzis9WAtA&oe=68A92D06"
+                alt="Transparent Frame" />
             <h2>Transparent Frame</h2>
             <p>Trendy Look | Unisex</p>
             <p class="price">₹899 <span class="discount">(18% OFF)</span></p>
@@ -81,7 +166,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521141035_2160108434470933_2617859835343893463_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=kaZsrAb8q8oQ7kNvwEEsQKh&_nc_oc=Adm_xFqeQ4deJJLcJONnQn2BbqnL_NckJ3mggTKju3g-catwy0fL_PZgWaB3VX7HNyg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHfSRcY-FClCl32GOn_BiU2S_BlCpG0W2hf6lhNV3bRKQ&oe=68A9335F" alt="Round Lens" />
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521141035_2160108434470933_2617859835343893463_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=kaZsrAb8q8oQ7kNvwEEsQKh&_nc_oc=Adm_xFqeQ4deJJLcJONnQn2BbqnL_NckJ3mggTKju3g-catwy0fL_PZgWaB3VX7HNyg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHfSRcY-FClCl32GOn_BiU2S_BlCpG0W2hf6lhNV3bRKQ&oe=68A9335F"
+                alt="Round Lens" />
             <h2>Round Lens</h2>
             <p>Metal Frame | Fashionable</p>
             <p class="price">₹1,099 <span class="discount">(22% OFF)</span></p>
@@ -89,7 +175,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521203731_721823370824079_3907354463619025607_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=0aZZuwhqA1MQ7kNvwFqhsgo&_nc_oc=Adm6MRl9h-F9Nd2_w8-dawxoCcjh4Iqkw3n5tHHdAtV_VPuBIOqzByi68SRPlFZblsY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHcw7Nf0J9zqlr2-oL_rPaVuDhOjXBm2E7d_0HcmJQnLQ&oe=68A929F6" alt="Cat Eye Glasses" />
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/521203731_721823370824079_3907354463619025607_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=0aZZuwhqA1MQ7kNvwFqhsgo&_nc_oc=Adm6MRl9h-F9Nd2_w8-dawxoCcjh4Iqkw3n5tHHdAtV_VPuBIOqzByi68SRPlFZblsY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHcw7Nf0J9zqlr2-oL_rPaVuDhOjXBm2E7d_0HcmJQnLQ&oe=68A929F6"
+                alt="Cat Eye Glasses" />
             <h2>Cat Eye Glasses</h2>
             <p>For Women | Bold Design</p>
             <p class="price">₹1,399 <span class="discount">(30% OFF)</span></p>
@@ -97,7 +184,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521373552_1445886100072970_3871256688803187782_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=YtqQmAwuy7oQ7kNvwG60Og2&_nc_oc=AdmxnqQ4B36O_rynulfhUMONKMUUNbZGR8uIiND32hmp1qwlx8CVISk25fnRgTJpC3I&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wF0lod-FIOyfPPM-zCEshAzE3H1v1XjQ4uveytS1AkXdw&oe=68A92AEC" alt="Square Frame" />
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521373552_1445886100072970_3871256688803187782_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=YtqQmAwuy7oQ7kNvwG60Og2&_nc_oc=AdmxnqQ4B36O_rynulfhUMONKMUUNbZGR8uIiND32hmp1qwlx8CVISk25fnRgTJpC3I&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wF0lod-FIOyfPPM-zCEshAzE3H1v1XjQ4uveytS1AkXdw&oe=68A92AEC"
+                alt="Square Frame" />
             <h2>Square Frame</h2>
             <p>Professional Look | Durable</p>
             <p class="price">₹1,199 <span class="discount">(12% OFF)</span></p>
@@ -105,7 +193,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/523920534_1499133884437586_201598023705172415_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=lZmA72iOpXAQ7kNvwGuLtvT&_nc_oc=Adl5754oH60kPPmlYWMdQclvN6mWRRdcD9KB4x3woxixRba1eFhm7WNAgqnBjZ5kD2c&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHO09-HQajtw1d9lNCBH6QDwbrPTkkyDSv4_QMhHsZV9g&oe=68A922F3" alt="Pilot Style" />
+            <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/523920534_1499133884437586_201598023705172415_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=lZmA72iOpXAQ7kNvwGuLtvT&_nc_oc=Adl5754oH60kPPmlYWMdQclvN6mWRRdcD9KB4x3woxixRba1eFhm7WNAgqnBjZ5kD2c&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wHO09-HQajtw1d9lNCBH6QDwbrPTkkyDSv4_QMhHsZV9g&oe=68A922F3"
+                alt="Pilot Style" />
             <h2>Pilot Style</h2>
             <p>Double Bridge | Stylish</p>
             <p class="price">₹1,499 <span class="discount">(28% OFF)</span></p>
@@ -113,7 +202,8 @@
         </div>
 
         <div class="product-card">
-            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/520977574_9973199802789737_3494187962386141501_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ySSfifokGXEQ7kNvwF9D-_h&_nc_oc=Adk-bBs7ctcEhmijTPZBj69lPuuf1YhBLVHGDMNGX4sIGCpJNGYXAuhx5E-6ZThqZIA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHW7lkBpXh_p4sJSG2n9_YeyktZs8XReU1kOWVmFQDjAg&oe=68A940F2" alt="Vintage Collection" />
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/520977574_9973199802789737_3494187962386141501_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ySSfifokGXEQ7kNvwF9D-_h&_nc_oc=Adk-bBs7ctcEhmijTPZBj69lPuuf1YhBLVHGDMNGX4sIGCpJNGYXAuhx5E-6ZThqZIA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHW7lkBpXh_p4sJSG2n9_YeyktZs8XReU1kOWVmFQDjAg&oe=68A940F2"
+                alt="Vintage Collection" />
             <h2>Vintage Collection</h2>
             <p>Retro Style | Gold Finish</p>
             <p class="price">₹1,599 <span class="discount">(20% OFF)</span></p>

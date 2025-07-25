@@ -11,29 +11,109 @@
 </head>
 
 <body>
-    <!-- Search with Camera and Mic -->
-    <div class="search-box">
-        <div>
-            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
-        </div>
-        <div>
-            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
-            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
-            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
-        </div>
-        <div class="product-filter">
-            <h3>Filter Products & Price: </h3>
-            <select id="priceFilter">
-                <option value="">Filter by Price</option>
-                <option value="low">Below ₹100</option>
-                <option value="medium">₹100–₹500</option>
-                <option value="high">Above ₹500</option>
-            </select>
-        </div>
-    </div>
-    <!-- Video element for camera preview -->
-    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
 
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="chips.html">Chips</a></li>
+                            <li><a href="candyman.html">Candyman</a></li>
+                            <li><a href="rice.html">Rice</a></li>
+                            <li><a href="coldDrinks.html">Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Face Wash</a></li>
+                            <li><a href="facecream.html">Face Cream</a></li>
+                            <li><a href="handwash.html">Hand wash</a></li>
+                            <li><a href="perfume.html">Perfumes</a></li>
+                            <li><a href="medicalKit.html">Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Outfits & Devices<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="mobiles.html">Mobiles</a></li>
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                            <li><a href="shirts.html">Shirts</a></li>
+                            <li><a href="eyeGlass.html">Eye Glass</a></li>
+                            <li><a href="television.html">Televisions</a></li>
+                            <li><a href="handWatch.html">Hand Watches</a></li>
+                            <li><a href="bags.html">Bags</a></li>
+                            <li><a href="pants.html">Jeans & Pants</a></li>
+                            <li><a href="bulbs.html">Bulbs</a></li>
+                            <li><a href="earphones.html">Ear Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">NoteBook</a></li>
+                            <li><a href="pen.html">Pen & Pencils</a></li>
+                            <li><a href="geometry.html">GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                    <li class="dropdown">
+                        <a href="#">Contact <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Call</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search with Camera and Mic -->
+        <div class="search-box">
+            <div>
+                <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div>
+                <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+                <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+                <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="product-filter">
+                <h3>Filter Products & Price: </h3>
+                <select id="priceFilter">
+                    <option value="">Filter by Price</option>
+                    <option value="low">Below ₹100</option>
+                    <option value="medium">₹100–₹500</option>
+                    <option value="high">Above ₹500</option>
+                </select>
+            </div>
+        </div>
+        <!-- Video element for camera preview -->
+        <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    </header>
     <header class="header">
         <h1>Jeans & Pants Collection</h1>
         <p>Explore our stylish and comfortable options</p>
@@ -41,52 +121,62 @@
 
     <section class="product-container">
         <div class="product-card">
-            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/520611899_674035092329783_5548937815605955225_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FpwK8Hal9J4Q7kNvwHjuCmy&_nc_oc=AdlH3HPjHUvX-o3tfh2-tjOiIcHt9PbaB8GUy5vgH5Qo953l0sq4Svgl9jcFBI8ExNE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wFMULwoUViiVWY0k0HmfjHRJGxNBikZwOwmkyNSAqg4wA&oe=68A962EE" alt="Jeans 1">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/520611899_674035092329783_5548937815605955225_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FpwK8Hal9J4Q7kNvwHjuCmy&_nc_oc=AdlH3HPjHUvX-o3tfh2-tjOiIcHt9PbaB8GUy5vgH5Qo953l0sq4Svgl9jcFBI8ExNE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wFMULwoUViiVWY0k0HmfjHRJGxNBikZwOwmkyNSAqg4wA&oe=68A962EE"
+                alt="Jeans 1">
             <h2>Classic Blue Jeans</h2>
             <p>Price: ₹1299</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/520861250_24063625589956093_6772975676728413727_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Xhhb6RMzFlIQ7kNvwGYay_d&_nc_oc=Adly4dRwWKnAvNUhZEYHxn78tkK8bhsUG7Bt4KWEuApvl4NvW8Vl-Vt2bOtgzaRwhog&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wFgON-ri6QjsaTk9HPWIwITsxQJfyC1C1k7e6FNp65o4g&oe=68A96C03" alt="Pant 2">
+            <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/520861250_24063625589956093_6772975676728413727_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Xhhb6RMzFlIQ7kNvwGYay_d&_nc_oc=Adly4dRwWKnAvNUhZEYHxn78tkK8bhsUG7Bt4KWEuApvl4NvW8Vl-Vt2bOtgzaRwhog&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wFgON-ri6QjsaTk9HPWIwITsxQJfyC1C1k7e6FNp65o4g&oe=68A96C03"
+                alt="Pant 2">
             <h2>Slim Fit Black Pant</h2>
             <p>Price: ₹999</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/522128951_1441103573746286_5201818097501410986_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FjhR110MkyQQ7kNvwERPNkY&_nc_oc=AdmC7vmbs_6e88Xt-pXqjUWFfDd_JzcQ7fBvQof5uhl2hL__nj5eM26H6829pxU11l8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGh6YiV-NTEs5rYzTxnc0l9KhRgPnFcCsuBtk_-tINDuw&oe=68A95CC2" alt="Jeans 3">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/522128951_1441103573746286_5201818097501410986_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=FjhR110MkyQQ7kNvwERPNkY&_nc_oc=AdmC7vmbs_6e88Xt-pXqjUWFfDd_JzcQ7fBvQof5uhl2hL__nj5eM26H6829pxU11l8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGh6YiV-NTEs5rYzTxnc0l9KhRgPnFcCsuBtk_-tINDuw&oe=68A95CC2"
+                alt="Jeans 3">
             <h2>Distressed Denim</h2>
             <p>Price: ₹1499</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519526632_722881837206907_4451208996553129909_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7tmycjpIU2QQ7kNvwEOZUEF&_nc_oc=AdlB904s36gyueHnBHBdmYckT2g6MMKByTvhMeg7yVEagZrPE2BDXjjUjo1LzO7giuo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGA1kuuM4VlSvPaFMb6-LjY1h8cvA98cAcww-AVIhFoMQ&oe=68A94AD2" alt="Pant 4">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519526632_722881837206907_4451208996553129909_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7tmycjpIU2QQ7kNvwEOZUEF&_nc_oc=AdlB904s36gyueHnBHBdmYckT2g6MMKByTvhMeg7yVEagZrPE2BDXjjUjo1LzO7giuo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGA1kuuM4VlSvPaFMb6-LjY1h8cvA98cAcww-AVIhFoMQ&oe=68A94AD2"
+                alt="Pant 4">
             <h2>Formal Grey Pant</h2>
             <p>Price: ₹1199</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520611899_1249977292973969_2975500852448001316_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=OrEqiJG2kXMQ7kNvwHJTUKA&_nc_oc=AdnMrgM2wokU28Jw_qgRwCUyEJxzQeRKCEt1OVEhg8aCNzjLOS41Qgcc57yArZB1tzI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGsgKhu0DhyFM8H2fQz3j3A784MFSdXs3cwbG9a4-15SA&oe=68A9674A" alt="Jeans 5">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520611899_1249977292973969_2975500852448001316_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=OrEqiJG2kXMQ7kNvwHJTUKA&_nc_oc=AdnMrgM2wokU28Jw_qgRwCUyEJxzQeRKCEt1OVEhg8aCNzjLOS41Qgcc57yArZB1tzI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGsgKhu0DhyFM8H2fQz3j3A784MFSdXs3cwbG9a4-15SA&oe=68A9674A"
+                alt="Jeans 5">
             <h2>Skinny Fit Jeans</h2>
             <p>Price: ₹1399</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/522724759_1084034609842377_6472565254972103083_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Qs6TgDkBZgMQ7kNvwFWlONJ&_nc_oc=AdnPO8VBb5BEt2obx708zK1mPadiR8g_-VM2sB4A8FXCY2k7_-prZOggd_A1-QyBjbU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wFm7VlPdEq52YV8sZ-akzLJIWhAdc6G4Mge4s5XXmHUOA&oe=68A9541C" alt="Pant 6">
+            <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/522724759_1084034609842377_6472565254972103083_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Qs6TgDkBZgMQ7kNvwFWlONJ&_nc_oc=AdnPO8VBb5BEt2obx708zK1mPadiR8g_-VM2sB4A8FXCY2k7_-prZOggd_A1-QyBjbU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wFm7VlPdEq52YV8sZ-akzLJIWhAdc6G4Mge4s5XXmHUOA&oe=68A9541C"
+                alt="Pant 6">
             <h2>Cargo Pants</h2>
             <p>Price: ₹1099</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/521659905_1082552850515823_658195599838593112_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=l3zlN06RUM8Q7kNvwG9G2Gg&_nc_oc=AdnrqnetmwKql8eV3Ayo99fBv1KVs1IIClCL_PFqwCaw5JVCUygqN19RNWNB49IEup0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wHOhzX_I7L6y8BX_xTgZGGNlJJx79YyWUm4rl0PN15orw&oe=68A97221" alt="Jeans 7">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/521659905_1082552850515823_658195599838593112_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=l3zlN06RUM8Q7kNvwG9G2Gg&_nc_oc=AdnrqnetmwKql8eV3Ayo99fBv1KVs1IIClCL_PFqwCaw5JVCUygqN19RNWNB49IEup0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wHOhzX_I7L6y8BX_xTgZGGNlJJx79YyWUm4rl0PN15orw&oe=68A97221"
+                alt="Jeans 7">
             <h2>Ripped Blue Jeans</h2>
             <p>Price: ₹1599</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520537162_781861557607598_6915043479839923449_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=G_ZLZIyge8IQ7kNvwHc6wbK&_nc_oc=AdnOWXCSH2snFPRmuBugIm8HfZr0VdJ5F9oKIY3RWCDVIb8shds60043l3gWcs6Yn7c&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGA8uMfpG5VAEt2fIaRmtw5G4OB_qxsNApvb6ixGC7mtQ&oe=68A97C34" alt="Pant 8">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520537162_781861557607598_6915043479839923449_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=G_ZLZIyge8IQ7kNvwHc6wbK&_nc_oc=AdnOWXCSH2snFPRmuBugIm8HfZr0VdJ5F9oKIY3RWCDVIb8shds60043l3gWcs6Yn7c&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGA8uMfpG5VAEt2fIaRmtw5G4OB_qxsNApvb6ixGC7mtQ&oe=68A97C34"
+                alt="Pant 8">
             <h2>Stretch Cotton Pants</h2>
             <p>Price: ₹899</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521181749_1392482118649467_6230817207649647795_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9mnp51cTomsQ7kNvwHHHFX5&_nc_oc=AdlD-AyGCDTieO6kQPaJADIwIDncrZAD_Di-Ej0xhyUv2tQQPO2pdqBjvl9X80JzWIg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wEO2wKEnZaEB30B5PbTCmskhfMM_84mCyI8l_6AfyBvpg&oe=68A96721" alt="Jeans 9">
+            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/521181749_1392482118649467_6230817207649647795_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9mnp51cTomsQ7kNvwHHHFX5&_nc_oc=AdlD-AyGCDTieO6kQPaJADIwIDncrZAD_Di-Ej0xhyUv2tQQPO2pdqBjvl9X80JzWIg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wEO2wKEnZaEB30B5PbTCmskhfMM_84mCyI8l_6AfyBvpg&oe=68A96721"
+                alt="Jeans 9">
             <h2>High Waist Jeans</h2>
             <p>Price: ₹1199</p>
         </div>
         <div class="product-card">
-            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520443060_2226370381131369_5605711517346931411_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7MubYeoifOAQ7kNvwGytkto&_nc_oc=AdnZoFwTNwELHr229wZ2LLklvKKtfia-lySE0mphLWcd02s5VKDqnefh-GJbGoCeNGY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGzNBDixS11qQWMq4xxm7jaXlEtTLfgl-btJgqSF7ntKg&oe=68A9578F" alt="Pant 10">
+            <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520443060_2226370381131369_5605711517346931411_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7MubYeoifOAQ7kNvwGytkto&_nc_oc=AdnZoFwTNwELHr229wZ2LLklvKKtfia-lySE0mphLWcd02s5VKDqnefh-GJbGoCeNGY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGzNBDixS11qQWMq4xxm7jaXlEtTLfgl-btJgqSF7ntKg&oe=68A9578F"
+                alt="Pant 10">
             <h2>Flat Front Pants</h2>
             <p>Price: ₹999</p>
         </div>
