@@ -11,29 +11,110 @@
 </head>
 
 <body>
-    <!-- Search with Camera and Mic -->
-    <div class="search-box">
-        <div>
-            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
-        </div>
-        <div>
-            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
-            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
-            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
-        </div>
-        <div class="product-filter">
-            <h3>Filter Products & Price: </h3>
-            <select id="priceFilter">
-                <option value="">Filter by Price</option>
-                <option value="low">Below ₹100</option>
-                <option value="medium">₹100–₹500</option>
-                <option value="high">Above ₹500</option>
-            </select>
-        </div>
-    </div>
-    <!-- Video element for camera preview -->
-    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
 
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="chips.html">Chips</a></li>
+                            <li><a href="candyman.html">Candyman</a></li>
+                            <li><a href="rice.html">Rice</a></li>
+                            <li><a href="coldDrinks.html">Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Face Wash</a></li>
+                            <li><a href="facecream.html">Face Cream</a></li>
+                            <li><a href="handwash.html">Hand wash</a></li>
+                            <li><a href="perfume.html">Perfumes</a></li>
+                            <li><a href="medicalKit.html">Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Outfits & Devices<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="mobiles.html">Mobiles</a></li>
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                            <li><a href="shirts.html">Shirts</a></li>
+                            <li><a href="eyeGlass.html">Eye Glass</a></li>
+                            <li><a href="television.html">Televisions</a></li>
+                            <li><a href="handWatch.html">Hand Watches</a></li>
+                            <li><a href="bags.html">Bags</a></li>
+                            <li><a href="pants.html">Jeans & Pants</a></li>
+                            <li><a href="bulbs.html">Bulbs</a></li>
+                            <li><a href="earphones.html">Ear Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">NoteBook</a></li>
+                            <li><a href="pen.html">Pen & Pencils</a></li>
+                            <li><a href="geometry.html">GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                    <li class="dropdown">
+                        <a href="#">Contact <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Call</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search with Camera and Mic -->
+        <div class="search-box">
+            <div>
+                <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div>
+                <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+                <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+                <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="product-filter">
+                <h3>Filter Products & Price: </h3>
+                <select id="priceFilter">
+                    <option value="">Filter by Price</option>
+                    <option value="low">Below ₹100</option>
+                    <option value="medium">₹100–₹500</option>
+                    <option value="high">Above ₹500</option>
+                </select>
+            </div>
+        </div>
+        <!-- Video element for camera preview -->
+        <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+    </header>
+    
     <!-- Flour Products Section -->
     <section class="flour-section" id="flour">
         <h2 class="section-title">CiriPortal - Flour Products</h2>

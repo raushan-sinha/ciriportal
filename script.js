@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Dropdown toggle for mobile - only for main dropdown links
 const dropdownToggleLinks = document.querySelectorAll('.navbar-nav .dropdown > a');
-
 dropdownToggleLinks.forEach(link => {
     link.addEventListener('click', function (e) {
         // Only handle dropdown toggle on mobile devices

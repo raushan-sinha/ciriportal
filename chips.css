@@ -11,7 +11,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: white;
+    background: linear-gradient(to bottom, #b9e9f0, #d6ecf0);
     color: #000;
     position: sticky;
     top: 0;
@@ -71,7 +71,7 @@ body {
     align-items: center;
     gap: 25px;
     flex: 1;
-    justify-content: center;
+    justify-content: end;
     margin: 0 15px;
 }
 
@@ -130,6 +130,10 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     z-index: 100;
     border: 1px solid #eee;
+}
+
+.fa-user {
+    font-size: 2rem;
 }
 
 /* Desktop hover behavior */
@@ -449,10 +453,10 @@ select:hover {
         gap: 10px;
     }
 
-    .signup-btn .btn {
-        background-color: #6366f1;
+    .login-btn .btn {
+        background-color: #000;
         border-radius: 8px;
-        padding: 10px 20px;
+        padding: 20px 20px;
         font-size: 14px;
     }
 
@@ -499,7 +503,7 @@ select:hover {
         font-size: 14px;
     }
 
-    .signup-btn .btn {
+    .login-btn .btn {
         padding: 8px 16px;
         font-size: 13px;
     }
@@ -527,6 +531,10 @@ select:hover {
         padding: 6px 0;
     }
 
+    .fa-user {
+        font-size: 1.5rem;
+    }
+
     .logo {
         width: 40px;
         height: 35px;
@@ -552,7 +560,7 @@ select:hover {
         font-size: 15px;
     }
 
-    .signup-btn .btn {
+    .login-btn .btn {
         padding: 12px 20px;
         font-size: 14px;
     }
@@ -595,7 +603,7 @@ select:hover {
         font-size: 14px;
     }
 
-    .signup-btn .btn {
+    .login-btn .btn {
         padding: 10px 16px;
         font-size: 13px;
     }
@@ -611,8 +619,8 @@ select:hover {
     }
 
     .hamburger span {
-        width: 20px;
-        height: 2px;
+        width: 25px;
+        height: 3px;
     }
 }
 
@@ -647,7 +655,7 @@ select:hover {
         font-size: 13px;
     }
 
-    .signup-btn .btn {
+    .login-btn .btn {
         padding: 8px 12px;
         font-size: 12px;
     }

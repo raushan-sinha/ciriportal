@@ -11,92 +11,173 @@
 </head>
 
 <body>
-    <!-- Search with Camera and Mic -->
-    <div class="search-box">
-        <div>
-            <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
-        </div>
-        <div>
-            <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
-            <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
-            <button class="icon-btn"><i class="fas fa-microphone"></i></button>
-        </div>
-        <div class="product-filter">
-            <h3>Filter Products & Price: </h3>
-            <select id="priceFilter">
-                <option value="">Filter by Price</option>
-                <option value="low">Below ₹100</option>
-                <option value="medium">₹100–₹500</option>
-                <option value="high">Above ₹500</option>
-            </select>
-        </div>
-    </div>
-    <!-- Video element for camera preview -->
-    <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
-    <!-- Product list display -->
-    <div class="product-results" id="productResults"></div>
-    <!-- Chips Products Section -->
-    <section class="chips-section" id="chips">
-        <h2 class="section-title">CiriPortal - Chips Products</h2>
-        <div class="chips-scroll-wrapper animate-left-right">
-            <div class="chips-container">
-                <div class="chips-card"><img src="Images/potato.jpeg" alt="Salted Potato Chips">
-                    <p>Salted Potato Chips<br><span>&#8377;30</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/masala.jpeg" alt="Masala Chips">
-                    <p>Masala Chips<br><span>&#8377;35</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/nachos.jpeg" alt="Classic Nachos">
-                    <p>Classic Nachos<br><span>&#8377;45</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/cheese.jpeg" alt="Cheese Balls">
-                    <p>Cheese Balls<br><span>&#8377;40</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/wafers.jpeg" alt="Peri Peri Wafers">
-                    <p>Peri Peri Wafers<br><span>&#8377;50</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/sourcream.jpeg" alt="Sour Cream Chips">
-                    <p>Sour Cream Chips<br><span>&#8377;55</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/bbq.jpeg" alt="BBQ Chips">
-                    <p>BBQ Chips<br><span>&#8377;50</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/onion.jpeg" alt="Onion Rings">
-                    <p>Onion Rings<br><span>&#8377;35</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/tandoori.jpeg" alt="Tandoori Chips">
-                    <p>Tandoori Chips<br><span>&#8377;40</span></p><button class="order-btn">Order Now</button>
-                </div>
-                <div class="chips-card"><img src="Images/lime.jpeg" alt="Lime Zing Chips">
-                    <p>Lime Zing Chips<br><span>&#8377;30</span></p><button class="order-btn">Order Now</button>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
+
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="chips.html">Chips</a></li>
+                            <li><a href="candyman.html">Candyman</a></li>
+                            <li><a href="rice.html">Rice</a></li>
+                            <li><a href="coldDrinks.html">Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Face Wash</a></li>
+                            <li><a href="facecream.html">Face Cream</a></li>
+                            <li><a href="handwash.html">Hand wash</a></li>
+                            <li><a href="perfume.html">Perfumes</a></li>
+                            <li><a href="medicalKit.html">Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Outfits & Devices<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="mobiles.html">Mobiles</a></li>
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                            <li><a href="shirts.html">Shirts</a></li>
+                            <li><a href="eyeGlass.html">Eye Glass</a></li>
+                            <li><a href="television.html">Televisions</a></li>
+                            <li><a href="handWatch.html">Hand Watches</a></li>
+                            <li><a href="bags.html">Bags</a></li>
+                            <li><a href="pants.html">Jeans & Pants</a></li>
+                            <li><a href="bulbs.html">Bulbs</a></li>
+                            <li><a href="earphones.html">Ear Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">NoteBook</a></li>
+                            <li><a href="pen.html">Pen & Pencils</a></li>
+                            <li><a href="geometry.html">GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                    <li class="dropdown">
+                        <a href="#">Contact <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Email</a></li>
+                            <li><a href="#">Call</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">WhatsApp</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Chips Purchasing Rules Section -->
-    <section class="rules-section" id="chips-rules">
-        <h2 class="section-title">Chips Purchase Guidelines</h2>
-        <div class="rules-content">
-            <ul>
-                <li>All products are packed in hygienic conditions and sealed to maintain freshness.</li>
-                <li>Store chips in a cool, dry place away from direct sunlight.</li>
-                <li>Free delivery on chips orders above &#8377;299.</li>
-                <li>Available sizes: 50g, 100g, 200g packs.</li>
-                <li>Orders placed before 3 PM are shipped the same day.</li>
-                <li>Returns are allowed within 24 hours only if the pack is damaged or tampered.</li>
-                <li>All products are 100% vegetarian and FSSAI certified.</li>
-            </ul>
+        <!-- Search with Camera and Mic -->
+        <div class="search-box">
+            <div>
+                <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div>
+                <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+                <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button>
+                <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="product-filter">
+                <h3>Filter Products & Price: </h3>
+                <select id="priceFilter">
+                    <option value="">Filter by Price</option>
+                    <option value="low">Below ₹100</option>
+                    <option value="medium">₹100–₹500</option>
+                    <option value="high">Above ₹500</option>
+                </select>
+            </div>
         </div>
-    </section>
+        <!-- Video element for camera preview -->
+        <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+        <!-- Product list display -->
+        <div class="product-results" id="productResults"></div>
+    </header>
+        <!-- Chips Products Section -->
+        <section class="chips-section" id="chips">
+            <h2 class="section-title">CiriPortal - Chips Products</h2>
+            <div class="chips-scroll-wrapper animate-left-right">
+                <div class="chips-container">
+                    <div class="chips-card"><img src="Images/potato.jpeg" alt="Salted Potato Chips">
+                        <p>Salted Potato Chips<br><span>&#8377;30</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/masala.jpeg" alt="Masala Chips">
+                        <p>Masala Chips<br><span>&#8377;35</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/nachos.jpeg" alt="Classic Nachos">
+                        <p>Classic Nachos<br><span>&#8377;45</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/cheese.jpeg" alt="Cheese Balls">
+                        <p>Cheese Balls<br><span>&#8377;40</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/wafers.jpeg" alt="Peri Peri Wafers">
+                        <p>Peri Peri Wafers<br><span>&#8377;50</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/sourcream.jpeg" alt="Sour Cream Chips">
+                        <p>Sour Cream Chips<br><span>&#8377;55</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/bbq.jpeg" alt="BBQ Chips">
+                        <p>BBQ Chips<br><span>&#8377;50</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/onion.jpeg" alt="Onion Rings">
+                        <p>Onion Rings<br><span>&#8377;35</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/tandoori.jpeg" alt="Tandoori Chips">
+                        <p>Tandoori Chips<br><span>&#8377;40</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                    <div class="chips-card"><img src="Images/lime.jpeg" alt="Lime Zing Chips">
+                        <p>Lime Zing Chips<br><span>&#8377;30</span></p><button class="order-btn">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 CiriPortal. All rights reserved.</p>
-        <p>Contact us: ciriportal@gmail.com</p>
-    </footer>
+        <!-- Chips Purchasing Rules Section -->
+        <section class="rules-section" id="chips-rules">
+            <h2 class="section-title">Chips Purchase Guidelines</h2>
+            <div class="rules-content">
+                <ul>
+                    <li>All products are packed in hygienic conditions and sealed to maintain freshness.</li>
+                    <li>Store chips in a cool, dry place away from direct sunlight.</li>
+                    <li>Free delivery on chips orders above &#8377;299.</li>
+                    <li>Available sizes: 50g, 100g, 200g packs.</li>
+                    <li>Orders placed before 3 PM are shipped the same day.</li>
+                    <li>Returns are allowed within 24 hours only if the pack is damaged or tampered.</li>
+                    <li>All products are 100% vegetarian and FSSAI certified.</li>
+                </ul>
+            </div>
+        </section>
 
-    <script src="chips.js"></script>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+            <p>Contact us: ciriportal@gmail.com</p>
+        </footer>
+
+        <script src="chips.js"></script>
 </body>
 
 </html>

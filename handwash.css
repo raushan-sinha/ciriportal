@@ -11,7 +11,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: white;
+    background: linear-gradient(to bottom, #b9e9f0, #d6ecf0);
     color: #000;
     position: sticky;
     top: 0;
@@ -71,7 +71,7 @@ body {
     align-items: center;
     gap: 25px;
     flex: 1;
-    justify-content: center;
+    justify-content: end;
     margin: 0 15px;
 }
 
@@ -130,6 +130,10 @@ body {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     z-index: 100;
     border: 1px solid #eee;
+}
+
+.fa-user {
+    font-size: 2rem;
 }
 
 /* Desktop hover behavior */
@@ -450,9 +454,9 @@ select:hover {
     }
 
     .login-btn .btn {
-        background-color: #6366f1;
+        background-color: #000;
         border-radius: 8px;
-        padding: 10px 20px;
+        padding: 20px 20px;
         font-size: 14px;
     }
 
@@ -525,6 +529,10 @@ select:hover {
     .nav-logo {
         gap: 8px;
         padding: 6px 0;
+    }
+
+    .fa-user {
+        font-size: 1.5rem;
     }
 
     .logo {
@@ -611,8 +619,8 @@ select:hover {
     }
 
     .hamburger span {
-        width: 20px;
-        height: 2px;
+        width: 25px;
+        height: 3px;
     }
 }
 
@@ -698,7 +706,6 @@ select:hover {
     }
 }
 
-/* handwash */
 /* Handwash Section */
 .handwash-section {
     padding: 40px 20px;
