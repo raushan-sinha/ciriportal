@@ -52,3 +52,51 @@ window.addEventListener('resize', () => {
 document.querySelector('#backPage').addEventListener('click', () => {
     window.history.back();
 })
+
+
+//todo: Search Box for Items -
+const itemsName = {
+    'flour': 'flour.html',
+    'chips': 'chips.html',
+    'candyman': 'candyman.html',
+    'rice': 'rice.html',
+    'colddrinks': 'coldDrinks.html',
+    'facewash': 'facewash.html',
+    'facecream': 'facecream.html',
+    'handwash': 'handwash.html',
+    'medicalkit': 'medicalKit.html',
+    'perfumes': 'perfumes.html',
+    'shoes': 'shoes.html',
+    'mobile': 'mobiles.html',
+    'refrigerator': 'refrigerator.html',
+    'laptop': 'laptops.html',
+    'handwatch': 'handwatch.html',
+    'earphones': 'earphones.html',
+    'eyeglass': 'eyeGlass.html',
+    'shirts': 'shirts.html',
+    'television': 'television.html',
+    'bag': 'bags.html',
+    'bulb': 'bulbs.html',
+    'pants': 'pants.html',
+    'notebook': 'notebook.html',
+    'pen': 'pen.html',
+    'geometry': 'geometry.html'
+}
+const searchBtn = document.querySelector('#searchBtn');
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const searchBox = document.querySelector('#searchBox').value.toLowerCase();
+    if (itemsName[searchBox]) {
+        window.open(itemsName[searchBox], '_self');
+    } else {
+        alert(`Page isn't available`);
+    }
+});
+
+//? Keypress Enter -
+document.querySelector('#searchBox').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        searchBtn.click();
+    }
+})
+
