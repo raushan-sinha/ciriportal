@@ -71,7 +71,7 @@ body {
     align-items: center;
     gap: 25px;
     flex: 1;
-    justify-content: center;
+    justify-content: end;
     margin: 0 15px;
 }
 
@@ -696,20 +696,6 @@ select:hover {
         padding: 8px 20px;
         font-size: 13px;
     }
-}
-
-/* Reset & Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fdfdfd;
-    color: #333;
-    line-height: 1.6;
 }
 
 /* Media Section */
