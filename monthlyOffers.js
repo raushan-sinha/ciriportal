@@ -1,13 +1,3 @@
-'use strict';
-
-document.querySelector('.copy-btn').addEventListener('click', () => {
-    navigator.clipboard.writeText('CIRI-USER-4567');
-    setTimeout(() => {
-        alert('Copied your Referral Code. Now You can share. :)')
-    }, 100);
-})
-
-
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('.navbar-nav');
 const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
