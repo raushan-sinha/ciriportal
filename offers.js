@@ -2,3 +2,54 @@ document.querySelector('#email').addEventListener('click', (e) => {
     e.preventDefault();
     open('mail:ciriportal@gmail.com', '_self');
 });
+
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.navbar-nav');
+const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+
+// Toggle hamburger menu
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('open');
+});
+
+// Handle dropdown toggling for mobile only
+dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('a');
+
+    link.addEventListener('click', function (e) {
+        // Check if it's mobile view (based on CSS breakpoint 992px)
+        if (window.innerWidth <= 992) {
+            e.preventDefault();
+
+            // Close other dropdowns
+            dropdowns.forEach(d => {
+                if (d !== dropdown) {
+                    d.classList.remove('open');
+                }
+            });
+
+            // Toggle current dropdown
+            dropdown.classList.toggle('open');
+        }
+    });
+});
+
+// Close nav menu when clicking outside (optional)
+document.addEventListener('click', function (e) {
+    const isClickInsideNav = e.target.closest('.nav-container');
+    if (!isClickInsideNav) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('open');
+        dropdowns.forEach(d => d.classList.remove('open'));
+    }
+});
+
+// On resize, reset dropdowns and nav
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 992) {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('active');
+        dropdowns.forEach(d => d.classList.remove('open'));
+    }
+});
