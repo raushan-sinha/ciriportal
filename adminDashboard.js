@@ -1,6 +1,6 @@
 //todo: Access each Navigation links -
 const navLinks = [
-    'manageProd.html',
+    'manufacturer.html',
     'order.html',
     'customer.html',
     'helpDesk.html',
