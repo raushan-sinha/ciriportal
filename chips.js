@@ -99,3 +99,65 @@ document.querySelector('#searchBox').addEventListener('keypress', (e) => {
         searchBtn.click();
     }
 })
+
+//todo: Speech Recognition for Searching an Item -
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition();
+
+recognition.interimResults = false;
+recognition.continuous = false;
+recognition.lang = 'en-US';
+
+document.querySelector('#startVoice').addEventListener('click', () => {
+    recognition.start();
+    console.log("Voice recognition started...");
+});
+
+const itemsPage = {
+    'flour': { url: 'https://ciriportal.vercel.app/flour.html' },
+    'chips': { url: 'https://ciriportal.vercel.app/chips.html' },
+    'candyman': { url: 'https://ciriportal.vercel.app/candyman.html' },
+    'rice': { url: 'https://ciriportal.vercel.app/rice.html' },
+    'coldDrinks': { url: 'https://ciriportal.vercel.app/coldDrinks.html' },
+    'facewash': { url: 'https://ciriportal.vercel.app/facewash.html' },
+    'facecream': { url: 'https://ciriportal.vercel.app/facecream.html' },
+    'handwash': { url: 'https://ciriportal.vercel.app/handwash.html' },
+    'perfume': { url: 'https://ciriportal.vercel.app/perfume.html' },
+    'medicalKit': { url: 'https://ciriportal.vercel.app/medicalKit.html' },
+    'shoes': { url: 'https://ciriportal.vercel.app/shoes.html' },
+    'mobiles': { url: 'https://ciriportal.vercel.app/mobiles.html' },
+    'laptop': { url: 'https://ciriportal.vercel.app/laptops.html' },
+    'refrigerator': { url: 'https://ciriportal.vercel.app/refrigerator.html' },
+    'shirts': { url: 'https://ciriportal.vercel.app/shirts.html' },
+    'eyeGlass': { url: 'https://ciriportal.vercel.app/eyeGlass.html' },
+    'television': { url: 'https://ciriportal.vercel.app/television.html' },
+    'handWatch': { url: 'https://ciriportal.vercel.app/handWatch.html' },
+    'bags': { url: 'https://ciriportal.vercel.app/bags.html' },
+    'pants': { url: 'https://ciriportal.vercel.app/pants.html' },
+    'bulbs': { url: 'https://ciriportal.vercel.app/bulbs.html' },
+    'earphones': { url: 'https://ciriportal.vercel.app/earphones.html' },
+    'notebook': { url: 'https://ciriportal.vercel.app/notebook.html' },
+    'pen': { url: 'https://ciriportal.vercel.app/pen.html' },
+    'geometry': { url: 'https://ciriportal.vercel.app/geometry.html' }
+};
+
+recognition.addEventListener('result', (e) => {
+    const transcript = Array.from(e.results)
+        .map(result => result[0].transcript)
+        .join('')
+        .toLowerCase();
+
+    console.log("You said:", transcript);
+
+    for (const [item, link] of Object.entries(itemsPage)) {
+        if (transcript.includes(item)) {
+            window.open(link.url, '_self');
+            return;
+        }
+    }
+});
+
+//? Optional: Log errors
+recognition.addEventListener('error', (e) => {
+    console.error("Speech Recognition Error:", e.error);
+});
