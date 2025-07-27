@@ -708,67 +708,84 @@ select:hover {
 
 /* Rice */
 .rice-section {
-    padding: 40px 20px;
-    background-color: #f8fff8;
+    padding: 30px 15px;
+    background-color: #fdfdfd;
+}
+
+.section-title {
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 25px;
+    color: #333;
 }
 
-.rice-scroll-wrapper {
-    overflow-x: auto;
-    padding-bottom: 10px;
-}
-
-.rice-container {
+.rice-grid {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    width: max-content;
-    animation: scrollLeftRight 22s linear infinite alternate;
-    padding: 10px;
 }
 
 .rice-card {
-    min-width: 280px;
-    max-width: 250px;
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-    flex-shrink: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #857777;
+    width: 100%;
+    max-width: 220px;
+    padding: 15px;
+    text-align: center;
     transition: transform 0.3s ease;
+}
+
+.rice-card:hover {
+    transform: translateY(-6px);
 }
 
 .rice-card img {
     width: 100%;
-    height: 240px;
-    object-fit: fill;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .rice-card p {
-    padding: 10px;
-    font-weight: 600;
-    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: 500;
+    color: #333;
 }
 
 .rice-card span {
-    display: block;
-    font-weight: 400;
-    color: #666;
+    color: #e53935;
+    font-weight: 600;
 }
 
 .order-btn {
-    margin: 10px auto 15px;
+    margin-top: 8px;
     padding: 8px 16px;
-    background-color: #4caf50;
+    background-color: #0077cc;
     color: white;
     border: none;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .order-btn:hover {
-    background-color: #388e3c;
+    background-color: #005fa3;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .rice-card {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .rice-card {
+        max-width: 100%;
+    }
 }
 
 /* Rice Rules Section */
@@ -802,22 +819,6 @@ select:hover {
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .rice-container {
-        animation: none;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-
-    .rice-card {
-        min-width: 150px;
-    }
-
-    .rules-content {
-        text-align: left;
-    }
-}
 
 /* Footer */
 .footer {
