@@ -868,7 +868,7 @@ select:hover {
 
 .refrigerator-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
     padding: 40px 20px;
     max-width: 1200px;
@@ -878,8 +878,8 @@ select:hover {
 .refrigerator-box {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 20px;
+    box-shadow: 0 4px 10px #857777;
+    padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
