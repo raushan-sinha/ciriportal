@@ -725,7 +725,7 @@ select:hover {
     z-index: 1001;
     width: 50px;
     height: 50px;
-    background: #2c3e50;
+    background: linear-gradient(45deg, #ff6ec4, #42e695, #f9c74f);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -742,9 +742,20 @@ select:hover {
 }
 
 .sidebar-toggle i {
-    color: white;
+    color: black;
     font-size: 24px;
     transition: transform 0.3s ease;
+    animation: glowEffect 1.5s infinite alternate;
+}
+
+/* Glow (lightning) effect */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 6px #00eaff, 0 0 12px #00eaff;
+    }
+    100% {
+        text-shadow: 0 0 12px #00eaff, 0 0 24px #00eaff;
+    }
 }
 
 /* Sidebar */
