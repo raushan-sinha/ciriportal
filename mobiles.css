@@ -858,7 +858,7 @@ select:hover {
 
 .mobile-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
     gap: 1.5rem;
     padding: 2rem;
 }
@@ -866,7 +866,7 @@ select:hover {
 .mobile-card {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px #857777;
     padding: 1rem;
     text-align: center;
     transition: 0.3s ease;
