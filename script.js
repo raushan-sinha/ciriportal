@@ -208,7 +208,7 @@ document.querySelectorAll('.admin-btn a').forEach((link, idx) => {
 
 
 //todo: Offers & Promotions -
-document.querySelector('#offers').addEventListener('click', (e) => {
+document.querySelector('.offers-btn').addEventListener('click', (e) => {
     e.preventDefault();
     open('offers.html', '_blank');
 });
