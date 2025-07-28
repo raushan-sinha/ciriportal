@@ -708,117 +708,85 @@ select:hover {
 
 /* Facewash Section */
 .facewash-section {
-    padding: 40px 20px;
-    background-color: #eaf9ff;
+    padding: 30px 15px;
+    background-color: #fdfdfd;
+}
+
+.section-title {
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 25px;
+    color: #333;
 }
 
-.facewash-scroll-wrapper {
-    overflow-x: auto;
-    padding-bottom: 10px;
-}
-
-.facewash-container {
+.facewash-grid {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    width: max-content;
-    animation: scrollLeftRight 30s linear infinite alternate;
-    padding: 10px;
 }
 
 .facewash-card {
-    min-width: 280px;
-    max-width: 250px;
-    background: #ffffff;
+    background: #fff;
     border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    flex-shrink: 0;
+    box-shadow: 0 4px 10px #857777;
+    width: 100%;
+    max-width: 220px;
+    padding: 15px;
+    text-align: center;
     transition: transform 0.3s ease;
+}
+
+.facewash-card:hover {
+    transform: translateY(-6px);
 }
 
 .facewash-card img {
     width: 100%;
-    height: 240px;
-    object-fit: fill;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .facewash-card p {
-    padding: 10px;
-    font-weight: 600;
-    font-size: 1rem;
+    margin: 10px 0;
+    font-weight: 500;
+    color: #333;
 }
 
 .facewash-card span {
-    display: block;
-    font-weight: 400;
-    color: #444;
+    color: #e53935;
+    font-weight: 600;
 }
 
 .order-btn {
-    margin: 10px auto 15px;
-    padding: 8px 18px;
-    background-color: #00acc1;
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #0077cc;
     color: white;
     border: none;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .order-btn:hover {
-    background-color: #00838f;
+    background-color: #005fa3;
 }
 
-/* Rules Section */
-.rules-section {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.rules-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.rules-content ul {
-    list-style: disc inside;
-    line-height: 1.8;
-    color: #444;
-    font-size: 1rem;
-}
-
-/* Scroll Animation */
-@keyframes scrollLeftRight {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Responsive */
+/* Responsive for mobile */
 @media (max-width: 768px) {
-    .facewash-container {
-        animation: none;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-
     .facewash-card {
-        min-width: 160px;
-    }
-
-    .rules-content {
-        text-align: left;
+        max-width: 45%;
     }
 }
 
+@media (max-width: 480px) {
+    .facewash-card {
+        max-width: 100%;
+    }
+}
 
 /* Footer */
 .footer {
