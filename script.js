@@ -402,3 +402,77 @@ recognition.addEventListener('result', (e) => {
 recognition.addEventListener('error', (e) => {
     console.error("Speech Recognition Error:", e.error);
 });
+
+
+//todo: Scroll reveal animation
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe all fade-in elements
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+
+// Add smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Add loading animation to buttons
+document.querySelectorAll('.action-btn, .view-all-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+        if (this.getAttribute('href') === '#') {
+            e.preventDefault();
+            const originalText = this.textContent;
+            this.textContent = 'Loading...';
+            this.style.pointerEvents = 'none';
+
+            setTimeout(() => {
+                this.textContent = originalText;
+                this.style.pointerEvents = 'auto';
+            }, 2000);
+        }
+    });
+});
+
+
+
+//todo: Why Choose Section links access -
+const chooseSection = [
+    'distributor.html',
+    'joinCiri.html',
+    'member-request.html'
+];
+
+document.querySelectorAll('.why-choose-section .action-card a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(chooseSection[idx], '_self');
+    });
+});
+
+
+//todo: View Products -
+document.querySelector('.viewProducts').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('laptops.html', '_self');
+});
