@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+.seasonal-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    animation: fadeIn 1s ease-in;
+}
+
+.offer-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease;
+    transition: transform 0.3s ease;
+}
+
+.offer-container:hover {
+    transform: translateY(-5px);
+}
+
+.section-title {
+    font-size: 28px;
+    color: #2b2d42;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 16px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.offer-benefits {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.offer-benefits li {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    font-size: 16px;
+    color: #333;
+}
+
+.campaign-steps h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #37474f;
+}
+
+.campaign-steps ol {
+    padding-left: 20px;
+}
+
+.campaign-steps li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        background-color: #fefefe;
+    }
+
+    to {
+        background-color: #f4f6f8;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .offer-container {
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .intro-text,
+    .offer-benefits li,
+    .campaign-steps li {
+        font-size: 15px;
+    }
+}

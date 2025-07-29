@@ -1,0 +1,104 @@
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.rewards-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.rewards-container {
+    background-color: #ffffff;
+    padding: 40px 35px;
+    max-width: 850px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    animation: slideIn 0.6s ease-in-out;
+}
+
+.rewards-title {
+    font-size: 32px;
+    text-align: center;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+.rewards-intro,
+.closing-line {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #334155;
+}
+
+.rewards-info h2,
+.rewards-benefits h2 {
+    font-size: 22px;
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.rewards-info ul,
+.rewards-benefits ol {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.rewards-info li,
+.rewards-benefits li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.rewards-info li:hover,
+.rewards-benefits li:hover {
+    color: #0ea5e9;
+    transform: translateX(5px);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .rewards-section {
+        padding: 40px 15px;
+    }
+
+    .rewards-container {
+        padding: 25px 20px;
+    }
+
+    .rewards-title {
+        font-size: 26px;
+    }
+
+    .rewards-info h2,
+    .rewards-benefits h2 {
+        font-size: 18px;
+    }
+
+    .rewards-info li,
+    .rewards-benefits li,
+    .rewards-intro,
+    .closing-line {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f0f4f8;
+    color: #1f2937;
+}
+
+.training-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.training-container {
+    background: #ffffff;
+    padding: 40px 30px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    animation: fadeInUp 0.6s ease;
+}
+
+.training-title {
+    font-size: 32px;
+    color: #0f172a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.training-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.training-benefits h2,
+.training-steps h2 {
+    font-size: 22px;
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.training-benefits ul,
+.training-steps ol {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.training-benefits li,
+.training-steps li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.training-benefits li:hover,
+.training-steps li:hover {
+    color: #0ea5e9;
+    transform: translateX(5px);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .training-section {
+        padding: 30px 10px;
+    }
+
+    .training-container {
+        padding: 25px 20px;
+    }
+
+    .training-title {
+        font-size: 22px;
+    }
+
+    .training-intro {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .training-benefits h2,
+    .training-steps h2 {
+        font-size: 18px;
+    }
+
+    .training-benefits li,
+    .training-steps li {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+}
