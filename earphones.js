@@ -162,3 +162,44 @@ recognition.addEventListener('result', (e) => {
 recognition.addEventListener('error', (e) => {
     console.error("Speech Recognition Error:", e.error);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('sidebarToggle');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    // Toggle sidebar
+    toggleBtn.addEventListener('click', function () {
+        sidebar.classList.toggle('open');
+        overlay.classList.toggle('active');
+    });
+
+    // Close sidebar when clicking on overlay
+    overlay.addEventListener('click', function () {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+    });
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function (event) {
+        const isClickInsideSidebar = sidebar.contains(event.target);
+        const isClickOnToggle = toggleBtn.contains(event.target);
+
+        if (!isClickInsideSidebar && !isClickOnToggle && sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+        }
+    });
+});
+
+//todo: Sidebar Links access -
+const sideBarLinks = [
+    'repairDevice.html'
+];
+
+document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(sideBarLinks[idx], '_self');
+    });
+});
