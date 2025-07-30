@@ -135,6 +135,7 @@ body {
 
 .fa-user {
     font-size: 2rem;
+    color: #0000FF;
 }
 
 /* Desktop hover behavior */
@@ -173,7 +174,7 @@ body {
 }
 
 .login-btn .btn {
-    background-color: #000;
+    background-color: #FF0000;
     padding: 8px 16px;
     color: #fff;
     text-decoration: none;
@@ -451,7 +452,7 @@ select:hover {
     }
 
     .login-btn .btn {
-        background-color: #000;
+        background-color: #FF0000;
         border-radius: 8px;
         padding: 20px 20px;
         font-size: 14px;
