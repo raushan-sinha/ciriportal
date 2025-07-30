@@ -282,10 +282,6 @@ select:hover {
     transition: background 0.3s ease;
 }
 
-.hamburger:hover {
-    background: #f5f5f5;
-}
-
 .hamburger span {
     width: 35px;
     height: 3px;
