@@ -1619,12 +1619,12 @@ strong {
     margin-top: 40px;
 }
 
-#feature-card {
+.feature-card {
     background: #101923;
     padding: 40px 20px;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px #857777;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -2374,16 +2374,16 @@ button:hover {
     gap: 1.5rem;
 }
 
-.feature-card {
+.about-feature-card {
     background: white;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px #857777;
     transition: all 0.3s ease;
     border: 1px solid #e5e7eb;
 }
 
-.feature-card:hover {
+.about-feature-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
@@ -2393,14 +2393,14 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-.feature-card h3 {
+.about-feature-card h3 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #1f2937;
 }
 
-.feature-card p {
+.about-feature-card p {
     color: #6b7280;
     font-size: 0.9rem;
 }
