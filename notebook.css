@@ -704,114 +704,118 @@ select:hover {
 
 /* Notebook Section */
 .notebook-section {
-    padding: 40px 20px;
-    background-color: #f5fcff;
+    padding: 50px 20px;
+    background-color: #f7f9fc;
     text-align: center;
 }
 
-.notebook-scroll-wrapper {
-    overflow-x: auto;
-    padding-bottom: 10px;
+.notebook-section .section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 40px;
 }
 
-.notebook-container {
-    display: flex;
+/* Notebook Grid */
+.notebook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    width: max-content;
-    animation: scrollLeftRight 30s linear infinite alternate;
-    padding: 10px;
+    justify-items: center;
 }
 
+/* Notebook Card */
 .notebook-card {
-    min-width: 280px;
-    max-width: 250px;
     background: #ffffff;
     border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.notebook-card img {
+    box-shadow: 0 4px 10px #857777;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 250px;
     width: 100%;
-    height: 240px;
-    object-fit: fill;
+    text-align: center;
 }
 
+.notebook-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Styling */
+.notebook-card img {
+    width: 180px;
+    height: 220px;
+    object-fit: fill;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
 .notebook-card p {
-    padding: 10px;
-    font-weight: 600;
     font-size: 1rem;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 10px;
 }
 
 .notebook-card span {
-    display: block;
-    font-weight: 400;
-    color: #444;
+    font-weight: 600;
+    color: #16a34a;
 }
 
+/* Order Button */
 .order-btn {
-    margin: 10px auto 15px;
-    padding: 8px 18px;
-    background-color: #007bff;
+    background-color: #0f172a;
     color: white;
     border: none;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .order-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Rules Section */
-.rules-section {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.rules-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.rules-content ul {
-    list-style: disc inside;
-    line-height: 1.8;
-    color: #444;
-    font-size: 1rem;
-}
-
-/* Scroll Animation */
-@keyframes scrollLeftRight {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
+    background-color: #1e293b;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .notebook-container {
-        animation: none;
-        flex-wrap: nowrap;
-        overflow-x: auto;
+    .notebook-section {
+        padding: 40px 15px;
     }
 
     .notebook-card {
-        min-width: 160px;
+        padding: 16px;
     }
 
-    .rules-content {
-        text-align: left;
+    .notebook-card img {
+        width: 160px;
+        height: 200px;
+    }
+
+    .notebook-card p {
+        font-size: 0.95rem;
+    }
+
+    .order-btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 468px) {
+    .notebook-card img {
+        width: 140px;
+        height: 180px;
+    }
+
+    .notebook-card p {
+        font-size: 0.9rem;
+    }
+
+    .order-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
     }
 }
 
