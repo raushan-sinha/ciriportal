@@ -716,7 +716,7 @@ select:hover {
 /* Toggle button */
 .sidebar-toggle {
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 20px;
     z-index: 1001;
     width: 50px;
@@ -944,7 +944,8 @@ select:hover {
 
 @media (max-width: 480px) {
     .sidebar {
-        width: 220px;
+        width: 280px;
+        top: 170px;
     }
 
     .sidebar-header {
@@ -956,7 +957,7 @@ select:hover {
     }
 
     .sidebar-toggle {
-        top: 100px;
+        top: 150px;
         left: 10px;
         width: 40px;
         height: 40px;
@@ -1638,9 +1639,7 @@ strong {
     height: 100%;
 }
 
-.feature-card:hover::before {
-    left: 100%;
-}
+
 
 .feature-card:hover {
     transform: translateY(-10px);
