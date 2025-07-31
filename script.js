@@ -455,6 +455,18 @@ document.querySelectorAll('.action-btn, .view-all-btn').forEach(btn => {
 });
 
 
+//todo: Access Pages -
+document.querySelector('.btn-distributor').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('distributor.html', '_self');
+})
+
+document.querySelector('.btn-retailer').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('retailer.html', '_self');
+})
+
+
 //todo: Access Services program -
 const programs = [
     'product-training.html',
