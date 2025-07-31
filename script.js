@@ -455,24 +455,64 @@ document.querySelectorAll('.action-btn, .view-all-btn').forEach(btn => {
 });
 
 
+//todo: Access Services program -
+const programs = [
+    'product-training.html',
+    'loyalty-rewards.html',
+    'returnPolicy.html',
+    'business-culture.html',
+    'seasonal-offers.html',
+    'support-assistance.html'
+];
 
-//todo: Why Choose Section links access -
-const chooseSection = [
-    'distributor.html',
+document.querySelectorAll('.programs-grid .program-card button').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open(programs[idx], '_self');
+    })
+})
+
+
+document.querySelector('.view-all-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('laptops.html', '_self')
+})
+
+
+//todo: Access page
+const chooseCard = [
+    'manufacturer.html',
     'joinCiri.html',
     'member-request.html'
 ];
 
-document.querySelectorAll('.why-choose-section .action-card a').forEach((link, idx) => {
+document.querySelectorAll('.choose-grid .choose-card button').forEach((link, idx) => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        window.open(chooseSection[idx], '_self');
+        window.open(chooseCard[idx], '_self');
+    })
+})
+
+
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        slide.style.display = "none";
     });
-});
+    slides[index].classList.add("active");
+    slides[index].style.display = "block";
+}
 
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
 
-//todo: View Products -
-document.querySelector('.viewProducts').addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open('laptops.html', '_self');
-});
+// Initially show the first slide
+showSlide(currentSlide);
+
+// Change slide every 2 seconds
+setInterval(nextSlide, 2000);
