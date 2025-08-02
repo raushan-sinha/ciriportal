@@ -1583,7 +1583,7 @@ html {
     padding: 16px;
     border-radius: 12px;
     transition: transform 0.3s ease;
-    background-color: #fff;
+    background-color: #ccc;
 }
 
 .product-item:hover {

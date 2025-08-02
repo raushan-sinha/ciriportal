@@ -1,8 +1,3 @@
-document.querySelector('#email').addEventListener('click', (e) => {
-    e.preventDefault();
-    open('mail:ciriportal@gmail.com', '_self');
-});
-
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('.navbar-nav');
 const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
