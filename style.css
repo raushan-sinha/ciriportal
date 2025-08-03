@@ -159,6 +159,11 @@ body {
     color: #232F3E;
 }
 
+.fa-cart-shopping {
+    font-size: 2rem;
+    color: #232F3E;
+}
+
 /* Desktop hover behavior */
 @media (min-width: 993px) {
     .navbar-nav .dropdown:hover>.dropdown-menu {
@@ -189,8 +194,9 @@ body {
 /* Right Section */
 .nav-right {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     flex-shrink: 0;
 }
 
@@ -204,10 +210,11 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     white-space: nowrap;
+    border: none;
 }
 
 .login-btn .btn:hover {
-    background-color: #333;
+    background-color: #101923;
     color: whitesmoke;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -551,7 +558,8 @@ select:hover {
         padding: 6px 0;
     }
 
-    .fa-user {
+    .fa-user,
+    .fa-cart-shopping {
         font-size: 1.5rem;
     }
 

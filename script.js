@@ -193,18 +193,23 @@ document.querySelectorAll('.login-btn ul a').forEach((link, idx) => {
 
 
 //todo: Admin Control -
-const adminLinks = [
-    'adminLogin.html',
-    // 'adminPanel.html',
-    'adminDashboard.html'
-];
+// const adminLinks = [
+//     'adminLogin.html',
+//     // 'adminPanel.html',
+//     'adminDashboard.html'
+// ];
 
-document.querySelectorAll('.admin-btn a').forEach((link, idx) => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        open(adminLinks[idx], '_self');
-    });
-});
+// document.querySelectorAll('.admin-btn a').forEach((link, idx) => {
+//     link.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         open(adminLinks[idx], '_self');
+//     });
+// });
+
+document.querySelector('.fa-user').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('adminLogin.html', '_self');
+})
 
 
 //todo: Offers & Promotions -
