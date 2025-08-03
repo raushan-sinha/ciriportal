@@ -11,7 +11,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background: linear-gradient(to bottom, #b9e9f0, #d6ecf0);
+    background: #EAEDED;
     color: #000;
     position: sticky;
     top: 0;
@@ -708,10 +708,10 @@ select:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     flex-wrap: wrap;
     gap: 150px;
-    background: linear-gradient(135deg, #00ffff, #87ceeb);
+    background: #232F3E;
 }
 
 #searchBox {
@@ -723,8 +723,8 @@ select:hover {
 }
 
 .icon-btn {
-    background-color: #1e293b;
-    color: white;
+    background-color: #febd69;
+    color: #101923;
     border: none;
     padding: 10px;
     border-radius: 50%;
@@ -734,17 +734,13 @@ select:hover {
     height: 40px;
     transition: background 0.3s;
 }
-
-.icon-btn:hover {
-    background-color: #334155;
-}
-
 .product-filter {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    color: white;
 }
 
 #priceFilter {
@@ -836,6 +832,7 @@ select:hover {
         background-color: transparent;
         display: block;
         font-size: 1.28rem;
+         color: white;
     }
 }
 
@@ -845,6 +842,7 @@ select:hover {
         background-color: transparent;
         display: block;
         font-size: 1.28rem;
+         color: white;
     }
 }
 
