@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiriPortal - Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
+
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="colddrinks.html">colddrinks</a></li>
+                            <li><a href="chips.html">Chips</a></li>
+                            <li><a href="candyman.html">Candyman</a></li>
+                            <li><a href="rice.html">Rice</a></li>
+                            <li><a href="coldDrinks.html">Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Face Wash</a></li>
+                            <li><a href="facecream.html">Face Cream</a></li>
+                            <li><a href="handwash.html">Hand wash</a></li>
+                            <li><a href="perfume.html">Perfumes</a></li>
+                            <li><a href="medicalKit.html">Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Outfits & Devices<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="mobiles.html">Mobiles</a></li>
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                            <li><a href="shirts.html">Shirts</a></li>
+                            <li><a href="eyeGlass.html">Eye Glass</a></li>
+                            <li><a href="television.html">Televisions</a></li>
+                            <li><a href="handWatch.html">Hand Watches</a></li>
+                            <li><a href="bags.html">Bags</a></li>
+                            <li><a href="pants.html">Jeans & Pants</a></li>
+                            <li><a href="bulbs.html">Bulbs</a></li>
+                            <li><a href="earphones.html">Ear Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">NoteBook</a></li>
+                            <li><a href="pen.html">Pen & Pencils</a></li>
+                            <li><a href="geometry.html">GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-right">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search with Camera and Mic -->
+        <div class="search-box">
+            <div>
+                <button id="backPage"><i class="fa-solid fa-arrow-left"></i></button>
+            </div>
+            <div>
+                <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+                <!-- <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button> -->
+                <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                <button class="icon-btn" id="startVoice"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="product-filter">
+                <h3>Filter Products & Price: </h3>
+                <select id="priceFilter">
+                    <option value="">Filter by Price</option>
+                    <option value="low">Below ₹100</option>
+                    <option value="medium">₹100–₹500</option>
+                    <option value="high">Above ₹500</option>
+                </select>
+            </div>
+        </div>
+        <!-- Video element for camera preview -->
+        <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+        <!-- Product list display -->
+        <div class="product-results" id="productResults"></div>
+    </header>
+
+    <header class="cart-heading">
+        <h1>Your Shopping Cart</h1>
+        <p>Review your selected items and proceed to purchase or save for later.</p>
+        <button class="add-cart-btn">Add to Cart</button>
+    </header>
+    <section class="cart-container">
+        <!-- Product 1 -->
+        <div class="cart-wrapper">
+            <div class="cart-card">
+                <div class="image-box">
+                    <img src="https://m.media-amazon.com/images/I/71geVdy6-OS._AC_UL480_FMwebp_QL65_.jpg"
+                        alt="Mobile Phone" />
+                </div>
+                <div class="cart-details">
+                    <h2>Redmi Note 12 5G</h2>
+                    <p>Storage: 128 GB | RAM: 6 GB | 5000 mAh Battery</p>
+                    <span class="price">₹14,999</span>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="cart-wrapper">
+            <div class="cart-card">
+                <div class="image-box">
+                    <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/526833382_1098551518867319_1970345131458900363_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=bSsde8R8fxoQ7kNvwFBhQ4U&_nc_oc=AdlD23ZwLgsglcOtCDVfUAw5li_nSm5__SkJrBZEYYjwBedwWgsIWGCrwXiyqf_TtnI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wEhcWsamOr8jILHxBy2EwAC3PKr5UIAmQubMfGJgddojQ&oe=68B3EAC0"
+                        alt="Smart TV" />
+                </div>
+                <div class="cart-details">
+                    <h2>Samsung 43\" Smart LED TV</h2>
+                    <p>Ultra HD 4K | LED Panel | Dolby Audio</p>
+                    <span class="price">₹28,490</span>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="cart-wrapper">
+            <div class="cart-card">
+                <div class="image-box">
+                    <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/525245046_1476702593687422_1594868404683579805_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=pBmoC9Wu7T8Q7kNvwEdG4O0&_nc_oc=Adn1kttdUbZ-RXT6AijknsWBcG_J9KfUbfOBa1mOLptjHEmT4u5QcVrnmU0p5zBXKPQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wHlsdkT5F_-zPzdSuhxP7ndDUjVIDa9g0qDdCJVsNevpA&oe=68B415FD"
+                        alt="Smart TV" />
+                </div>
+                <div class="cart-details">
+                    <h2>Realme Buds Wireless 2</h2>
+                    <p> ANC • Bass Boost+</p>
+                    <span class="price">₹1,499</span>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="cart-wrapper">
+            <div class="cart-card">
+                <div class="image-box">
+                    <img src="image-container">
+                    <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/524394122_994323016002969_2000933690399001323_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tnr6Iv1gwzEQ7kNvwFXAAl9&_nc_oc=AdlL-5VSu6a-lmOXZfUgHlF0pugaCSet8S8T_A1eG0F12hr-vYqVUBgRtVbNWX9oteU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wHPze_uEvaU00pIqrwbs8dTWchJWG4Xnkt6xQRBHfmrxA&oe=68B40E60"
+                        alt="HP Pavilion x360" />
+                </div>
+                <div class="cart-details">
+                    <h2>HP Pavilion x360</h2>
+                    <p>Intel i7 12th Gen | 1TB SSD | 16GB</p>
+                    <span class="price">₹48,490</span>
+                    <button class="buy-now-btn">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        <p>Contact us: ciriportal@gmail.com</p>
+        <div class="footer-socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

@@ -211,6 +211,11 @@ document.querySelector('.fa-user').addEventListener('click', (e) => {
     window.open('adminLogin.html', '_self');
 })
 
+//todo: Access Cart Page-
+document.querySelector('.fa-cart-shopping').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('cart.html', '_self');
+});
 
 //todo: Offers & Promotions -
 document.querySelector('.offers-btn').addEventListener('click', (e) => {
@@ -533,3 +538,5 @@ showSlide(currentSlide);
 
 // Change slide every 2 seconds
 setInterval(nextSlide, 2000);
+
+
