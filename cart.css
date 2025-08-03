@@ -807,8 +807,17 @@ select:hover {
     font-weight: bold;
 }
 
+.cart-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 /* Buy Now Button */
 .buy-now-btn {
+    width: 50%;
     background-color: #f7ca00;
     color: #111111;
     border: none;
@@ -823,6 +832,12 @@ select:hover {
 .buy-now-btn:hover {
     background-color: #e6b800;
     transform: scale(1.05);
+}
+
+.fa-trash {
+    color: rgb(241, 79, 79);
+    font-size: 1.8rem;
+    margin-top: 3%;
 }
 
 /* Add to Cart Button (Outside) */
@@ -1169,4 +1184,53 @@ select:hover {
         color: blue;
         opacity: 0.64;
     }
+}
+
+/* Confirmation Alert */
+.confirm-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 1001;
+    width: 300px;
+    text-align: center;
+}
+
+#confirmDelete,
+#cancelDelete {
+    padding: 10px 20px;
+    margin: 10px 5px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Yes Button - Green */
+#confirmDelete {
+    background-color: #4caf50;
+    color: white;
+}
+
+#confirmDelete:hover {
+    background-color: #43a047;
+    transform: scale(1.05);
+}
+
+/* No Button - Red */
+#cancelDelete {
+    background-color: #f44336;
+    color: white;
+}
+
+#cancelDelete:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
 }

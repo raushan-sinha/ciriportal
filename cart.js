@@ -162,3 +162,34 @@ recognition.addEventListener('result', (e) => {
 recognition.addEventListener('error', (e) => {
     console.error("Speech Recognition Error:", e.error);
 });
+
+
+
+//todo: Delete Button -
+document.querySelectorAll('.cart-btn .fa-trash').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        const itemCard = document.querySelector('.cart-wrapper');
+        if (!itemCard) return;
+
+        //? Create a confirmation dialog
+        const confirmAlert = document.createElement('div');
+        confirmAlert.className = 'confirm-alert';
+        confirmAlert.innerHTML = `
+            <p>Are you sure you want to delete this item?</p>
+            <button id="confirmDelete">Yes</button>
+            <button id="cancelDelete">No</button>
+        `;
+        document.body.appendChild(confirmAlert);
+
+        //? Handle confirmation - Item Card Remove
+        document.querySelector('#confirmDelete').addEventListener('click', () => {
+            itemCard.remove();
+            confirmAlert.remove();
+        });
+
+        //? Handle confirmation - Item Card Not Remove
+        document.querySelector('#cancelDelete').addEventListener('click', () => {
+            confirmAlert.remove();
+        });
+    });
+});
