@@ -745,6 +745,15 @@ select:hover {
 }
 
 #priceFilter {
+    border-radius: 6px;
+    padding: 6px 2px;
+    background-color: #cc0c39;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
     width: 120px;
 }
 
