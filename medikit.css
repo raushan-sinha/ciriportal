@@ -255,19 +255,19 @@ body {
 
 select {
     border-radius: 6px;
-    padding: 6px 10px;
-    background-color: black;
+    padding: 6px 2px;
+    background-color: #cc0c39;
     color: #fff;
-    border: 1px solid #ddd;
+    border: none;
     width: 110px;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 select:hover {
-    border-color: #999;
-    background-color: #000;
+    opacity: 0.8;
 }
 
 /* Hamburger Menu */
