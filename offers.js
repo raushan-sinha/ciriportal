@@ -48,3 +48,17 @@ window.addEventListener('resize', () => {
         dropdowns.forEach(d => d.classList.remove('open'));
     }
 });
+
+//todo: Payment Method -
+const paymentBox = document.querySelector('.payment-box ');
+document.querySelectorAll('.product-info .cta-button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        paymentBox.style.display = 'block';
+    });
+});
+
+
+//todo: Close Payment Box -
+document.querySelector('#closePaymentBox').addEventListener('click', () => {
+    paymentBox.style.display = 'none';
+});
