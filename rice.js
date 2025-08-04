@@ -100,3 +100,16 @@ document.querySelector('#searchBox').addEventListener('keypress', (e) => {
     }
 })
 
+//todo: Payment Method -
+const paymentBox = document.querySelector('.payment-box ');
+document.querySelectorAll('.product-info .order-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        paymentBox.style.display = 'block';
+    });
+});
+
+
+//todo: Close Payment Box -
+document.querySelector('#closePaymentBox').addEventListener('click', () => {
+    paymentBox.style.display = 'none';
+});
