@@ -574,3 +574,17 @@ document.querySelectorAll('.payment-btns .pay-btn').forEach((btn) => {
         paymentBox.style.display = 'none';
     });
 });
+
+
+//todo: Referral Code -
+const closeIconReferral = document.querySelector('#close-icon');
+const referralBox = document.querySelector('.referral-box');
+document.querySelectorAll('.referral-btns .referral-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        referralBox.style.display = 'block';
+    });
+    closeIconReferral.addEventListener('click', () => {
+        referralBox.style.display = 'none';
+    });
+});
