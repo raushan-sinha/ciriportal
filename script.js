@@ -516,27 +516,47 @@ document.querySelectorAll('.choose-grid .choose-card button').forEach((link, idx
 })
 
 
-const slides = document.querySelectorAll(".slide");
+//todo: Sliding section
 let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        slide.style.display = "none";
-    });
-    slides[index].classList.add("active");
-    slides[index].style.display = "block";
-}
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+            
+            // Move slider wrapper
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            sliderWrapper.style.transform = `translateX(-${index * 100}%)`;
+        }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
 
-// Initially show the first slide
-showSlide(currentSlide);
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
 
-// Change slide every 2 seconds
-setInterval(nextSlide, 2000);
+        // Event listeners
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
 
+        // Indicator clicks
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
 
+        // Auto-slide (optional)
+        setInterval(nextSlide, 5000);

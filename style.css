@@ -1109,7 +1109,7 @@ select:hover {
 
 #offers-btn {
     position: fixed;
-    top: 65%;
+    top: 70%;
     right: 1rem;
     z-index: 999;
     background-color: #ff9900;
@@ -1163,7 +1163,6 @@ select:hover {
 
 /* ---------- Responsive Tweaks ---------- */
 @media (max-width: 768px) {
-
     .search-box {
         display: flex;
         flex-direction: row;
@@ -2482,5 +2481,467 @@ html {
 
     100% {
         transform: translateX(-50%);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.slider-container-top {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #f0c14b;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+#prevBtn {
+    left: 20px;
+}
+
+#nextBtn {
+    right: 20px;
+}
+
+/* Flight Section */
+.flight-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.flight-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.discount {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.discount span {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.flight-names {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.flight-names span {
+    background: #f8f9fa;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.image-box {
+    flex: 1;
+    max-width: 400px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* iPhone Section */
+.iphone-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.iphone-details {
+    flex: 1;
+    max-width: 500px;
+}
+
+.iphone-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.storage-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.storage-list li {
+    padding: 12px 0;
+    font-size: 1.2rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.iphone-image {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.iphone-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Laptop Section */
+.laptop-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.laptop-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.laptop-brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.laptop-brands span {
+    background: #e8f4fd;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #2c5aa0;
+}
+
+/* Shirt Section */
+.shirt-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 40px;
+    gap: 40px;
+}
+
+.shirt-details {
+    flex: 1;
+    max-width: 500px;
+}
+
+.shirt-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.shirt-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.shirt-list li {
+    padding: 12px 0;
+    font-size: 1.2rem;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.shirt-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.shirt-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Pay Button */
+.pay-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.pay-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Slide Indicators */
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    .slider-container-top {
+        height: 600px;
+    }
+
+    .flight-section,
+    .iphone-section,
+    .laptop-section,
+    .shirt-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .title,
+    .iphone-title,
+    .shirt-title {
+        font-size: 2rem;
+    }
+
+    .image-box,
+    .iphone-image,
+    .shirt-image {
+        max-width: 300px;
+    }
+
+    .image-box img,
+    .shirt-image img {
+        height: 200px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    #prevBtn {
+        left: 10px;
+    }
+
+    #nextBtn {
+        right: 10px;
+    }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .slider-container-top {
+        height: 550px;
+        border-radius: 15px;
+    }
+
+    .flight-section,
+    .iphone-section,
+    .laptop-section,
+    .shirt-section {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .title,
+    .iphone-title,
+    .shirt-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .discount {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .flight-names,
+    .laptop-brands {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .flight-names span,
+    .laptop-brands span {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .storage-list li,
+    .shirt-list li {
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+
+    .image-box,
+    .iphone-image,
+    .shirt-image {
+        max-width: 250px;
+    }
+
+    .image-box img,
+    .shirt-image img {
+        height: 150px;
+    }
+
+    .iphone-image img {
+        max-width: 200px;
+    }
+
+    .pay-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    #prevBtn {
+        left: 5px;
+    }
+
+    #nextBtn {
+        right: 5px;
+    }
+
+    .slide-indicators {
+        margin-top: 15px;
+    }
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+
+    .title,
+    .iphone-title,
+    .shirt-title {
+        font-size: 1.3rem;
+    }
+
+    .image-box,
+    .iphone-image,
+    .shirt-image {
+        max-width: 200px;
+    }
+
+    .image-box img,
+    .shirt-image img {
+        height: 120px;
     }
 }
