@@ -2760,6 +2760,20 @@ html {
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
+/* Referral Button */
+.referral-btn {
+    background: #008a00;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
 /* Slide Indicators */
 .slide-indicators {
     display: flex;
@@ -2782,12 +2796,18 @@ html {
     transform: scale(1.2);
 }
 
+.payment-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 /* Responsive Design */
 
 /* Tablet - 768px */
 @media (max-width: 768px) {
     .slider-container-top {
-        height: 600px;
+        height: 650px;
     }
 
     .flight-section,
@@ -2830,6 +2850,12 @@ html {
     #nextBtn {
         right: 10px;
     }
+
+    .payment-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Mobile - 480px */
@@ -2839,7 +2865,7 @@ html {
     }
 
     .slider-container-top {
-        height: 550px;
+        height: 650px;
         border-radius: 15px;
     }
 
@@ -2847,7 +2873,7 @@ html {
     .iphone-section,
     .laptop-section,
     .shirt-section {
-        padding: 15px;
+        padding: 20px;
         gap: 20px;
     }
 
@@ -2901,6 +2927,12 @@ html {
         font-size: 1rem;
     }
 
+    .flight-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .nav-btn {
         width: 35px;
         height: 35px;
@@ -2922,6 +2954,12 @@ html {
     .indicator {
         width: 10px;
         height: 10px;
+    }
+
+    .payment-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
