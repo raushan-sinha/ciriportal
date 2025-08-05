@@ -2746,7 +2746,9 @@ html {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 15px 20px;
+    height: 50px;
+    width: 200px;
     border-radius: 25px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -2799,6 +2801,14 @@ html {
 .payment-btns {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+
+.referral-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
@@ -2855,6 +2865,11 @@ html {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .pay-btn {
+        width: 200px;
+        margin: auto;
     }
 }
 
@@ -2960,6 +2975,11 @@ html {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .pay-btn {
+        width: 200px;
+        margin: auto;
     }
 }
 
