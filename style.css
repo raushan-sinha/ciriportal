@@ -3007,3 +3007,96 @@ html {
         height: 120px;
     }
 }
+
+/* Payment Box */
+.payment-box {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 90%;
+    max-width: 320px;
+    padding: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.payment-box.active {
+    display: block;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    color: #555;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    color: red;
+}
+
+.pay-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #006eff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.rules-box {
+    background-color: #f9f9f9;
+    border-left: 4px solid #006eff;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #444;
+    margin: 10px 0 20px;
+    border-radius: 6px;
+}
+
+.rules-box ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.rules-box li {
+    margin-bottom: 6px;
+}
+
+.pay-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #006eff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay-button:hover {
+    background-color: #0052cc;
+}
+
+@media (max-width: 480px) {
+    .pay-title {
+        font-size: 18px;
+    }
+
+    .rules-box {
+        font-size: 13px;
+    }
+
+    .pay-button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}

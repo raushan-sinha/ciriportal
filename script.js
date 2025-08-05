@@ -560,3 +560,17 @@ indicators.forEach((indicator, index) => {
 
 // Auto-slide (optional)
 setInterval(nextSlide, 5000);
+
+
+//todo: Payment Sliding top -
+const closeIcon = document.querySelector('.close-icon');
+const paymentBox = document.querySelector('.payment-box');
+document.querySelectorAll('.payment-btns .pay-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        paymentBox.style.display = 'block';
+    });
+    closeIcon.addEventListener('click', () => {
+        paymentBox.style.display = 'none';
+    });
+});
