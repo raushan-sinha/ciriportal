@@ -41,6 +41,7 @@ body {
     border-radius: 6px;
     margin-bottom: 0.5rem;
     transition: background 0.2s;
+    white-space: nowrap;
 }
 
 .sidebar-nav a.active,

@@ -43,6 +43,7 @@ body {
     border-radius: 8px;
     transition: background 0.3s;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .sidebar-nav a:hover,
