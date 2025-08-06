@@ -10,77 +10,328 @@
 </head>
 
 <body>
-    <header class="dashboard-header">
+    <!-- Header -->
+    <header class="header">
         <div class="header-left">
-            <img src="" alt="Retailer Avatar" class="avatar" id="avatarPreview">
-            <div>
-                <h1>Welcome, Retailer</h1>
-                <p>Retailer Code: CIRI-R001</p>
-                <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile
-                    Image</button>
-                <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
+            <div class="user-info">
+                <img src="/placeholder.svg?height=50&width=50" alt="Avatar" class="avatar" id="avatar">
+                <div class="user-details">
+                    <h1>Welcome, Retailer</h1>
+                    <p>Code: CIRI-R001</p>
+                    <label for="upload" class="upload-btn">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </label>
+                    <input type="file" id="upload" accept="image/*" style="display:none">
+                </div>
             </div>
         </div>
-        <button class="logout-btn">Logout</button>
+        <button class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
     </header>
 
-    <main class="dashboard-container">
-        <section class="summary-cards">
-            <div class="card">Total Orders: <strong>80</strong></div>
-            <div class="card">Pending Deliveries: <strong>5</strong></div>
-            <div class="card">Earnings This Month: <strong>₹20,500</strong></div>
-            <div class="card">Retailer Code: <strong>CIRI-R001</strong></div>
-        </section>
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-wrapper">
+        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+        <label for="mobile-menu-toggle" class="mobile-menu-btn">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </label>
+        
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay">
+            <nav class="mobile-nav">
+                <a href="#products" class="mobile-nav-link">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Browse Products</span>
+                </a>
+                <a href="#cart" class="mobile-nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart & Checkout</span>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#returns" class="mobile-nav-link">
+                    <i class="fas fa-undo"></i>
+                    <span>Return Request</span>
+                </a>
+                <a href="#offers" class="mobile-nav-link">
+                    <i class="fas fa-gift"></i>
+                    <span>Offers & Schemes</span>
+                </a>
+            </nav>
+        </div>
+    </div>
 
-        <section class="orders-section">
-            <h2>Order History</h2>
-            <ul>
-                <li>Order #2001 - Delivered</li>
-                <li>Order #2002 - In Transit</li>
-                <li>Order #2003 - Pending</li>
-            </ul>
-        </section>
+    <!-- Desktop Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#products" class="nav-link active">
+                <i class="fas fa-shopping-bag"></i>
+                <span>Browse Products</span>
+            </a>
+            <a href="#cart" class="nav-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart & Checkout</span>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="#returns" class="nav-link">
+                <i class="fas fa-undo"></i>
+                <span>Return Request</span>
+            </a>
+            <a href="#offers" class="nav-link">
+                <i class="fas fa-gift"></i>
+                <span>Offers & Schemes</span>
+            </a>
+        </div>
+    </nav>
 
-        <section class="product-shop">
-            <h2>Shop Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="Images/chips.jpeg" alt="Chips">
-                    <p>Chips - ₹20</p>
-                    <button>Order Now</button>
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Summary Cards -->
+        <section class="stats">
+            <div class="stat-card blue">
+                <div class="stat-info">
+                    <p>Total Orders</p>
+                    <h3>80</h3>
                 </div>
-                <div class="product-card">
-                    <img src="Images/rice.jpeg" alt="Rice">
-                    <p>Rice - ₹45</p>
-                    <button>Order Now</button>
+                <i class="fas fa-box"></i>
+            </div>
+            <div class="stat-card orange">
+                <div class="stat-info">
+                    <p>Pending Deliveries</p>
+                    <h3>5</h3>
                 </div>
-                <!-- Add more product-card blocks as needed -->
+                <i class="fas fa-truck"></i>
+            </div>
+            <div class="stat-card green">
+                <div class="stat-info">
+                    <p>Monthly Earnings</p>
+                    <h3>₹20,500</h3>
+                </div>
+                <i class="fas fa-rupee-sign"></i>
+            </div>
+            <div class="stat-card purple">
+                <div class="stat-info">
+                    <p>Growth Rate</p>
+                    <h3>+12%</h3>
+                </div>
+                <i class="fas fa-chart-line"></i>
             </div>
         </section>
 
-        <section class="reports-section">
-            <h2>Sales Reports</h2>
-            <p>This Month: ₹20,500</p>
-            <p><button>Download Invoice</button></p>
+        <!-- Products Section -->
+        <section class="content-section" id="products">
+            <div class="section-header">
+                <h2>Browse Products</h2>
+                <span class="badge">6 Products Available</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=150&width=150&text=Chips" alt="Premium Chips">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Chips</h3>
+                        <div class="product-footer">
+                            <span class="price">₹20</span>
+                            <button class="btn-add">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=150&width=150&text=Rice" alt="Basmati Rice">
+                    </div>
+                    <div class="product-info">
+                        <h3>Basmati Rice</h3>
+                        <div class="product-footer">
+                            <span class="price">₹45</span>
+                            <button class="btn-add">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=150&width=150&text=Oil" alt="Cooking Oil">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cooking Oil</h3>
+                        <div class="product-footer">
+                            <span class="price">₹120</span>
+                            <button class="btn-add">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=150&width=150&text=Flour" alt="Wheat Flour">
+                    </div>
+                    <div class="product-info">
+                        <h3>Wheat Flour</h3>
+                        <div class="product-footer">
+                            <span class="price">₹35</span>
+                            <button class="btn-add">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=150&width=150&text=Sugar" alt="Sugar">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sugar</h3>
+                        <div class="product-footer">
+                            <span class="price">₹42</span>
+                            <button class="btn-add">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/placeholder.svg?height=150&width=150&text=Tea" alt="Tea Leaves">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tea Leaves</h3>
+                        <div class="product-footer">
+                            <span class="price">₹85</span>
+                            <button class="btn-add">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="support-section">
-            <h2>Need Help?</h2>
-            <button>Chat Support</button>
-            <button>Email Us</button>
+        <!-- Cart Section -->
+        <section class="content-section" id="cart">
+            <h2>Cart & Checkout</h2>
+            <div class="cart-container">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <a href="#products" class="btn-primary">Browse Products</a>
+                </div>
+                <div class="cart-total" style="display:none">
+                    <span>Total: <strong>₹0</strong></span>
+                    <button class="btn-checkout">Proceed to Checkout</button>
+                </div>
+            </div>
         </section>
 
-        <section class="settings-section">
-            <h2>Retailer Settings</h2>
-            <ul>
-                <li><button>Update Profile</button></li>
-                <li><button>Change Password</button></li>
-                <li><button>Bank Details</button></li>
-            </ul>
+        <!-- Returns Section -->
+        <section class="content-section" id="returns">
+            <h2>Return Requests</h2>
+            <div class="returns-grid">
+                <div class="form-card">
+                    <h3>Submit Return Request</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Order ID</label>
+                            <input type="text" placeholder="Enter order ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Reason for Return</label>
+                            <textarea placeholder="Describe the reason for return" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit Return Request</button>
+                    </form>
+                </div>
+                <div class="return-history">
+                    <h3>Recent Return Requests</h3>
+                    <div class="return-list">
+                        <div class="return-item">
+                            <span>Order #2001</span>
+                            <span class="badge pending">Pending</span>
+                        </div>
+                        <div class="return-item">
+                            <span>Order #1998</span>
+                            <span class="badge approved">Approved</span>
+                        </div>
+                        <div class="return-item">
+                            <span>Order #1995</span>
+                            <span class="badge delivered">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section class="content-section" id="offers">
+            <h2>Offers & Schemes</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-badge">10% OFF</div>
+                    <div class="offer-content">
+                        <h3>Buy 10 Get 1 Free</h3>
+                        <p>On all grocery items</p>
+                        <button class="apply-btn">Apply Offer</button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-badge">15% OFF</div>
+                    <div class="offer-content">
+                        <h3>Bulk Order Discount</h3>
+                        <p>Orders above ₹5000</p>
+                        <button class="apply-btn">Apply Offer</button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-badge">20% OFF</div>
+                    <div class="offer-content">
+                        <h3>Festival Special</h3>
+                        <p>Limited time offer</p>
+                        <button class="apply-btn">Apply Offer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Info -->
+        <section class="additional-info">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3><i class="fas fa-history"></i> Recent Orders</h3>
+                    <div class="order-list">
+                        <div class="order-item">
+                            <span>Order #2001</span>
+                            <span class="badge delivered">Delivered</span>
+                        </div>
+                        <div class="order-item">
+                            <span>Order #2002</span>
+                            <span class="badge transit">In Transit</span>
+                        </div>
+                        <div class="order-item">
+                            <span>Order #2003</span>
+                            <span class="badge pending">Pending</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-tools"></i> Quick Actions</h3>
+                    <div class="action-grid">
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download Invoice</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-comments"></i>
+                            <span>Chat Support</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email Us</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <script src="retailerPage.js"></script>
 </body>
 
 </html>
