@@ -37,6 +37,7 @@ body {
     border-radius: 5px;
     margin-bottom: 0.5rem;
     transition: background 0.3s;
+    white-space: nowrap;
 }
 
 .sidebar-nav a:hover,

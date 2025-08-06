@@ -66,7 +66,8 @@ const dashboardNavLinks = [
     'manufacturerPage.html',
     'distributorOrder.html',
     'inventory.html',
-    'distributorRetail.html'
+    'distributorRetail.html',
+    'reports-returns.html'
 ];
 
 document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {

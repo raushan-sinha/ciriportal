@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Reports & Returns</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="reports-returns.css">
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">CiriPortal</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="#manufacturer"><span class="sidebar-icon">📦</span> Manufacturer</a>
+            <a href="#orders"><span class="sidebar-icon">📝</span> Orders</a>
+            <a href="#inventory"><span class="sidebar-icon">📊</span> Inventory</a>
+            <a href="#retailers"><span class="sidebar-icon">🛒</span> Retailers</a>
+            <a href="#reports&returns"><span class="sidebar-icon">🧾</span> Reports & Returns</a>
+        </nav>
+    </aside>
+    <!-- Hamburger for mobile -->
+    <button class="sidebar-toggle" id="sidebarToggleBtn">
+        < </button>
+
+            <!-- Main Wrapper -->
+            <div class="main-content">
+                <section class="reports-returns">
+                    <h1 class="section-title">📦 Reports & Returns</h1>
+
+                    <!-- Returns Section -->
+                    <div class="card return-section">
+                        <h2>Return a Product</h2>
+                        <p>You can initiate a return within the return window. Please select the reason below:</p>
+                        <select>
+                            <option>-- Select Return Reason --</option>
+                            <option>Wrong Product Delivered</option>
+                            <option>Damaged or Defective</option>
+                            <option>Item Not Needed</option>
+                        </select>
+                        <button class="btn">Submit Return Request</button>
+                        <p class="info">Refund will be processed after successful inspection.</p>
+                    </div>
+
+                    <!-- Report Section -->
+                    <div class="card report-section">
+                        <h2>Order Reports</h2>
+                        <p>Track past orders, download receipts, and report any issues below.</p>
+                        <div class="report-actions">
+                            <button class="btn">📥 Download CSV</button>
+                            <button class="btn">📄 Download PDF</button>
+                            <button class="btn">⚠️ Report an Issue</button>
+                        </div>
+                    </div>
+
+                    <!-- Status Tracker -->
+                    <div class="card tracker-section">
+                        <h2>Return Status Tracker</h2>
+                        <ul class="tracker">
+                            <li class="active">Request Received</li>
+                            <li>Pickup Scheduled</li>
+                            <li>Product Inspected</li>
+                            <li>Refund Initiated</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+
+
+
+            <script src="reports-returns.js"></script>
+</body>
+
+</html>
