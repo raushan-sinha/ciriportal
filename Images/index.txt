@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="nav-logo">
+                <img src="Images/ciri-logo.png" alt="CiriUAE-logo" class="logo">
+                <span class="logo-text">CiriPortal</span>
+            </div>
+
+            <nav class="navbar-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Foods & Drinks<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="flour.html">Flour</a></li>
+                            <li><a href="chips.html">Chips</a></li>
+                            <li><a href="candyman.html">Candyman</a></li>
+                            <li><a href="rice.html">Rice</a></li>
+                            <li><a href="coldDrinks.html">Cold Drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Personal care <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="facewash.html">Face Wash</a></li>
+                            <li><a href="facecream.html">Face Cream</a></li>
+                            <li><a href="handwash.html">Hand wash</a></li>
+                            <li><a href="perfume.html">Perfumes</a></li>
+                            <li><a href="medicalKit.html">Medical Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Outfits & Devices<span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shoes.html">Shoes</a></li>
+                            <li><a href="mobiles.html">Mobiles</a></li>
+                            <li><a href="laptops.html">Laptops</a></li>
+                            <li><a href="refrigerator.html">Refrigerator</a></li>
+                            <li><a href="shirts.html">Shirts</a></li>
+                            <li><a href="eyeGlass.html">Eye Glass</a></li>
+                            <li><a href="television.html">Televisions</a></li>
+                            <li><a href="handWatch.html">Hand Watches</a></li>
+                            <li><a href="bags.html">Bags</a></li>
+                            <li><a href="pants.html">Jeans & Pants</a></li>
+                            <li><a href="bulbs.html">Bulbs</a></li>
+                            <li><a href="earphones.html">Ear Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="sustainability.html">Sustainability</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Education <span class="icon">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="notebook.html">NoteBook</a></li>
+                            <li><a href="pen.html">Pen & Pencils</a></li>
+                            <li><a href="geometry.html">GeometryBox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="media.html">Media</a></li>
+                </ul>
+                <select id="countrySelect">
+                    <option value="">Country</option>
+                </select>
+            </nav>
+
+            <div class="nav-right">
+                <div class="login-btn dropdown">
+                    <button class="btn dropdown-toggle">Login<span class="arrow"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Distributor Login</a></li>
+                        <li><a href="#">Retailer Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="admin-btn dropdown">
+                    <i class="fa-solid fa-user"></i>
+                    <!-- <ul class="dropdown-menu">
+                        <li><a href="#">Admin Login</a></li>
+                        <li><a href="#">Admin Panel</a></li>
+                        <li><a href="#">Admin Dashboard</a></li>
+                    </ul> -->
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!-- Search with Camera and Mic -->
+        <div class="search-box">
+            <div>
+                <input type="text" name="search" id="searchBox" placeholder="Search CiriPortal..." />
+                <button class="icon-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+                <!-- <button class="icon-btn" id="cameraBtn"><i class="fas fa-camera"></i></button> -->
+                <button class="icon-btn" id="startVoice"><i class="fas fa-microphone"></i></button>
+            </div>
+            <div class="product-filter">
+                <h3>Filter Products & Price: </h3>
+                <select id="priceFilter">
+                    <option value="">Filter by Price</option>
+                    <option value="low">Below ₹100</option>
+                    <option value="medium">₹100–₹500</option>
+                    <option value="high">Above ₹500</option>
+                </select>
+            </div>
+        </div>
+        <hr id="line">
+
+        <!-- Video element for camera preview -->
+        <video id="cameraPreview" autoplay playsinline width="300" style="display:none;"></video>
+
+        <!-- Product list display -->
+        <div class="product-results" id="productResults"></div>
+    </header>
+
+    <!-- Sidebar container -->
+    <div class="sidebar-container">
+        <!-- Overlay for closing sidebar when clicking outside -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Sidebar toggle button -->
+        <div class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+
+        <!-- Sidebar content -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-nav">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-share-alt"></i>
+                    Referral System
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-bullseye"></i>
+                    CSR & Mission Page
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-question-circle"></i>
+                    Help Center for Users
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-briefcase"></i>
+                    CiriPortal Wallet
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-heart"></i>
+                    Wishlists
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    Combo Monthly Offers Deals
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Sliding Section -->
+        <div class="slider-container-top">
+            <button id="prevBtn" class="nav-btn">&#10094;</button>
+            <div class="slider-wrapper">
+                <!-- Slide 1: Freedom Flight -->
+                <div class="slide active">
+                    <div class="flight-section">
+                        <div class="flight-content">
+                            <h2 class="title">Freedom Flight to This Weekend</h2>
+                            <p class="discount">Minimum <span>11% OFF</span></p>
+                            <div class="flight-names">
+                                <span>✈️ Indigo</span>
+                                <span>🛫 AIR INDIA</span>
+                                <span>🛬 & more...</span>
+                            </div>
+                            <div class="payment-btns">
+                                <button class="pay-btn">CiriPortal Pay</button>
+                                <div class="referral-btns">
+                                    <button class="referral-btn">Use Referral Code</button>
+                                    <a href="security.html">Security & Trust at CiriPortal</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <img src="https://scontent.fixr3-4.fna.fbcdn.net/v/t1.15752-9/525168266_1158806419615901_4465501530770094148_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=qlLwVIIA8jkQ7kNvwFjAuZE&_nc_oc=AdnoAslZiySV5eplMsnZCuAdNi_LwWI8V2guO4fED_vej0yrjs5elPgCWTmbVEX9uvlVOThrsyU3_2rcZ6CtQXkl&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fixr3-4.fna&oh=03_Q7cD3AEZ9IB-2gh2FHpsvfCpELJRpXcz5TP-T7zcw5ULVin3ig&oe=68B8E2FA"
+                                alt="World Tour">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: iPhone 16 Pro -->
+                <div class="slide">
+                    <div class="iphone-section">
+                        <div class="iphone-details">
+                            <h2 class="iphone-title">iPhone 16 Pro</h2>
+                            <ul class="storage-list">
+                                <li>128GB – ₹1,19,900</li>
+                                <li>256GB – ₹1,29,900</li>
+                                <li>512GB – ₹1,49,900</li>
+                                <li>1TB – ₹1,69,900</li>
+                            </ul>
+                            <div class="payment-btns">
+                                <button class="pay-btn">CiriPortal Pay</button>
+                                <div class="referral-btns">
+                                    <button class="referral-btn">Use Referral Code</button>
+                                    <a href="security.html">Security & Trust at CiriPortal</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="iphone-image">
+                            <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/526780598_4114729432076931_6772465867384853517_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ODel9VvEsn8Q7kNvwEmv0Ji&_nc_oc=Admspfmv496VJ4mq9_NgzyNDeVUsS2LPWTHLi1wtEUlKE3cAQGL6cD2EnfI98Q4yJT4&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD3AEz6KSUdsFFG8N5_vvuWARbldkTXkwmnuaxt4PXrdS3og&oe=68B9481D"
+                                alt="iPhone 16 Pro" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Laptops -->
+                <div class="slide">
+                    <div class="laptop-section">
+                        <div class="laptop-content">
+                            <h2 class="title">Premium Laptops Collection</h2>
+                            <p class="discount">Up to <span>25% OFF</span></p>
+                            <div class="laptop-brands">
+                                <span>💻 MacBook Pro</span>
+                                <span>🖥️ Dell XPS</span>
+                                <span>⚡ Gaming Laptops</span>
+                            </div>
+                            <div class="payment-btns">
+                                <button class="pay-btn">CiriPortal Pay</button>
+                                <div class="referral-btns">
+                                    <button class="referral-btn">Use Referral Code</button>
+                                    <a href="security.html">Security & Trust at CiriPortal</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-box">
+                            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1000&q=80"
+                                alt="Premium Laptops">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Shirts -->
+                <div class="slide">
+                    <div class="shirt-section">
+                        <div class="shirt-details">
+                            <h2 class="shirt-title">Premium Shirts Collection</h2>
+                            <ul class="shirt-list">
+                                <li>Formal Shirts – ₹1,999</li>
+                                <li>Casual Shirts – ₹1,499</li>
+                                <li>Designer Shirts – ₹2,999</li>
+                                <li>Party Wear – ₹3,499</li>
+                            </ul>
+                            <div class="payment-btns">
+                                <button class="pay-btn">CiriPortal Pay</button>
+                                <div class="referral-btns">
+                                    <button class="referral-btn">Use Referral Code</button>
+                                    <a href="security.html">Security & Trust at CiriPortal</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shirt-image">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=80"
+                                alt="Premium Shirts" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="nextBtn" class="nav-btn">&#10095;</button>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="slide-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+        </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="categories-grid">
+                <!-- Example Category (1 of 3) -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h2 class="category-title">Up to 75% off | Electronics & Accessories</h2>
+                        <p class="category-subtitle">Electronics</p>
+                    </div>
+
+                    <div class="products-grid">
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/523407028_1061250549553476_6044618835191264637_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ZehV2U3qYhcQ7kNvwF-U_XE&_nc_oc=AdmLbLH1benPUmgDBXn8yh2nxEgx_pdUOk04FmpqU0urxLLHuCEvt3VC3t7qxwpcGOM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wFFW0DgFQTxrWdFZVQjLWD5wafKgk1K6gOFFVA-LaDmyg&oe=68B3F404"
+                                    alt="Smartphones on sale">
+                            </div>
+                            <h3 class="product-name">Smartphones</h3>
+                            <p class="product-price">From ₹19,999</p>
+                            <p class="product-discount">Up to 60% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=300&h=300&fit=crop"
+                                    alt="Wireless Earbuds">
+                            </div>
+                            <h3 class="product-name">Wireless Earbuds</h3>
+                            <p class="product-price">From ₹1,499</p>
+                            <p class="product-discount">Up to 70% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300&h=300&fit=crop"
+                                    alt="Gaming Laptops">
+                            </div>
+                            <h3 class="product-name">Gaming Laptops</h3>
+                            <p class="product-price">From ₹45,999</p>
+                            <p class="product-discount">Up to 40% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop"
+                                    alt="Smartwatches">
+                            </div>
+                            <h3 class="product-name">Smartwatches</h3>
+                            <p class="product-price">From ₹2,999</p>
+                            <p class="product-discount">Up to 55% off</p>
+                        </div>
+                    </div>
+
+                    <div class="see-all-link">
+                        <a href="offers.html">
+                            See all offers
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <h2 class="category-title">Up to 65% off | Foods & Cold Drinks</h2>
+                        <p class="category-subtitle">Foods & Cold Drinks</p>
+                    </div>
+
+                    <div class="products-grid">
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/527072600_789928293699515_2384637943882819712_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=1P858Pdi8vkQ7kNvwFVz8HL&_nc_oc=Adkq9GyTKGY0EutgJhEHIrRTNOJFq0DYDF2qbMzynXzlgxAHBNPaQo3WsfY0XCYfJHE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wGPzN_nbPKDWf2oA-NH1uw35a0bpwQQMBEIZB48jMSTqQ&oe=68B3D831"
+                                    alt="Wheat Flour">
+                            </div>
+                            <h3 class="product-name">Wheat Flour</h3>
+                            <p class="product-price">From ₹3209</p>
+                            <p class="product-discount">Up to 60% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fixr3-1.fna.fbcdn.net/v/t1.15752-9/525880076_2260062611116224_4541153188395873381_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=hS9B7k84SQ8Q7kNvwHtrScz&_nc_oc=AdnFnR_HgKtCRf8KJRWnlUmT2nX8lIA2zgfMPlWQSSzHmcXoq7HolXrNAsGd1FR5ckuWn3hpLj1r_Pl_9K2XJkVK&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fixr3-1.fna&oh=03_Q7cD2wHzC6LMrenp8lomEur3hinZanLq-xtZ9Yp_Pr6zhQo42Q&oe=68B53CD9"
+                                    alt="Fruit Burst">
+                            </div>
+                            <h3 class="product-name">Fruit Burst</h3>
+                            <p class="product-price">From ₹20</p>
+                            <p class="product-discount">Up to 50% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fixr3-1.fna.fbcdn.net/v/t1.15752-9/523928291_1390176875412953_2543539590651341557_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=6jUkcYij8rMQ7kNvwHKrFMd&_nc_oc=AdnLFD7cXY5pnKshKU3WIuwyE10tdaQnhcjzazdmL-EaqDIwowfCtNji0JZZKM7iAnd3aJH4X-8-K6LYHdrPu2Ok&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fixr3-1.fna&oh=03_Q7cD2wFTBwxNuP8pFUWLw_06_gRCPIMtkOKAqwKLFNWYViVVig&oe=68B534EA"
+                                    alt="Coca Cola">
+                            </div>
+                            <h3 class="product-name">Coca Cola</h3>
+                            <p class="product-price">From ₹45</p>
+                            <p class="product-discount">Up to 40% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fixr3-3.fna.fbcdn.net/v/t1.15752-9/526110000_1087186946846331_2343532732285215324_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=rybeQO0elkQQ7kNvwFgcBLb&_nc_oc=Adlc9EXrO_pVAD7EKqbbmV1FrTqRydNKjh6FAbr4CVJqKqBxdQ7AZMFfqoHaexFWWtDK-C0Mi3cheWyK0rtN1NJv&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fixr3-3.fna&oh=03_Q7cD2wGfIR4tYtoDauwMaz5CkdehUuNWKCho6nX0QYGT2Igg6g&oe=68B525E3"
+                                    alt="Chips">
+                            </div>
+                            <h3 class="product-name">Chips</h3>
+                            <p class="product-price">From ₹5</p>
+                            <p class="product-discount">Up to 55% off</p>
+                        </div>
+                    </div>
+
+                    <div class="see-all-link">
+                        <a href="offers.html">
+                            See all offers
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <h2 class="category-title">Up to 70% off | Shirts, Pants & Shoes</h2>
+                        <p class="category-subtitle">Shirts, Pants & Shoes</p>
+                    </div>
+
+                    <div class="products-grid">
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fixr3-3.fna.fbcdn.net/v/t1.15752-9/523494686_537747749364263_6565084897093276470_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Rcs6dm9QHMgQ7kNvwGYZxCw&_nc_oc=Adm-XofqOJIEFSZ6DHoT741mEJUzytGalxG7T6p_xjR03J2IK_DVvQbLQkIuZBSEp0Mn2Yg8qCJUuPRUshYXopqN&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fixr3-3.fna&oh=03_Q7cD2wGOCMp3467O_HttTpQfZpZfdXH3VdBCNTrd8qwlHgqzAQ&oe=68B5209E"
+                                    alt="Blue Shirt">
+                            </div>
+                            <h3 class="product-name">Blue Shirt</h3>
+                            <p class="product-price">From ₹399</p>
+                            <p class="product-discount">Up to 60% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/524395887_743196225100544_1948676151043304187_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=2yAVkPkc2RMQ7kNvwEz_2CG&_nc_oc=AdkknzHjofR-gO7-qB2qiO81x7QahLLCcLbFb2MQVsYzb4_eiU7NLDGZqgcH_SYPdNw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wG366p7mIO22850PJolmXAD2qo-7xAVYutH6faeLiIh6Q&oe=68B41574"
+                                    alt="Slim Fit Black Pant">
+                            </div>
+                            <h3 class="product-name">Slim Fit Black Pant</h3>
+                            <p class="product-price">From ₹299</p>
+                            <p class="product-discount">Up to 50% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/526846234_1949068152584690_1960943003939112865_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=n6D-cD-YBqAQ7kNvwFKpxB6&_nc_oc=Adku4eLgLFVwnEdYd7-qr0REI6Qro0TDzIMgb4msAKLSEx3UGOXtI5h4HZPth-64zys&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wFxeejfbH8utx00pQLQHk3PhQeqUYgS6YZhaaxstn1a4g&oe=68B3EE48"
+                                    alt="Black Slim Fit Shirt">
+                            </div>
+                            <h3 class="product-name">Black Slim Fit Shirt</h3>
+                            <p class="product-price">From ₹45</p>
+                            <p class="product-discount">Up to 40% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/519639690_765691126030060_5592013197668614991_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7e1ONG1O_jMQ7kNvwEO_m-f&_nc_oc=AdmS225W7Pfi0jm20FHIyQscgRg36280yFWuTzPtF4EBYHWi8FBrZnKizbEh6Mguq-fXEgBtOfYMs6aA9uUDUVS2&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wEcj4aPpch1DM51kk-5J69E63V6uGGm3aQwLm2CU0xPog&oe=68A80023"
+                                    alt="Formal Leather Shoe">
+                            </div>
+                            <h3 class="product-name">Formal Leather Shoe</h3>
+                            <p class="product-price">From ₹5</p>
+                            <p class="product-discount">Up to 55% off</p>
+                        </div>
+                    </div>
+
+                    <div class="see-all-link">
+                        <a href="offers.html">
+                            See all offers
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-header">
+                        <h2 class="category-title">Up to 70% off | Educations</h2>
+                        <p class="category-subtitle">Educations</p>
+                    </div>
+
+                    <div class="products-grid">
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRAxh79jbIE4bdxLJ_Bbk5zfPpgNPCgmHtbg&s"
+                                    alt="Notebook">
+                            </div>
+                            <h3 class="product-name">Notebook</h3>
+                            <p class="product-price">From ₹199</p>
+                            <p class="product-discount">Up to 60% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/525340116_1446593463047135_3838183834794353181_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=gJ5asx59GoEQ7kNvwF-HI6t&_nc_oc=AdnZ6A09Zb6OmokxAyDLAndfoijWRHdt6BbO3IaD_Ex9VH3rqProRId0vYV8qLuALAQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD2wG7AOdYHecFFbWvAI1wgTI0JZRp6O2p90eAgt1z5eHXsw&oe=68B41AC7"
+                                    alt="HB Pencil Set">
+                            </div>
+                            <h3 class="product-name">HB Pencil Set</h3>
+                            <p class="product-price">From ₹299</p>
+                            <p class="product-discount">Up to 50% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="Images/advance2.jpg" alt="Advanced Geometry Kit">
+                            </div>
+                            <h3 class="product-name">Advanced Geometry Kit</h3>
+                            <p class="product-price">From ₹45</p>
+                            <p class="product-discount">Up to 40% off</p>
+                        </div>
+
+                        <div class="product-item">
+                            <div class="product-image">
+                                <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/523504564_1117782480245956_7778782107573993675_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=RNXrhtpFR7QQ7kNvwE9X-zO&_nc_oc=AdlyXDywlS63_TG1hXak6m7S3ymwKNLVAgtKWyXpJJAr47UcIKYnJXQUbL7uZoEH434&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD2wFtc1Kx9GQIAq27nea9TeQHyTgp8ODhE21148JUGeryyg&oe=68B41E1F"
+                                    alt="Spiral Binding Notebook">
+                            </div>
+                            <h3 class="product-name">Spiral Binding Notebook</h3>
+                            <p class="product-price">From ₹5</p>
+                            <p class="product-discount">Up to 55% off</p>
+                        </div>
+                    </div>
+
+                    <div class="see-all-link">
+                        <a href="offers.html">
+                            See all offers
+                            <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add the other two category-cards here (Kitchen and Home Appliances) -->
+
+            </div>
+
+            <!-- Special Deals Banner -->
+            <div class="deals-banner">
+                <h2>Limited Time Offers!</h2>
+                <p>Don't miss out on these incredible deals</p>
+                <div class="deals-tags">
+                    <div class="deal-tag shipping">
+                        <span class="deal-label">FREE SHIPPING</span>
+                        <span class="deal-description">on orders above ₹499</span>
+                    </div>
+                    <div class="deal-tag flash">
+                        <span class="deal-label">FLASH SALE</span>
+                        <span class="deal-description">24 hours only</span>
+                    </div>
+                    <div class="deal-tag new-user">
+                        <span class="deal-label">NEW USER</span>
+                        <span class="deal-description">Extra 10% off</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images Section -->
+    <section class="slide-img-section" id="slide-img">
+        <h2 class="section-title" id="explore-head">Explore CiriPortal Products</h2>
+        <div class="slide-img-scroll-wrapper animate-left-right">
+            <div class="slide-img-container">
+                <div class="slide-img-card"><img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&h=300&fit=crop"
+                        alt="Rolex Analog Watch">
+                </div>
+                <div class="slide-img-card"><img
+                        src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/521354728_4004949463051588_7536584064185693582_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=xrGZ37OzCu0Q7kNvwH3o3oN&_nc_oc=Admj7Pe4fIRmH7MyQt9InuxmP3a6reishITRS4pxAYcc9IIIQquJ7g1-rqkjIoiILaA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD2wE79R1V6T46MGhz5-spWyf2cZGmZGvUujH74Dz0wKGBzQ&oe=68AE96C9"
+                        alt="Healthy Muesli">
+                </div>
+                <div class="slide-img-card"><img
+                        src="https://scontent.fixr3-1.fna.fbcdn.net/v/t1.15752-9/523928291_1390176875412953_2543539590651341557_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=6jUkcYij8rMQ7kNvwHKrFMd&_nc_oc=AdnLFD7cXY5pnKshKU3WIuwyE10tdaQnhcjzazdmL-EaqDIwowfCtNji0JZZKM7iAnd3aJH4X-8-K6LYHdrPu2Ok&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fixr3-1.fna&oh=03_Q7cD2wFTBwxNuP8pFUWLw_06_gRCPIMtkOKAqwKLFNWYViVVig&oe=68B534EA"
+                        alt="Coca Cola">
+                </div>
+                <div class="slide-img-card"><img
+                        src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/519536842_2123313734825781_6717843016676743579_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=LQvse4axe_YQ7kNvwETGB5s&_nc_oc=AdnwN18hdsVIx01Ws9ZCBVvWLxr630cFzMqKEmKw3sUm8YloyWfeYbYziV8Y0u6aymqmUSe7zGdb2OIMsNWS4RYG&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wH1jr28zVX1ssdgmnDJejjroq64kUOCyOeEvOl0gwRHrQ&oe=68A80DA5"
+                        alt="MSI GF63 Thin">
+                </div>
+                <div class="slide-img-card"><img src="Images/emergency.jpg" alt="Emergency Medikit">
+                </div>
+                <div class="slide-img-card"><img
+                        src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/523407028_1061250549553476_6044618835191264637_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ZehV2U3qYhcQ7kNvwF-U_XE&_nc_oc=AdmLbLH1benPUmgDBXn8yh2nxEgx_pdUOk04FmpqU0urxLLHuCEvt3VC3t7qxwpcGOM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD2wFFW0DgFQTxrWdFZVQjLWD5wafKgk1K6gOFFVA-LaDmyg&oe=68B3F404"
+                        alt="iPhone 14 Pro Max">
+                </div>
+                <div class="slide-img-card"><img src="Images/spiral.jpeg" alt="Spiral Binding Notebook">
+                </div>
+                <div class="slide-img-card"><img
+                        src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/520443060_2226370381131369_5605711517346931411_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=7MubYeoifOAQ7kNvwGytkto&_nc_oc=AdnZoFwTNwELHr229wZ2LLklvKKtfia-lySE0mphLWcd02s5VKDqnefh-GJbGoCeNGY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD2wGzNBDixS11qQWMq4xxm7jaXlEtTLfgl-btJgqSF7ntKg&oe=68A9578F"
+                        alt="Flat Front Pants">
+                </div>
+                <div class="slide-img-card"><img
+                        src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/521452721_1610369203255691_7319598066941328590_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=ErOHz--uAiQQ7kNvwGmkTYm&_nc_oc=AdkRmxbUPXT17fiVaDr8HqQBJiaauM4P7TXjnUOGEZWIcoB99KU5CbNFvV3nqsS4RUw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD2wFJBSAmx-aytu0xANX52HjXLHToh2OW9zf1ru9MWqxHGw&oe=68A8469B"
+                        alt="Haier 320L Double Door">
+                </div>
+                <div class="slide-img-card"><img
+                        src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/520477394_24037801762549353_7290135007616065105_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=joyaqZY3LusQ7kNvwH64H-a&_nc_oc=AdlAWIAMd50xZheh0tRbI0VVVGTGkgbx09IW-Qt7WxalRVKkbE1rThyOe5nvlifnrz27CpA6UZpzRVGa_RNfksfJ&_nc_ad=z-m&_nc_cid=1174&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD2wFJ1c3m4aSNAFyYUBOAi3Tu4xXcLARS_IV5vrFThEbbRA&oe=68A803DF"
+                        alt="Running Shoes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About CiriPortal Services -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About CiriPortal Services</h2>
+            <p class="section-intro">CiriPortal is a cutting-edge B2B platform built to streamline and digitize the
+                distribution and retail ecosystem. Our mission is to empower local businesses, distributors, and
+                retailers by providing an intuitive and reliable solution that transforms traditional workflows into
+                efficient, data-driven operations.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Analytics</h3>
+                    <p>Get instant insights into your business performance</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Seamless Integration</h3>
+                    <p>Connect all your business processes in one platform</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Scalable Solutions</h3>
+                    <p>Grow your business with our flexible platform</p>
+                </div>
+            </div>
+
+            <div class="platform-features">
+                <div class="feature-box">
+                    <i class="fas fa-desktop"></i>
+                    <h4>End-To-End B2B Platform</h4>
+                    <p>Complete B2B Ecosystem</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Smart Geo-Mapping</h4>
+                    <p>Location-Based Assignments</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-box"></i>
+                    <h4>60,000+ Products</h4>
+                    <p>Multisector Categories</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Real-Time Inventory</h4>
+                    <p>Seamless Management</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distributor Details -->
+    <section class="distributor-section">
+        <div class="container">
+            <div class="distributor-content">
+                <div class="distributor-text">
+                    <h2>CiriPortal Distributor Details</h2>
+                    <p>Distributors are the heart of CiriPortal. Our platform provides each distributor with a dedicated
+                        dashboard where they can:</p>
+                    <ul>
+                        <li>Upload and manage multiple product categories</li>
+                        <li>Assign pricing based on location, retailer type, or volume</li>
+                        <li>Track real-time order requests from registered retailers</li>
+                        <li>Generate automatic sales reports and performance insights</li>
+                        <li>Manage delivery and logistic partners</li>
+                        <li>Offer seasonal promotions and discounts</li>
+                        <li>Communicate directly with retailers through chat or announcements</li>
+                    </ul>
+                    <p>Distributors also have access to service and support tools, which allow them to schedule training
+                        sessions, manage complaints, and ensure top-tier customer satisfaction.</p>
+                    <button class="btn-distributor">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Access Distributor Portal
+                    </button>
+                </div>
+                <div class="distributor-video">
+                    <video width="500" height="500" autoplay muted loop>
+                        <source
+                            src="https://www.shutterstock.com/shutterstock/videos/3744201267/preview/stock-footage-man-boxes-and-quality-control-with-tablet-for-distribution-order-inspection-or-checklist-for.webm"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retailer Details -->
+    <section class="retailer-section">
+        <div class="container">
+            <div class="retailer-content">
+                <div class="retailer-video">
+                    <video width="500" height="500" autoplay muted loop>
+                        <source
+                            src="https://www.shutterstock.com/shutterstock/videos/1015908784/preview/stock-footage-husband-and-wife-choosing-oatmeal-and-flakes-in-grocery-store-perfect-food-for-breakfast-man.webm"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="retailer-text">
+                    <h2>CiriPortal Retailer Details</h2>
+                    <p>Retailers on CiriPortal gain access to an easy-to-use interface tailored to their business needs.
+                        Through their dashboard, retailers can:</p>
+                    <ul>
+                        <li>Browse products from multiple verified distributors</li>
+                        <li>Place bulk or item-wise orders with expected delivery timelines</li>
+                        <li>Access real-time stock and price availability</li>
+                        <li>Participate in loyalty and cashback programs</li>
+                        <li>Track their order history, invoice status, and returns</li>
+                        <li>Submit queries or requests directly to the distributor</li>
+                        <li>Get updated about offers, schemes, and announcements</li>
+                    </ul>
+                    <p>Retailers benefit from increased transparency, faster deliveries, and access to a wider range of
+                        products.</p>
+                    <button class="btn-retailer">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Access Retailer Portal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Programs -->
+    <section class="service-programs">
+        <div class="container">
+            <h2>CiriPortal Service Programs</h2>
+            <p class="section-intro">CiriPortal offers various service-oriented programs aimed at enhancing user
+                experience and building long-term relationships between distributors and retailers.</p>
+
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Product Training Program</h3>
+                    <p>Helps retailers understand new product features, specifications, and sales techniques.</p>
+                    <button class="program-btn">Learn More</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Loyalty & Reward Schemes</h3>
+                    <p>Points-based rewards for consistent purchases, referrals, or on-time payments.</p>
+                    <button class="program-btn">Join Program</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Return & Complaint Handling</h3>
+                    <p>A structured process for return approvals, replacements, and complaint resolution.</p>
+                    <button class="program-btn">Get Support</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Business Annually Program</h3>
+                    <p>Ours business and cultural programs in 20+ countries.</p>
+                    <button class="program-btn">View Globally</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Seasonal Offers & Campaigns</h3>
+                    <p>Enables distributors to run targeted campaigns with trackable results.</p>
+                    <button class="program-btn">Create Campaign</button>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Support Assistance Program</h3>
+                    <p>24/7 ticketing system and chatbot for resolving operational or technical issues quickly.</p>
+                    <button class="program-btn">Get Help</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Snapshot -->
+    <section class="marketplace-section">
+        <div class="container">
+            <h2>Marketplace Snapshot</h2>
+
+            <div class="marketplace-overview">
+                <div class="overview-card">
+                    <h3>CiriPortal Edge</h3>
+                    <p>Integrated Programs</p>
+                </div>
+                <div class="overview-card">
+                    <h3>National Reach</h3>
+                    <p>Strategic Collaborations</p>
+                </div>
+                <div class="overview-card">
+                    <h3>Global Product Range</h3>
+                    <p>Lines: CnPLx, EduTech, FMCG+</p>
+                </div>
+            </div>
+
+            <div class="product-categories">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="Industrial Machinery">
+                    </div>
+                    <h4>Industrial Machinery</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="data:image/png;base64,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"
+                            alt="Consumer Electronics">
+                    </div>
+                    <h4>Consumer Electronics</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="data:image/png;base64,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"
+                            alt="Medicare">
+                    </div>
+                    <h4>Medicare</h4>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdidllQjD_Qfe17rnmzQHzu0RHko8bWNaBEw&s"
+                            alt="Foods Services">
+                    </div>
+                    <h4>Foods Services</h4>
+                </div>
+            </div>
+
+            <button class="view-all-btn">View All Products</button>
+        </div>
+    </section>
+
+    <!-- Partner Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Partner Testimonials</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"A reliable partner for scaling our digital distribution. Seamless onboarding."</p>
+                    <div class="testimonial-author">
+                        <strong>FB</strong>
+                        <span>Finn Balor</span>
+                        <small>Founder, JVT Pvt Ltd</small>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"CiriPortal was born from a vision to simplify and revolutionize the B2B experience. We didn't
+                        just want to build another platform — we set out to create an ecosystem that empowers businesses
+                        at every stage of their journey."</p>
+                    <div class="testimonial-author">
+                        <strong>AC</strong>
+                        <span>Alex Carry</span>
+                        <small>Founder, Reason Pvt Ltd</small>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Every product feature in CiriPortal is designed with purpose — to solve real-world problems that
+                        distributors and retailers face every day. We are customer-obsessed, and that's our biggest
+                        strength."</p>
+                    <div class="testimonial-author">
+                        <strong>MC</strong>
+                        <span>Mike Carry</span>
+                        <small>Founder, Medication Pvt Ltd</small>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"We believe technology should not be complicated. CiriPortal stands for intuitive design,
+                        powerful backend, and seamless workflows — making B2B commerce as easy as shopping online"</p>
+                    <div class="testimonial-author">
+                        <strong>JD</strong>
+                        <span>Johny Depp</span>
+                        <small>Founder, Uniliftner Pvt Ltd</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-card">
+                    <h3>1,000+</h3>
+                    <p>Manufacturers</p>
+                </div>
+                <div class="stat-card">
+                    <h3>6,000+</h3>
+                    <p>Distributors</p>
+                </div>
+                <div class="stat-card">
+                    <h3>200,000+</h3>
+                    <p>Retailers</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>National Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose CiriPortal -->
+    <section class="why-choose-section">
+        <div class="container">
+            <h2>Why Choose CiriPortal</h2>
+
+            <div class="choose-grid">
+                <div class="choose-card">
+                    <h3>Add Your Products</h3>
+                    <p>Manufacturers onboarded access</p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+                <div class="choose-card">
+                    <h3>Join CiriPortal</h3>
+                    <p>Join Us to Expand Product Visibility</p>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+                <div class="choose-card">
+                    <h3>Become a member</h3>
+                    <p>Access CiriPortal Connect</p>
+                    <button class="apply-btn">Connect</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>CiriPortal</h4>
+                <p>Empowering lives through quality slide-img, care, education, and media.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul class="explore-links">
+                    <li><a href="#">Foods</a></li>
+                    <li><a href="#">Personal Care</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Security & Trust Page</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CiriPortal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Offers Button -->
+    <button type="button" class="offers-btn" id="offers-btn">
+        <strong><i class="fas fa-gift"></i> Offers</strong>
+        <div id="container-stars">
+            <div id="stars"></div>
+        </div>
+    </button>
+
+
+
+    <!-- Cookie Setting -->
+    <div id="cookieBanner" class="cookie-banner">
+        <p id="privacyCookies">
+            We use cookies to improve your experience. By using our site, you agree to our
+            <a href="#" id="privacyPolicy">Privacy Policy</a>.
+        </p>
+        <div class="cookie-buttons">
+            <button id="acceptCookies">Accept</button>
+            <button id="rejectCookies">Reject</button>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <div class="chatbot-container">
+        <span class="chatbot-text">Ask Me..</span>
+        <button id="chatbotToggle" aria-label="Chat with us">
+            <i class="fas fa-robot"></i>
+        </button>
+    </div>
+
+
+    <!-- Chatbox -->
+    <div class="chatbox" id="chatbox">
+        <div class="chatbox-header">
+            <h4>Chat with CiriBot</h4>
+            <span id="closeChatbox">&times;</span>
+        </div>
+        <div class="chatbox-body">
+            <p>Hello! How can I assist you today?</p>
+            <!-- You can expand this with real-time chat later -->
+        </div>
+        <div class="chatbox-footer">
+            <input type="text" placeholder="Type your message..." />
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Payment -->
+    <div class="payment-box">
+        <span class="close-icon">&times;</span>
+        <div class="pay-title">CiriPortal Pay</div>
+
+        <div class="rules-box">
+            <ul>
+                <li>Use referral code for discounts.</li>
+                <li>No cancellation after payment.</li>
+                <li>This offer is valid for 2 days.</li>
+                <li>Offers may vary by region.</li>
+            </ul>
+        </div>
+
+        <button class="pay-button">Pay Now</button>
+    </div>
+
+    <!-- Referral Code Box -->
+    <div class="referral-box">
+        <span id="close-icon">&times;</span>
+        <div class="referral-title">Enter Referral Code</div>
+
+        <!-- 📌 Added paragraph -->
+        <p class="referral-info">Go to <strong>Referral System</strong> and copy the referral code, then paste it here.
+        </p>
+
+        <div class="input-group">
+            <input type="text" placeholder="Referral Code" />
+            <button class="submit-btn">Submit Code</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

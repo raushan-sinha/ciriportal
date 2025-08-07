@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CiriPortal - Retailer Dashboard</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="retailerPage.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -21,13 +22,8 @@
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <div class="sidebar-logo">
-                <div class="sidebar-logo-icon">C</div>
-                <div class="sidebar-logo-text">
-                    <h2>CiriPortal</h2>
-                    <p>Retailer Dashboard</p>
-                </div>
-            </div>
+            <h1>CiriPortal</h1>
+            <p>Retailer Dashboard</p>
         </div>
         <nav class="sidebar-nav">
             <a href="#products" class="sidebar-nav-item active" data-section="products">
@@ -37,7 +33,18 @@
             <a href="#cart" class="sidebar-nav-item" data-section="cart">
                 <i class="fas fa-shopping-cart"></i>
                 <span>Cart & Checkout</span>
-                <span class="cart-count">0</span>
+            </a>
+            <a href="#orders" class="sidebar-nav-item" data-section="orders">
+                <i class="fas fa-clipboard-list"></i>
+                <span>My Orders</span>
+            </a>
+            <a href="#live-feed" class="sidebar-nav-item" data-section="live-feed">
+                <i class="fas fa-rss"></i>
+                <span>Live Product Feed</span>
+            </a>
+            <a href="#purchase-history" class="sidebar-nav-item" data-section="purchase-history">
+                <i class="fas fa-history"></i>
+                <span>Purchase History</span>
             </a>
             <a href="#returns" class="sidebar-nav-item" data-section="returns">
                 <i class="fas fa-undo"></i>
@@ -46,6 +53,10 @@
             <a href="#offers" class="sidebar-nav-item" data-section="offers">
                 <i class="fas fa-gift"></i>
                 <span>Offers & Schemes</span>
+            </a>
+            <a href="#support" class="sidebar-nav-item" data-section="support">
+                <i class="fas fa-headset"></i>
+                <span>Support Help Desk</span>
             </a>
         </nav>
     </aside>
@@ -113,7 +124,8 @@
             <div class="product-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="/placeholder.svg?height=150&width=150&text=Chips" alt="Premium Chips">
+                        <img src="https://scontent.fpat2-3.fna.fbcdn.net/v/t1.15752-9/525743969_1367894534312954_2691303459483917236_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IeoKWnXn1Q0Q7kNvwF5TCU4&_nc_oc=AdlNVRHioLWVJ6dDCpJjxGfJDMXVBuzyjKrTcLw3fJN0V1qCa7OGXPDYPrFA4Yc3Guo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-3.fna&oh=03_Q7cD3AE6842FLNpQST1d7rmpqNDhoD0FGS-U4UOZNtzBqtGKRA&oe=68BBB48A"
+                            alt="Premium Chips">
                     </div>
                     <div class="product-info">
                         <h3>Premium Chips</h3>
@@ -125,7 +137,8 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="/placeholder.svg?height=150&width=150&text=Rice" alt="Basmati Rice">
+                        <img src="https://scontent.fpat2-2.fna.fbcdn.net/v/t1.15752-9/528648331_1538449897539130_3296572589477211751_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=110&ccb=1-7&_nc_sid=0024fc&_nc_ohc=_7olElRixY8Q7kNvwGItEhK&_nc_oc=AdlS9TnYqz8Qb0Hs14sK11pDHCBz0TbmVzcyRbLZjK4YwN55pPUoU8W4mGTC1H6GJmc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&oh=03_Q7cD3AE0XPyCjkejAlfoL-D691Ut0Aa6KHevds0QMYRZE5FFRg&oe=68BBBCD9"
+                            alt="Basmati Rice">
                     </div>
                     <div class="product-info">
                         <h3>Basmati Rice</h3>
@@ -137,7 +150,8 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="/placeholder.svg?height=150&width=150&text=Oil" alt="Cooking Oil">
+                        <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/526844385_738304022300267_173568765108540691_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=rRaFnrIp4fsQ7kNvwFCC_aU&_nc_oc=AdmbcpPa0hJlHFOL-tE7ReFZOBqwJCW1wulu7UdzDbb38r0BV_R1EdFP_5doH8_PeWg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD3AGubbjMTN-DH0CnQhuA7x29cKp0ecyynHYmmLUfdWP4Vw&oe=68BB9F2D"
+                            alt="Cooking Oil">
                     </div>
                     <div class="product-info">
                         <h3>Cooking Oil</h3>
@@ -149,7 +163,8 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="/placeholder.svg?height=150&width=150&text=Flour" alt="Wheat Flour">
+                        <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/526668529_1831049131092281_4016948426979433728_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=hMrGPSacuhEQ7kNvwHNUrCu&_nc_oc=AdmaC_hp3e6HVH1akC-1QG_aF0U8FgKQAi3xGFyqY-sK4yxNpPm3Pm81FEs6WcvIQ40&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD3AErskxcjJNynAoOtHSt6YN1u8o4nnThFbBKCpHLmmv5Lw&oe=68BBBCD0"
+                            alt="Wheat Flour">
                     </div>
                     <div class="product-info">
                         <h3>Wheat Flour</h3>
@@ -161,7 +176,8 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="/placeholder.svg?height=150&width=150&text=Sugar" alt="Sugar">
+                        <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/526029514_1259867365837936_2301566518613356719_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=P9EECLLgVq0Q7kNvwFd-9Wc&_nc_oc=AdmlrpfcuQQJM6y1OUIooDgOkJorWVuT5_mjHgcgNmhbSpwSJtkQkcU4w7M4wFB1spw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD3AEKkzJgsgjeZoqs0v8HEVPd_bDOTLvFXHzBnjEj8YFwlA&oe=68BB9A01"
+                            alt="Sugar">
                     </div>
                     <div class="product-info">
                         <h3>Sugar</h3>
@@ -173,7 +189,8 @@
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="/placeholder.svg?height=150&width=150&text=Tea" alt="Tea Leaves">
+                        <img src="https://instagram.fpat2-5.fna.fbcdn.net/v/t1.15752-9/526184768_1896737121180775_7585137113557732935_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=8G-GT-VUx-kQ7kNvwEQyWOb&_nc_oc=AdlM6W-q38hE8-hnGHcvtQkuvIPbKPbSXA5zGW1UrhJ38hwK81U3E8pVXaZ2ND3dTxw&_nc_zt=23&_nc_ht=instagram.fpat2-5.fna&oh=03_Q7cD3AG8CtZes-O5J8wTmEs0jeEaYebqWoUjOKCMOSPurYw-VA&oe=68BBA5B1"
+                            alt="Tea Leaves">
                     </div>
                     <div class="product-info">
                         <h3>Tea Leaves</h3>
@@ -188,7 +205,10 @@
 
         <!-- Cart Section -->
         <section class="content-section" id="cart">
-            <h2>Cart & Checkout</h2>
+            <div class="section-header">
+                <h2>Cart & Checkout</h2>
+                <span class="badge">0 Items</span>
+            </div>
             <div class="cart-container">
                 <div class="empty-cart">
                     <i class="fas fa-shopping-cart"></i>
@@ -202,20 +222,263 @@
             </div>
         </section>
 
+        <!-- My Orders Section -->
+        <section class="content-section" id="orders">
+            <div class="section-header">
+                <h2>My Orders</h2>
+                <span class="badge">12 Total Orders</span>
+            </div>
+            <div class="orders-container">
+                <div class="orders-header">
+                    <h3><i class="fas fa-clipboard-list"></i> Order Management</h3>
+                    <button class="btn-primary">Download All</button>
+                </div>
+                <div class="orders-list">
+                    <div class="order-row">
+                        <div class="order-id">#ORD-2024-001</div>
+                        <div>Premium Chips, Basmati Rice, Cooking Oil</div>
+                        <div>₹185</div>
+                        <div>Jan 15, 2024</div>
+                        <div class="order-status status-delivered">Delivered</div>
+                        <button class="btn-primary">View Details</button>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-id">#ORD-2024-002</div>
+                        <div>Wheat Flour, Sugar, Tea Leaves</div>
+                        <div>₹162</div>
+                        <div>Jan 18, 2024</div>
+                        <div class="order-status status-processing">Processing</div>
+                        <button class="btn-primary">Track Order</button>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-id">#ORD-2024-003</div>
+                        <div>Premium Chips, Sugar</div>
+                        <div>₹62</div>
+                        <div>Jan 20, 2024</div>
+                        <div class="order-status status-pending">Pending</div>
+                        <button class="btn-primary">Cancel Order</button>
+                    </div>
+                    <div class="order-row">
+                        <div class="order-id">#ORD-2024-004</div>
+                        <div>Cooking Oil, Tea Leaves</div>
+                        <div>₹205</div>
+                        <div>Jan 22, 2024</div>
+                        <div class="order-status status-delivered">Delivered</div>
+                        <button class="btn-primary">Reorder</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Product Feed Section -->
+        <section class="content-section" id="live-feed">
+            <div class="section-header">
+                <h2>Live Product Feed</h2>
+                <span class="badge">Real-time Updates</span>
+            </div>
+            <div class="feed-container">
+                <div class="feed-main">
+                    <div class="feed-header">
+                        <h3><i class="fas fa-rss"></i> Product Updates</h3>
+                        <button class="btn-primary">Refresh Feed</button>
+                    </div>
+                    <div class="feed-item">
+                        <div class="feed-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="feed-content">
+                            <h4>New Product Added</h4>
+                            <p>Organic Honey - Premium quality honey now available</p>
+                        </div>
+                        <div class="feed-time">2 min ago</div>
+                    </div>
+                    <div class="feed-item">
+                        <div class="feed-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <div class="feed-content">
+                            <h4>Price Update</h4>
+                            <p>Basmati Rice price reduced from ₹50 to ₹45</p>
+                        </div>
+                        <div class="feed-time">5 min ago</div>
+                    </div>
+                    <div class="feed-item">
+                        <div class="feed-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="feed-content">
+                            <h4>Stock Alert</h4>
+                            <p>Premium Chips - Only 5 units remaining</p>
+                        </div>
+                        <div class="feed-time">8 min ago</div>
+                    </div>
+                    <div class="feed-item">
+                        <div class="feed-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="feed-content">
+                            <h4>Featured Product</h4>
+                            <p>Tea Leaves marked as today's featured product</p>
+                        </div>
+                        <div class="feed-time">12 min ago</div>
+                    </div>
+                    <div class="feed-item">
+                        <div class="feed-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="feed-content">
+                            <h4>Delivery Update</h4>
+                            <p>New delivery slot available for tomorrow 2-4 PM</p>
+                        </div>
+                        <div class="feed-time">15 min ago</div>
+                    </div>
+                </div>
+                <div class="feed-sidebar">
+                    <div class="info-card">
+                        <h3><i class="fas fa-chart-line"></i> Quick Stats</h3>
+                        <div class="stat-item">
+                            <span>Products Updated Today</span>
+                            <strong>8</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span>Price Changes</span>
+                            <strong>3</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span>New Arrivals</span>
+                            <strong>2</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span>Stock Alerts</span>
+                            <strong>1</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purchase History Section -->
+        <section class="content-section" id="purchase-history">
+            <div class="section-header">
+                <h2>Purchase History</h2>
+                <span class="badge">Last 6 Months</span>
+            </div>
+            <div class="history-filters">
+                <div class="filter-group">
+                    <label>Date Range</label>
+                    <select>
+                        <option>Last 30 Days</option>
+                        <option>Last 3 Months</option>
+                        <option>Last 6 Months</option>
+                        <option>Last Year</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Status</label>
+                    <select>
+                        <option>All Orders</option>
+                        <option>Delivered</option>
+                        <option>Processing</option>
+                        <option>Cancelled</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Amount Range</label>
+                    <select>
+                        <option>All Amounts</option>
+                        <option>₹0 - ₹100</option>
+                        <option>₹100 - ₹500</option>
+                        <option>₹500+</option>
+                    </select>
+                </div>
+                <button class="btn-primary">Apply Filters</button>
+            </div>
+            <div class="history-table">
+                <div class="table-header">
+                    <div>Order ID</div>
+                    <div>Products</div>
+                    <div>Amount</div>
+                    <div>Date</div>
+                    <div>Status</div>
+                </div>
+                <div class="table-row">
+                    <div class="order-id">#ORD-2023-045</div>
+                    <div>Premium Chips, Basmati Rice</div>
+                    <div>₹65</div>
+                    <div>Dec 28, 2023</div>
+                    <div class="order-status status-delivered">Delivered</div>
+                </div>
+                <div class="table-row">
+                    <div class="order-id">#ORD-2023-044</div>
+                    <div>Cooking Oil, Wheat Flour, Sugar</div>
+                    <div>₹197</div>
+                    <div>Dec 25, 2023</div>
+                    <div class="order-status status-delivered">Delivered</div>
+                </div>
+                <div class="table-row">
+                    <div class="order-id">#ORD-2023-043</div>
+                    <div>Tea Leaves</div>
+                    <div>₹85</div>
+                    <div>Dec 22, 2023</div>
+                    <div class="order-status status-delivered">Delivered</div>
+                </div>
+                <div class="table-row">
+                    <div class="order-id">#ORD-2023-042</div>
+                    <div>Premium Chips, Sugar, Tea Leaves</div>
+                    <div>₹147</div>
+                    <div>Dec 18, 2023</div>
+                    <div class="order-status status-cancelled">Cancelled</div>
+                </div>
+                <div class="table-row">
+                    <div class="order-id">#ORD-2023-041</div>
+                    <div>Basmati Rice, Cooking Oil</div>
+                    <div>₹165</div>
+                    <div>Dec 15, 2023</div>
+                    <div class="order-status status-delivered">Delivered</div>
+                </div>
+            </div>
+        </section>
+
         <!-- Returns Section -->
         <section class="content-section" id="returns">
-            <h2>Return Requests</h2>
+            <div class="section-header">
+                <h2>Return Requests</h2>
+                <span class="badge">3 Active Returns</span>
+            </div>
             <div class="returns-grid">
                 <div class="form-card">
                     <h3>Submit Return Request</h3>
-                    <form>
+                    <form class="ticket-form">
                         <div class="form-group">
                             <label>Order ID</label>
                             <input type="text" placeholder="Enter order ID" required>
                         </div>
                         <div class="form-group">
+                            <label>Product</label>
+                            <select required>
+                                <option>Select Product</option>
+                                <option>Premium Chips</option>
+                                <option>Basmati Rice</option>
+                                <option>Cooking Oil</option>
+                                <option>Wheat Flour</option>
+                                <option>Sugar</option>
+                                <option>Tea Leaves</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Reason for Return</label>
-                            <textarea placeholder="Describe the reason for return" rows="4" required></textarea>
+                            <select required>
+                                <option>Select Reason</option>
+                                <option>Damaged Product</option>
+                                <option>Wrong Item Delivered</option>
+                                <option>Quality Issues</option>
+                                <option>Not as Described</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea placeholder="Describe the issue in detail" rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn-submit">Submit Return Request</button>
                     </form>
@@ -224,16 +487,25 @@
                     <h3>Recent Return Requests</h3>
                     <div class="return-list">
                         <div class="return-item">
-                            <span>Order #2001</span>
-                            <span class="badge pending">Pending</span>
+                            <div>
+                                <strong>Order #ORD-2024-001</strong>
+                                <p>Premium Chips - Damaged packaging</p>
+                            </div>
+                            <span class="badge pending">Under Review</span>
                         </div>
                         <div class="return-item">
-                            <span>Order #1998</span>
+                            <div>
+                                <strong>Order #ORD-2023-045</strong>
+                                <p>Basmati Rice - Quality issues</p>
+                            </div>
                             <span class="badge approved">Approved</span>
                         </div>
                         <div class="return-item">
-                            <span>Order #1995</span>
-                            <span class="badge delivered">Completed</span>
+                            <div>
+                                <strong>Order #ORD-2023-042</strong>
+                                <p>Tea Leaves - Wrong item delivered</p>
+                            </div>
+                            <span class="badge delivered">Refunded</span>
                         </div>
                     </div>
                 </div>
@@ -242,13 +514,16 @@
 
         <!-- Offers Section -->
         <section class="content-section" id="offers">
-            <h2>Offers & Schemes</h2>
+            <div class="section-header">
+                <h2>Offers & Schemes</h2>
+                <span class="badge">5 Active Offers</span>
+            </div>
             <div class="offers-grid">
                 <div class="offer-card">
                     <div class="offer-badge">10% OFF</div>
                     <div class="offer-content">
                         <h3>Buy 10 Get 1 Free</h3>
-                        <p>On all grocery items</p>
+                        <p>On all grocery items. Valid till end of month.</p>
                         <button class="apply-btn">Apply Offer</button>
                     </div>
                 </div>
@@ -256,7 +531,7 @@
                     <div class="offer-badge">15% OFF</div>
                     <div class="offer-content">
                         <h3>Bulk Order Discount</h3>
-                        <p>Orders above ₹5000</p>
+                        <p>Orders above ₹5000. Maximum discount ₹750.</p>
                         <button class="apply-btn">Apply Offer</button>
                     </div>
                 </div>
@@ -264,8 +539,108 @@
                     <div class="offer-badge">20% OFF</div>
                     <div class="offer-content">
                         <h3>Festival Special</h3>
-                        <p>Limited time offer</p>
+                        <p>Limited time offer. Valid for next 7 days only.</p>
                         <button class="apply-btn">Apply Offer</button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-badge">FREE DELIVERY</div>
+                    <div class="offer-content">
+                        <h3>Free Home Delivery</h3>
+                        <p>On orders above ₹500. No minimum quantity required.</p>
+                        <button class="apply-btn">Apply Offer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Help Desk Section -->
+        <section class="content-section" id="support">
+            <div class="section-header">
+                <h2>Support Help Desk</h2>
+                <span class="badge">24/7 Available</span>
+            </div>
+            <div class="support-container">
+                <div class="support-card">
+                    <div class="support-header">
+                        <h3><i class="fas fa-headset"></i> Contact Support</h3>
+                    </div>
+                    <div class="support-content">
+                        <div class="support-options">
+                            <div class="support-option">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone Support</h4>
+                                    <p>Call us at +91-9876543210</p>
+                                </div>
+                            </div>
+                            <div class="support-option">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Support</h4>
+                                    <p>support@ciriportal.com</p>
+                                </div>
+                            </div>
+                            <div class="support-option">
+                                <i class="fas fa-comments"></i>
+                                <div>
+                                    <h4>Live Chat</h4>
+                                    <p>Chat with our support team</p>
+                                </div>
+                            </div>
+                            <div class="support-option">
+                                <i class="fas fa-question-circle"></i>
+                                <div>
+                                    <h4>FAQ</h4>
+                                    <p>Browse frequently asked questions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div class="support-header">
+                        <h3><i class="fas fa-ticket-alt"></i> Submit Support Ticket</h3>
+                    </div>
+                    <div class="support-content">
+                        <form class="ticket-form">
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <input type="text" placeholder="Brief description of your issue" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select required>
+                                    <option>Select Category</option>
+                                    <option>Order Issues</option>
+                                    <option>Payment Problems</option>
+                                    <option>Product Quality</option>
+                                    <option>Delivery Issues</option>
+                                    <option>Account Problems</option>
+                                    <option>Technical Support</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Priority</label>
+                                <select required>
+                                    <option>Select Priority</option>
+                                    <option>Low</option>
+                                    <option>Medium</option>
+                                    <option>High</option>
+                                    <option>Urgent</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea placeholder="Describe your issue in detail" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Attach File (Optional)</label>
+                                <input type="file" accept="image/*,.pdf,.doc,.docx">
+                            </div>
+                            <button type="submit" class="btn-submit">Submit Ticket</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -278,15 +653,15 @@
                     <h3><i class="fas fa-history"></i> Recent Orders</h3>
                     <div class="order-list">
                         <div class="order-item">
-                            <span>Order #2001</span>
+                            <span>Order #ORD-2024-001</span>
                             <span class="badge delivered">Delivered</span>
                         </div>
                         <div class="order-item">
-                            <span>Order #2002</span>
+                            <span>Order #ORD-2024-002</span>
                             <span class="badge transit">In Transit</span>
                         </div>
                         <div class="order-item">
-                            <span>Order #2003</span>
+                            <span>Order #ORD-2024-003</span>
                             <span class="badge pending">Pending</span>
                         </div>
                     </div>
@@ -314,8 +689,9 @@
                 </div>
             </div>
         </section>
+    </div>
 
-        <script src="retailerPage.js"></script>
+    <script src="retailerPage.js"></script>
 </body>
 
 </html>
