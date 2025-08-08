@@ -187,7 +187,7 @@ const loginPages = [
 document.querySelectorAll('.login-btn ul a').forEach((link, idx) => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        open(loginPages[idx], '_blank');
+        open(loginPages[idx], '_self');
     });
 });
 
