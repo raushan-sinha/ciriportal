@@ -1061,8 +1061,7 @@ select:hover {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    flex-wrap: wrap;
-    gap: 150px;
+    gap: 50px;
     background: #232F3E;
 }
 
