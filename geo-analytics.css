@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #1e293b;
+    color: white;
+    padding: 1.5rem;
+    position: fixed;
+    height: 100vh;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: #0d5e57;
+}
+
+.sidebar-icon {
+    margin-right: 10px;
+}
+
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .dashboard {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .sidebar {
+        transform: translateX(-100%);
+        width: 220px;
+        padding: 1rem;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        display: block;
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .grid-section,
+    .orders-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-wrapper {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .dashboard-header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .avatar-icon {
+        background: #ccc;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Geo Analytics Section */
+.geo-analytics-section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f0f5ff, #e6f0ff);
+    color: #222;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.geo-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.geo-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+.geo-title strong {
+    color: #f97316;
+    /* Orange for strong emphasis */
+}
+
+.geo-desc {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.geo-desc strong {
+    color: #0f766e;
+    /* Teal for key highlights */
+}
+
+.geo-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.geo-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.geo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.geo-card h3 {
+    font-size: 1.2rem;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.geo-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.geo-image {
+    text-align: center;
+}
+
+.geo-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+    .geo-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .geo-title {
+        font-size: 1.8rem;
+    }
+
+    .geo-desc {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+    .geo-features {
+        grid-template-columns: 1fr;
+    }
+
+    .geo-title {
+        font-size: 1.5rem;
+    }
+
+    .geo-desc {
+        font-size: 0.95rem;
+    }
+}

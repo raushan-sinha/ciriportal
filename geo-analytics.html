@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Geo Analytics – CiriPortal</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="geo-analytics.css">
 </head>
+
 <body>
-    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-title">CiriPortal</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#dashboard" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
+            <a href="#manufacturer"><span class="sidebar-icon">📦</span> Manufacturer</a>
+            <a href="#orders"><span class="sidebar-icon">📝</span> Orders</a>
+            <a href="#inventory"><span class="sidebar-icon">📊</span> Inventory</a>
+            <a href="#retailers"><span class="sidebar-icon">🛒</span> Retailers</a>
+            <a href="#reports&returns"><span class="sidebar-icon">🧾</span> Reports & Returns</a>
+            <a href="#geo-analytics"><span class="sidebar-icon">🌍</span> Geo-analytics</a>
+        </nav>
+    </aside>
+
+    <!-- Hamburger for mobile -->
+    <button class="sidebar-toggle" id="sidebarToggleBtn">
+        < </button>
+
+            <!-- Geo Analytics Section -->
+            <section class="geo-analytics-section">
+                <div class="geo-container">
+                    <h2 class="geo-title">🌍 Geo Analytics for <strong>CiriPortal</strong></h2>
+                    <p class="geo-desc">
+                        Our <strong>Geo Analytics</strong> feature helps you visualize and analyze geographical data
+                        with real-time mapping, location-based insights, and advanced heatmaps.
+                        Perfect for <strong>tracking distributors</strong>, <strong>monitoring sales regions</strong>,
+                        and <strong>identifying growth opportunities</strong>.
+                    </p>
+
+                    <div class="geo-features">
+                        <div class="geo-card">
+                            <h3>📊 Regional Sales Insights</h3>
+                            <p>Get detailed performance reports for each region, allowing you to optimize your marketing
+                                and
+                                sales strategies.</p>
+                        </div>
+                        <div class="geo-card">
+                            <h3>📍 Real-Time Location Tracking</h3>
+                            <p>Monitor distributor locations, delivery routes, and coverage areas with live map updates.
+                            </p>
+                        </div>
+                        <div class="geo-card">
+                            <h3>🔥 Heatmap Analysis</h3>
+                            <p>Identify high-demand zones and areas with untapped potential using interactive heatmaps.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="geo-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/World_map_blank_without_borders.svg"
+                            alt="Geo Analytics Map">
+                    </div>
+                </div>
+            </section>
+
+            <script src="geo-analytics.js"></script>
 </body>
+
 </html>

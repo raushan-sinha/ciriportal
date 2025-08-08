@@ -202,6 +202,7 @@ td {
     padding: 0.6rem;
     border-bottom: 1px solid #eee;
 }
+
 @media (max-width: 1024px) {
     .dashboard {
         margin-left: 0;
