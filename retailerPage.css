@@ -459,13 +459,16 @@ body {
 
 .order-status {
     display: flex;
-    align-items: center;     /* vertical centering */
-    justify-content: center; /* horizontal centering */
+    align-items: center;
+    /* vertical centering */
+    justify-content: center;
+    /* horizontal centering */
     padding: 6px 12px;
     font-weight: 600;
     border-radius: 12px;
     min-width: 90px;
-    height: 32px;             /* optional: gives consistent height */
+    height: 32px;
+    /* optional: gives consistent height */
     text-align: center;
 }
 
@@ -767,6 +770,88 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
+
+/* Credit Line Tracker Section */
+#credit {
+    background: linear-gradient(135deg, #f0f4ff, #ccc);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+#credit h2 {
+    color: #1e3a8a;
+    /* Deep blue heading */
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#credit p {
+    color: #4b5563;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.credit-card {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid #1e40af;
+    /* Accent border */
+}
+
+.credit-card p {
+    margin: 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+}
+
+.credit-card p:last-child {
+    border-bottom: none;
+}
+
+.credit-card strong {
+    color: #2563eb;
+    /* Blue highlight for important labels */
+}
+
+/* Tablet (<= 768px) */
+@media (max-width: 768px) {
+    #credit {
+        margin-left: 0;
+        /* sidebar hidden */
+        padding: 15px;
+    }
+
+    #credit h2 {
+        font-size: 1.4rem;
+    }
+
+    .credit-card {
+        padding: 12px 15px;
+    }
+}
+
+/* Mobile (<= 480px) */
+@media (max-width: 480px) {
+    #credit {
+        padding: 12px;
+    }
+
+    #credit h2 {
+        font-size: 1.2rem;
+    }
+
+    #credit p,
+    .credit-card p {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Returns Section */
 .returns-grid {
