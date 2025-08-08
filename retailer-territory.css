@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #1e293b;
+    color: white;
+    padding: 1.5rem;
+    position: fixed;
+    height: 100vh;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: #0d5e57;
+}
+
+.sidebar-icon {
+    margin-right: 10px;
+}
+
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.8rem;
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 220px;
+        padding: 1rem;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        display: block;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .grid-section,
+    .orders-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-wrapper {
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+
+    .avatar-icon {
+        background: #ccc;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Retailer Territory Section */
+.retailer-territory {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf5);
+    margin-left: 240px;
+}
+
+.retailer-territory h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    color: #1f2d3d;
+}
+
+.retailer-territory strong {
+    color: #0074d9;
+    /* Highlight color */
+}
+
+.territory-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.territory-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.territory-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.territory-card h3 {
+    color: #0074d9;
+    margin-bottom: 10px;
+}
+
+.territory-card p {
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.territory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Tablet Styles (Max width: 768px) ===== */
+@media (max-width: 768px) {
+    .retailer-territory {
+        margin-left: 0; /* Remove sidebar gap on small screens */
+        padding: 40px 15px;
+    }
+
+    .territory-intro {
+        font-size: 1rem;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .territory-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .territory-card {
+        padding: 18px;
+    }
+
+    .territory-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .territory-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Mobile Styles (Max width: 480px) ===== */
+@media (max-width: 480px) {
+    .retailer-territory {
+        margin-left: 0;
+        padding: 30px 30px;
+    }
+
+    .retailer-territory h2 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+
+    .territory-intro {
+        font-size: 0.9rem;
+        padding: 0 5px;
+        margin-bottom: 25px;
+    }
+
+    .territory-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .territory-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .territory-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .territory-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
