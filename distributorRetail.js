@@ -33,22 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
       sidebar.classList.toggle("show");
     });
     
-
-
-    // Dashboard nav logic
-    const dashboardNavLinks = [
-        'distributorPage.html',
-        'manufacturerPage.html',
-        'distributorOrder.html',
-        'inventory.html',
-        'distributorRetail.html'
-    ];
-    document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            open(dashboardNavLinks[idx], '_self');
-        })
-    });
 });
 
 
