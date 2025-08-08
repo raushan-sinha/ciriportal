@@ -26,155 +26,165 @@
             <a href="#inventory"><span class="sidebar-icon">📊</span> Inventory</a>
             <a href="#retailers"><span class="sidebar-icon">🛒</span> Retailers</a>
             <a href="#reports&returns"><span class="sidebar-icon">🧾</span> Reports & Returns</a>
+            <a href="#geo-analytics"><span class="sidebar-icon">🌍</span> Geo-analytics</a>
         </nav>
     </aside>
+
     <!-- Hamburger for mobile -->
-    <button class="sidebar-toggle" id="sidebarToggleBtn"><</button>
+    <button class="sidebar-toggle" id="sidebarToggleBtn">
+        < </button>
 
-    <!-- MAIN WRAPPER -->
-    <main class="dashboard">
-        <!-- HEADER -->
-        <header class="dashboard-header">
-            <div class="header-left">
-                <img src="" alt="Distributor Avatar" class="avatar" id="avatarPreview">
-                <div>
-                    <h1>Welcome, Distributor</h1>
-                    <p>Distributor Code: CIRI-D001</p>
-                    <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload Profile Image</button>
-                    <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
-                </div>
-            </div>
-            <!-- <button class="logout-btn">Logout</button> -->
-        </header>
-        <!-- KPI CARDS -->
-        <section class="kpi-grid">
-            <div class="card">
-                <h2>Products Listed</h2>
-                <p class="huge">240</p>
-            </div>
-            <div class="card">
-                <h2>Manufacturers</h2>
-                <p class="huge">18</p>
-            </div>
-            <div class="card">
-                <h2>Orders Pending</h2>
-                <p class="huge">10</p>
-            </div>
-            <div class="card">
-                <h2>Revenue</h2>
-                <p class="huge">$4,455</p>
-            </div>
-        </section>
+            <!-- MAIN WRAPPER -->
+            <main class="dashboard">
+                <!-- HEADER -->
+                <header class="dashboard-header">
+                    <div class="header-left">
+                        <img src="" alt="Distributor Avatar" class="avatar" id="avatarPreview">
+                        <div>
+                            <h1>Welcome, Distributor</h1>
+                            <p>Distributor Code: CIRI-D001</p>
+                            <button class="upload-btn" onclick="document.querySelector('#uploadImage').click()">Upload
+                                Profile Image</button>
+                            <input type="file" accept="image/*" id="uploadImage" class="hiddenFile">
+                        </div>
+                    </div>
+                    <!-- <button class="logout-btn">Logout</button> -->
+                </header>
+                <!-- KPI CARDS -->
+                <section class="kpi-grid">
+                    <div class="card">
+                        <h2>Products Listed</h2>
+                        <p class="huge">240</p>
+                    </div>
+                    <div class="card">
+                        <h2>Manufacturers</h2>
+                        <p class="huge">18</p>
+                    </div>
+                    <div class="card">
+                        <h2>Orders Pending</h2>
+                        <p class="huge">10</p>
+                    </div>
+                    <div class="card">
+                        <h2>Revenue</h2>
+                        <p class="huge">$4,455</p>
+                    </div>
+                </section>
 
-        <!-- Sales Overview and Inventory Status Section (Responsive Flexbox) -->
-        <section class="dashboard-flex">
-            <div class="sales-overview">
-                <h3>Sales Overview</h3>
-                <div class="chart-wrapper">
-                    <canvas id="salesChart"></canvas>
-                  </div>
-                  
-            </div>
-            <div class="inventory-status">
-                <h3>Inventory Status</h3>
-                <div class="inventory-bar">
-                    <span>In Stock</span>
-                    <div class="bar-bg"><div class="bar-fill in-stock"></div></div>
-                    <span class="inv-count">195</span>
-                </div>
-                <div class="inventory-bar">
-                    <span>Low Stock</span>
-                    <div class="bar-bg"><div class="bar-fill low-stock"></div></div>
-                    <span class="inv-count">35</span>
-                </div>
-                <div class="inventory-bar">
-                    <span>Out of Stock</span>
-                    <div class="bar-bg"><div class="bar-fill out-stock"></div></div>
-                    <span class="inv-count">8</span>
-                </div>
-                <div class="inventory-loading-line"></div>
-            </div>
-        </section>
+                <!-- Sales Overview and Inventory Status Section (Responsive Flexbox) -->
+                <section class="dashboard-flex">
+                    <div class="sales-overview">
+                        <h3>Sales Overview</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="salesChart"></canvas>
+                        </div>
 
-        <!-- ANALYTICS BELOW -->
-        <section class="analytics">
-            <div class="analytics-card">
-                <h3>Retailers</h3>
-                <p class="big">1,400</p>
-            </div>
-            <div class="analytics-card">
-                <h3>Orders</h3>
-                <p class="big">2,000</p>
-            </div>
-        </section>
+                    </div>
+                    <div class="inventory-status">
+                        <h3>Inventory Status</h3>
+                        <div class="inventory-bar">
+                            <span>In Stock</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill in-stock"></div>
+                            </div>
+                            <span class="inv-count">195</span>
+                        </div>
+                        <div class="inventory-bar">
+                            <span>Low Stock</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill low-stock"></div>
+                            </div>
+                            <span class="inv-count">35</span>
+                        </div>
+                        <div class="inventory-bar">
+                            <span>Out of Stock</span>
+                            <div class="bar-bg">
+                                <div class="bar-fill out-stock"></div>
+                            </div>
+                            <span class="inv-count">8</span>
+                        </div>
+                        <div class="inventory-loading-line"></div>
+                    </div>
+                </section>
 
-        <!-- RECENT ORDERS & REGISTRATIONS -->
-        <section class="tables">
-            <div class="table-container">
-                <h2>Recent Orders</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Order #</th>
-                            <th>Retailer</th>
-                            <th>Manufacturer</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ORD-08956</td>
-                            <td>Mart Bazear</td>
-                            <td>Apex Industries</td>
-                            <td><span class="badge pending">Pending</span></td>
-                        </tr>
-                        <tr>
-                            <td>ORD-08912</td>
-                            <td>ShopEase</td>
-                            <td>Prime Manufacturing</td>
-                            <td><span class="badge completed">Completed</span></td>
-                        </tr>
-                        <tr>
-                            <td>ORD-08905</td>
-                            <td>Visionary Electric</td>
-                            <td>Visionary Electric</td>
-                            <td><span class="badge dispatched">Dispatched</span></td>
-                        </tr>
-                        <!-- Add more rows here -->
-                    </tbody>
-                </table>
-            </div>
+                <!-- ANALYTICS BELOW -->
+                <section class="analytics">
+                    <div class="analytics-card">
+                        <h3>Retailers</h3>
+                        <p class="big">1,400</p>
+                    </div>
+                    <div class="analytics-card">
+                        <h3>Orders</h3>
+                        <p class="big">2,000</p>
+                    </div>
+                </section>
 
-            <div class="table-container">
-                <h2>Retailer Registrations</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Retailer Name</th>
-                            <th>Location</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Jul 17, 2025</td>
-                            <td>QuickMart</td>
-                            <td>Texas, USA</td>
-                        </tr>
-                        <tr>
-                            <td>Jul 16, 2025</td>
-                            <td>GigaStore</td>
-                            <td>California, USA</td>
-                        </tr>
-                        <!-- Add more rows here -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
+                <!-- RECENT ORDERS & REGISTRATIONS -->
+                <section class="tables">
+                    <div class="table-container">
+                        <h2>Recent Orders</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order #</th>
+                                    <th>Retailer</th>
+                                    <th>Manufacturer</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ORD-08956</td>
+                                    <td>Mart Bazear</td>
+                                    <td>Apex Industries</td>
+                                    <td><span class="badge pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ORD-08912</td>
+                                    <td>ShopEase</td>
+                                    <td>Prime Manufacturing</td>
+                                    <td><span class="badge completed">Completed</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ORD-08905</td>
+                                    <td>Visionary Electric</td>
+                                    <td>Visionary Electric</td>
+                                    <td><span class="badge dispatched">Dispatched</span></td>
+                                </tr>
+                                <!-- Add more rows here -->
+                            </tbody>
+                        </table>
+                    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="distributorPage.js"></script>
+                    <div class="table-container">
+                        <h2>Retailer Registrations</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Retailer Name</th>
+                                    <th>Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Jul 17, 2025</td>
+                                    <td>QuickMart</td>
+                                    <td>Texas, USA</td>
+                                </tr>
+                                <tr>
+                                    <td>Jul 16, 2025</td>
+                                    <td>GigaStore</td>
+                                    <td>California, USA</td>
+                                </tr>
+                                <!-- Add more rows here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script src="distributorPage.js"></script>
 </body>
 
 </html>
