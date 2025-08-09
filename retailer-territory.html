@@ -12,65 +12,86 @@
 </head>
 
 <body>
-    <!-- Sidebar Navigation -->
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <span class="sidebar-title">CiriPortal</span>
+            <h1>CiriPortal</h1>
+            <p>Distributor Dashboard</p>
         </div>
         <nav class="sidebar-nav">
-            <a href="distributorPage.html" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
-            <a href="manufacturerPage.html"><span class="sidebar-icon">🏭</span> Manufacturer</a>
-            <a href="distributorOrder.html"><span class="sidebar-icon">📝</span> Orders</a>
-            <a href="inventory.html"><span class="sidebar-icon">📦</span> Inventory</a>
-            <a href="distributorRetail.html"><span class="sidebar-icon">🛒</span> Retailers</a>
-            <a href="reports-returns.html"><span class="sidebar-icon">🧾</span> Reports & Returns</a>
-            <a href="geo-analytics.html"><span class="sidebar-icon">🌍</span> Geo-analytics</a>
-            <a href="retailer-territory.html"><span class="sidebar-icon">🗺</span> Retailer Territory</a>
+            <a href="distributorPage.html" class="sidebar-nav-item active" data-section="dashboard">
+                <span>Dashboard</span>
+            </a>
+            <a href="manufacturerPage.html" class="sidebar-nav-item" data-section="manufacturer">
+                <span>Manufacturer</span>
+            </a>
+            <a href="distributorOrder.html" class="sidebar-nav-item" data-section="orders">
+                <span>Orders</span>
+            </a>
+            <a href="inventory.html" class="sidebar-nav-item" data-section="Inventory">
+                <span>Inventory</span>
+            </a>
+            <a href="distributorRetail.html" class="sidebar-nav-item" data-section="retailers">
+                <span>Retailers</span>
+            </a>
+            <a href="reports-returns.html" class="sidebar-nav-item" data-section="reports&returns">
+                <span>Reports & Returns</span>
+            </a>
+            <a href="geo-analytics.html" class="sidebar-nav-item" data-section="geo-analytics">
+                <span>Geo-analytics</span>
+            </a>
+            <a href="retailer-territory.html" class="sidebar-nav-item" data-section="retailer-territory">
+                <span>Retailer Territory</span>
+            </a>
         </nav>
     </aside>
 
-    <!-- Hamburger for mobile -->
-    <button class="sidebar-toggle" id="sidebarToggleBtn">
-        < </button>
+    <section class="retailer-territory">
+        <div class="territory-container">
+            <h2>Retailer <strong>Territory</strong></h2>
+            <p class="territory-intro">
+                CiriPortal's <strong>Retailer Territory</strong> feature empowers distributors to
+                efficiently map and manage their network. Visualize retailer coverage, assign
+                territories, and optimize supply chain operations with real-time insights.
+            </p>
 
-            <section class="retailer-territory">
-                <div class="territory-container">
-                    <h2>Retailer <strong>Territory</strong></h2>
-                    <p class="territory-intro">
-                        CiriPortal's <strong>Retailer Territory</strong> feature empowers distributors to
-                        efficiently map and manage their network. Visualize retailer coverage, assign
-                        territories, and optimize supply chain operations with real-time insights.
+            <div class="territory-cards">
+                <div class="territory-card">
+                    <h3>🗺 Territory Mapping</h3>
+                    <p>
+                        Assign and track retailer zones effortlessly, ensuring balanced coverage
+                        across regions for maximum sales efficiency.
                     </p>
-
-                    <div class="territory-cards">
-                        <div class="territory-card">
-                            <h3>🗺 Territory Mapping</h3>
-                            <p>
-                                Assign and track retailer zones effortlessly, ensuring balanced coverage
-                                across regions for maximum sales efficiency.
-                            </p>
-                        </div>
-
-                        <div class="territory-card">
-                            <h3>📊 Performance Insights</h3>
-                            <p>
-                                Analyze sales and delivery performance per territory, identifying growth
-                                opportunities and improving route planning.
-                            </p>
-                        </div>
-
-                        <div class="territory-card">
-                            <h3>🤝 Retailer Engagement</h3>
-                            <p>
-                                Build stronger relationships with retailers by customizing offers and
-                                support based on their territory performance.
-                            </p>
-                        </div>
-                    </div>
                 </div>
-            </section>
 
-            <script src="retailer-territory.js"></script>
+                <div class="territory-card">
+                    <h3>📊 Performance Insights</h3>
+                    <p>
+                        Analyze sales and delivery performance per territory, identifying growth
+                        opportunities and improving route planning.
+                    </p>
+                </div>
+
+                <div class="territory-card">
+                    <h3>🤝 Retailer Engagement</h3>
+                    <p>
+                        Build stronger relationships with retailers by customizing offers and
+                        support based on their territory performance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="retailer-territory.js"></script>
 </body>
 
 </html>

@@ -7,27 +7,51 @@
     <title>CiriPortal - Distributor Order</title>
     <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="distributorOrder.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Sidebar Navigation -->
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <span class="sidebar-title">CiriPortal</span>
+            <h1>CiriPortal</h1>
+            <p>Distributor Dashboard</p>
         </div>
         <nav class="sidebar-nav">
-            <a href="distributorPage.html" class="active"><span class="sidebar-icon">🏠</span> Dashboard</a>
-            <a href="manufacturerPage.html"><span class="sidebar-icon">📦</span> Manufacturer</a>
-            <a href="distributorOrder.html"><span class="sidebar-icon">📝</span> Orders</a>
-            <a href="inventory.html"><span class="sidebar-icon">📊</span> Inventory</a>
-            <a href="distributorRetail.html"><span class="sidebar-icon">🛒</span> Retailers</a>
-            <a href="reports-returns.html"><span class="sidebar-icon">🧾</span> Reports & Returns</a>
-            <a href="geo-analytics.html"><span class="sidebar-icon">🌍</span> Geo-analytics</a>
-            <a href="retailer-territory.html"><span class="sidebar-icon">🗺</span> Retailer Territory</a>
+            <a href="distributorPage.html" class="sidebar-nav-item active" data-section="dashboard">
+                <span>Dashboard</span>
+            </a>
+            <a href="manufacturerPage.html" class="sidebar-nav-item" data-section="manufacturer">
+                <span>Manufacturer</span>
+            </a>
+            <a href="distributorOrder.html" class="sidebar-nav-item" data-section="orders">
+                <span>Orders</span>
+            </a>
+            <a href="inventory.html" class="sidebar-nav-item" data-section="Inventory">
+                <span>Inventory</span>
+            </a>
+            <a href="distributorRetail.html" class="sidebar-nav-item" data-section="retailers">
+                <span>Retailers</span>
+            </a>
+            <a href="reports-returns.html" class="sidebar-nav-item" data-section="reports&returns">
+                <span>Reports & Returns</span>
+            </a>
+            <a href="geo-analytics.html" class="sidebar-nav-item" data-section="geo-analytics">
+                <span>Geo-analytics</span>
+            </a>
+            <a href="retailer-territory.html" class="sidebar-nav-item" data-section="retailer-territory">
+                <span>Retailer Territory</span>
+            </a>
         </nav>
     </aside>
-    <!-- Hamburger for mobile -->
-    <button class="sidebar-toggle" id="sidebarToggleBtn"><</button>
     
     <div class="order-container">
         <h2>Order Placement</h2>

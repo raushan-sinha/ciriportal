@@ -11,21 +11,30 @@ body {
     background-color: #f5f7f9;
 }
 
-/* Sidebar and dashboard styles copied from distributorPage.css */
+/* ==== SIDEBAR BASE ==== */
 .sidebar {
     width: 240px;
+    height: 100vh;
     background-color: #1e293b;
     color: white;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     position: fixed;
-    height: 100vh;
-    transition: transform 0.3s ease;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
     z-index: 1000;
 }
 
-.sidebar-header {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+.sidebar-header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.sidebar-header p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
 }
 
 .sidebar-nav a {
@@ -37,49 +46,62 @@ body {
     border-radius: 5px;
     margin-bottom: 0.5rem;
     transition: background 0.3s;
-    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.sidebar-nav a i {
+    margin-right: 10px;
 }
 
 .sidebar-nav a:hover,
 .sidebar-nav a.active {
-    background-color: #0d5e57;
+    background-color: #0f172a;
 }
 
-.sidebar-icon {
-    margin-right: 10px;
+/* ==== OVERLAY ==== */
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 900;
 }
 
-.sidebar-toggle {
+/* ==== MOBILE TOGGLE BUTTON ==== */
+.mobile-menu-toggle {
     display: none;
     position: fixed;
-    top: 1rem;
-    right: 1rem;
-    font-size: 1.8rem;
-    background-color: #1e293b;
-    color: white;
-    border: none;
-    padding: 0.5rem 0.75rem;
-    border-radius: 5px;
+    top: 15px;
+    right: 15px;
     z-index: 1100;
+    background: #1e293b;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
-/* Responsive behavior */
+/* ==== RESPONSIVE: TABLET & MOBILE ==== */
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
     }
 
-    .sidebar.show {
+    .sidebar.active {
         transform: translateX(0);
     }
 
-    .sidebar-toggle {
-        display: block;
+    .sidebar-overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
 
-    .main-content {
-        margin-left: 0 !important;
+    .mobile-menu-toggle {
+        display: block;
     }
 }
 
@@ -95,15 +117,7 @@ body {
         margin-left: 0;
         padding: 1rem;
     }
-
-    .sidebar {
-        transform: translateX(-100%);
-        width: 220px;
-        padding: 1rem;
-    }
-
     
-
     .dashboard-header {
         flex-direction: column;
         align-items: flex-start;

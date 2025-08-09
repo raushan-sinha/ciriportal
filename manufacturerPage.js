@@ -1,27 +1,29 @@
 // Sidebar toggle logic
-// Sidebar toggle logic for mobile
 document.addEventListener("DOMContentLoaded", function () {
-    const sidebarToggleBtn = document.getElementById("sidebarToggleBtn");
     const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const toggleBtn = document.getElementById("mobileMenuToggle");
 
-    sidebarToggleBtn.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
+    // Open sidebar
+    toggleBtn.addEventListener("click", function () {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
     });
 
-    // Optional: Hide sidebar when clicking outside (for better UX)
-    document.addEventListener("click", (e) => {
-        if (
-            window.innerWidth <= 768 &&
-            !sidebar.contains(e.target) &&
-            !sidebarToggleBtn.contains(e.target)
-        ) {
-            sidebar.classList.remove("open");
+    // Close sidebar when clicking outside
+    overlay.addEventListener("click", function () {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+    });
+
+    // Optional: Close on window resize above 768px
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
         }
     });
 });
-
-
-// Dashboard nav logic
 
 
 // Main Price Chart (top section)
