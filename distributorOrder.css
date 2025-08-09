@@ -113,9 +113,9 @@ body {
     flex: 1;
 }
 
-h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.75rem;
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .product-card {
