@@ -117,6 +117,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.dashboard-header span{
+    color: blue;
+}
+
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));

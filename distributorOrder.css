@@ -118,6 +118,10 @@ body {
     margin-bottom: 2rem;
 }
 
+.dashboard-header span {
+    color: blue;
+}
+
 .product-card {
     background: rgb(189, 164, 164);
     border-radius: 10px;

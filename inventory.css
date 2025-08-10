@@ -124,6 +124,10 @@ body {
     height: 40px;
 }
 
+.dashboard-header span {
+    color: blue;
+}
+
 /* Inventory Grid using Flexbox */
 .inventory-grid {
     display: flex;
