@@ -70,7 +70,8 @@ const dashboardNavLinks = [
     'reports-returns.html',
     'geo-analytics.html',
     'retailer-territory.html',
-    'delivery-tracker.html'
+    'delivery-tracker.html',
+    'order-out.html'
 ];
 
 document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {

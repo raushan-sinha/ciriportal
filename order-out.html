@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order in Out – CiriPortal</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="order-out.css">
+</head>
+
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1>CiriPortal</h1>
+            <p>Distributor Dashboard</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="distributorPage.html" class="sidebar-nav-item active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="manufacturerPage.html" class="sidebar-nav-item" data-section="manufacturer">
+                <i class="fas fa-industry"></i>
+                <span>Manufacturer</span>
+            </a>
+            <a href="distributorOrder.html" class="sidebar-nav-item" data-section="orders">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Orders</span>
+            </a>
+            <a href="inventory.html" class="sidebar-nav-item" data-section="Inventory">
+                <i class="fas fa-boxes"></i>
+                <span>Inventory</span>
+            </a>
+            <a href="distributorRetail.html" class="sidebar-nav-item" data-section="retailers">
+                <i class="fas fa-store"></i>
+                <span>Retailers</span>
+            </a>
+            <a href="reports-returns.html" class="sidebar-nav-item" data-section="reports&returns">
+                <i class="fas fa-file-alt"></i>
+                <span>Reports & Returns</span>
+            </a>
+            <a href="geo-analytics.html" class="sidebar-nav-item" data-section="geo-analytics">
+                <i class="fas fa-globe"></i>
+                <span>Geo-analytics</span>
+            </a>
+            <a href="retailer-territory.html" class="sidebar-nav-item" data-section="retailer-territory">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Retailer Territory</span>
+            </a>
+            <a href="delivery-tracker.html" class="sidebar-nav-item" data-section="daily-delivery-tracker">
+                <i class="fas fa-truck"></i>
+                <span>Daily Delivery Tracker</span>
+            </a>
+            <a href="order-out.html" class="sidebar-nav-item" data-section="order-in-out">
+                <i class="fas fa-exchange-alt"></i>
+                <span>Order In Out</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="order-out-section">
+        <header class="section-header">
+            <h2>Order <span>In Out</span></h2>
+            <p>
+                The Order In Out section in CiriPortal allows distributors to track the complete movement of goods in
+                and out of
+                their inventory in real-time. This page displays all recent outgoing orders, enabling you to review
+                delivery details,
+                verify order accuracy, and ensure timely distribution to retailers and customers. The intuitive design
+                ensures quick
+                identification of orders by product type, customer, and delivery status, allowing for efficient
+                operations management.
+                Whether it’s bulk shipments to retailers or single deliveries to customers, you can monitor every stage
+                of order
+                fulfillment right from here. By providing a clear and organized view of your outwards orders, CiriPortal
+                helps reduce
+                errors, maintain transparency, and improve service reliability.
+            </p>
+        </header>
+
+        <div class="orders-grid">
+            <!-- Product 1 -->
+            <div class="order-card">
+                <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/528179432_702905449448029_2055703720960216063_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=fHC8LuZTtTkQ7kNvwFp3oER&_nc_oc=AdmpbQBz_ZIXL_79pJ2uR3xxjVrVjMBkcG-aetPs9l8lk4-E2TTwenfTDWicSj3SPhI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD3AEBmDFQtyiWJourbTibGmHRjau8TaFXmJ5rJU_ZcEXHrA&oe=68C1159B" alt="Premium Rice Bag">
+                <div class="order-details">
+                    <h3>Premium Rice Bag (50kg)</h3>
+                    <p><strong>Customer:</strong> Amit Kumar</p>
+                    <p><strong>Address:</strong> 12, Rosewood Street, Patna</p>
+                    <span class="status outted">Outted</span>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="order-card">
+                <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/529347895_1410400213570818_5363550709768860292_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=gGT-VODpZpAQ7kNvwFBbiCM&_nc_oc=AdmMObjsa3I7DwCJdlrLbP7rHJpzmQg6rdnktWniISp8Z2Ex-3G0Nhlhmpdu4YCfu1Y&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD3AFdM8S2PVk9hV4Bfk7tyg7K59oO6ymKXP15tvwYkTor1Q&oe=68C1171E" alt="Soft Drink Crate">
+                <div class="order-details">
+                    <h3>Soft Drink Crate (24 Bottles)</h3>
+                    <p><strong>Customer:</strong> Neha Singh</p>
+                    <p><strong>Address:</strong> 8, Sunrise Colony, Lucknow</p>
+                    <span class="status outted">Outted</span>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="order-card">
+                <img src="https://scontent.fpat2-5.fna.fbcdn.net/v/t1.15752-9/527328398_2293419814443530_8676826726909975423_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=468Tffet-ZwQ7kNvwELtpQ0&_nc_oc=AdmA9bFSS1nWIggrbnYttodgKYxLKUw4ubdGDv97pRaKtLdg9CoNQvX6pdk0bA-ixn8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&oh=03_Q7cD3AFSLcDudHTsPrW5ejhERKdvvvFFpgCMqIPF3jweppL5XA&oe=68C12EC4" alt="Cooking Oil Pack">
+                <div class="order-details">
+                    <h3>Cooking Oil Pack (5 Litres)</h3>
+                    <p><strong>Customer:</strong> Rajesh Sharma</p>
+                    <p><strong>Address:</strong> 56, Green Hills, Jaipur</p>
+                    <span class="status outted">Outted</span>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="order-card">
+                <img src="https://scontent.fpat2-7.fna.fbcdn.net/v/t1.15752-9/528348808_642274711734746_5529420726337649910_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=DF_XkBHzadcQ7kNvwHEKVSz&_nc_oc=AdmYFlXkiWSAHm86NV2LeRpYkPPPGjbJyKo8vFsFl-dByi7O_smcFvzXuR4SJ4egRms&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&oh=03_Q7cD3AEcxOPYcxLdC3Y09NPuTqGFsC5tvp_zzgnXtflpKXu9lw&oe=68C1396D" alt="Flour Packets">
+                <div class="order-details">
+                    <h3>Flour Packets (10kg)</h3>
+                    <p><strong>Customer:</strong> Priya Mehta</p>
+                    <p><strong>Address:</strong> 102, Silver Oaks, Chandigarh</p>
+                    <span class="status outted">Outted</span>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="order-card">
+                <img src="https://scontent.fpat2-1.fna.fbcdn.net/v/t1.15752-9/529346336_2107137069808536_5423183849943391089_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=J1KNqcqTts8Q7kNvwEjuqRu&_nc_oc=AdnSLY2waRNrL27YuIM-roM8hCc2xltcg5KosLRARX3sRKa2_yCKVmsqFJFPCQvMK08&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&oh=03_Q7cD3AEYAraQWoDKUR7Kcc7QPEsfD3awJ5yrcbFWqelL2Ld_rQ&oe=68C10FE0" alt="Biscuit Carton">
+                <div class="order-details">
+                    <h3>Biscuit Carton (48 Packs)</h3>
+                    <p><strong>Customer:</strong> Sunil Verma</p>
+                    <p><strong>Address:</strong> 34, Maple Avenue, Bhopal</p>
+                    <span class="status outted">Outted</span>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="order-card">
+                <img src="https://scontent.fpat2-4.fna.fbcdn.net/v/t1.15752-9/528326488_1335135718182983_4945596950331451632_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=107&ccb=1-7&_nc_sid=0024fc&_nc_ohc=oWACqgy5IcUQ7kNvwEXY4Vn&_nc_oc=AdlCXMvb9AkN1qxmwpsfF4HvvzOQM4jpvOZbUJEP94JC3v5RpGRMg5jEw956LntCq7I&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&oh=03_Q7cD3AFJ2g0nOSw8b_RfmSxxOi-dbuCW93xkSH_AwVsWKyhYpg&oe=68C13BA0" alt="Bottled Water Pack">
+                <div class="order-details">
+                    <h3>Bottled Water Pack (12 Litres)</h3>
+                    <p><strong>Customer:</strong> Anjali Gupta</p>
+                    <p><strong>Address:</strong> 210, Blue Lagoon, Pune</p>
+                    <span class="status outted">Outted</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="order-out.js"></script>
+</body>
+
+</html>
