@@ -202,3 +202,9 @@ document.querySelectorAll('.sidebar-nav a').forEach((link, idx) => {
         open(sideBarLinks[idx], '_self');
     });
 });
+
+//todo: Nav Logo link - Home Page
+document.querySelector('.nav-logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('index.html', '_self');
+});

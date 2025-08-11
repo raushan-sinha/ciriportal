@@ -161,3 +161,9 @@ recognition.addEventListener('result', (e) => {
 recognition.addEventListener('error', (e) => {
     console.error("Speech Recognition Error:", e.error);
 });
+
+//todo: Nav Logo link - Home Page
+document.querySelector('.nav-logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('index.html', '_self');
+});
