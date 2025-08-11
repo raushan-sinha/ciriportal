@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Delivery Tracker – CiriPortal</title>
+    <link rel="shortcut icon" href="Images/ciri-logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="delivery-tracker.css">
+</head>
+
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h1>CiriPortal</h1>
+            <p>Distributor Dashboard</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="distributorPage.html" class="sidebar-nav-item active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="manufacturerPage.html" class="sidebar-nav-item" data-section="manufacturer">
+                <i class="fas fa-industry"></i>
+                <span>Manufacturer</span>
+            </a>
+            <a href="distributorOrder.html" class="sidebar-nav-item" data-section="orders">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Orders</span>
+            </a>
+            <a href="inventory.html" class="sidebar-nav-item" data-section="Inventory">
+                <i class="fas fa-boxes"></i>
+                <span>Inventory</span>
+            </a>
+            <a href="distributorRetail.html" class="sidebar-nav-item" data-section="retailers">
+                <i class="fas fa-store"></i>
+                <span>Retailers</span>
+            </a>
+            <a href="reports-returns.html" class="sidebar-nav-item" data-section="reports&returns">
+                <i class="fas fa-file-alt"></i>
+                <span>Reports & Returns</span>
+            </a>
+            <a href="geo-analytics.html" class="sidebar-nav-item" data-section="geo-analytics">
+                <i class="fas fa-globe"></i>
+                <span>Geo-analytics</span>
+            </a>
+            <a href="retailer-territory.html" class="sidebar-nav-item" data-section="retailer-territory">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>Retailer Territory</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Main -->
+    <!-- Main Content -->
+    <main class="delivery-section">
+        <h2>Daily Delivery <span>Tracker</span></h2>
+        <div class="delivery-list">
+
+            <!-- Product 1 -->
+            <div class="delivery-card">
+                <img src="https://scontent.fpat1-2.fna.fbcdn.net/v/t1.15752-9/526668529_1831049131092281_4016948426979433728_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=CRzuXWj_75gQ7kNvwHmn_Rz&_nc_oc=AdlYICWIBn4X7V78g5o-hdGg-_HMDhtpmk5K6XuB3x2ethMD-_BdsN1gEaugpC8u_4s3-tYlXO5CCUUJcENfYpSa&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fpat1-2.fna&oh=03_Q7cD3AEJdV3F_eBhGwrd905XcCG8HTtmBdnDxPFFlvsla4TskA&oe=68C0CA90"
+                    alt="Product 1">
+                <div class="delivery-info">
+                    <h3>Premium Flour Pack</h3>
+                    <p><strong>Customer:</strong> Ankit Sharma</p>
+                    <p><strong>Address:</strong> 22/A, Green Park, Delhi</p>
+                    <span class="status pending">Pending</span>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="delivery-card">
+                <img src="https://scontent.fpat1-2.fna.fbcdn.net/v/t1.15752-9/530505052_1093401923000120_1121900207449978070_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_aid=0&_nc_ohc=KgWuyJCHoO4Q7kNvwGRxFHt&_nc_oc=AdnemVnqFb1dg4193uSM5v_sT1kFQJB0kiVK6vWKvqTVG5zSsPT_1wnxdIyHgLm23surc_IV0rRK20yxH9VP-Xov&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fpat1-2.fna&oh=03_Q7cD3AF_89nyrKR0klVrAxXkwmiTFlOfcknKNPMrUtt6y5XLWA&oe=68C0E1A1"
+                    alt="Product 2">
+                <div class="delivery-info">
+                    <h3>Cold Drink Pack (6 Bottles)</h3>
+                    <p><strong>Customer:</strong> Priya Verma</p>
+                    <p><strong>Address:</strong> 14, Lake View, Mumbai</p>
+                    <span class="status delivered">Delivered</span>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="delivery-card">
+                <img src="https://scontent.fpat1-2.fna.fbcdn.net/v/t1.15752-9/527034344_1920919885414509_8802430472648755631_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=YSJY8SXg9zQQ7kNvwG53S7W&_nc_oc=AdlzalJ0Lvtkb8MjUobsB9ws7Bgv-NTMjibrXGIbhQHgaU41hsfQS4fzw48p6LPOtkMKG6hfRWinXC77O0B2lYZW&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fpat1-2.fna&oh=03_Q7cD3AGb_4zvNzWLlgQIW5RdAZ2-7QEzWAa_XJgDkHqSjW_8Ig&oe=68C0CA13"
+                    alt="Product 3">
+                <div class="delivery-info">
+                    <h3>Candyman Toffees (500g)</h3>
+                    <p><strong>Customer:</strong> Rohan Gupta</p>
+                    <p><strong>Address:</strong> 45, Ashok Nagar, Kolkata</p>
+                    <span class="status pending">Pending</span>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="delivery-card">
+                <img src="https://scontent.fpat1-2.fna.fbcdn.net/v/t1.15752-9/527508914_1542866960455728_3457701905617103204_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tjjhT3X-wSMQ7kNvwFj7A1T&_nc_oc=AdmAymaRfQpRVbZRA6yDGKhT7pBNZsTf5bIsg-mB9gjCSw7AyjxVolHWmwlD4r-WD1CCUWKhhb1Lt_HpfyOJNWKs&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fpat1-2.fna&oh=03_Q7cD3AGN6wgGWdchyun4y6VG4OyRU50emre4dsi3hLk7guwnPw&oe=68C0CD3B" alt="Product 4">
+                <div class="delivery-info">
+                    <h3>Organic Wheat Pack (10kg)</h3>
+                    <p><strong>Customer:</strong> Neha Singh</p>
+                    <p><strong>Address:</strong> 78, Rajendra Nagar, Lucknow</p>
+                    <span class="status delivered">Delivered</span>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="delivery-card">
+                <img src="https://scontent.fpat1-1.fna.fbcdn.net/v/t1.15752-9/530302095_2179915665842933_2766867351178388386_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=105&ccb=1-7&_nc_sid=0024fc&_nc_ohc=9dcEojrWCKQQ7kNvwEUrehl&_nc_oc=Adk6TtDxG06hv6rp-jRIWik5QlxDdMWhVDxsPae4dRX06m8u9qs3LaNIWJvQx3RqsMmHiH4auk4v_7MS6cpeZ_rD&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fpat1-1.fna&oh=03_Q7cD3AGXo50FkjgzLjdrGfTO5Zwbb9WkJUbMOHlgiYrEUeAsbg&oe=68C0CB54" alt="Product 5">
+                <div class="delivery-info">
+                    <h3>Potato Chips Family Pack</h3>
+                    <p><strong>Customer:</strong> Manish Yadav</p>
+                    <p><strong>Address:</strong> 56, Ring Road, Jaipur</p>
+                    <span class="status pending">Pending</span>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="delivery-card">
+                <img src="https://scontent.fpat1-2.fna.fbcdn.net/v/t1.15752-9/528616897_735297879338949_7882023952909985600_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=104&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Z7FieRrG5X4Q7kNvwF41s5B&_nc_oc=Adlhau3qCYy3jH0LuKKh_i-P8vY1qlqG8rVzAyXYXqFRjF52Ze07Z0OyS8ukBSc60XQGdMc7CxrgU-aI_D2x8sLw&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=scontent.fpat1-2.fna&oh=03_Q7cD3AH3JdXi7J8qTMI16wtSkdyWY_LvIsdI6TNWElD-YwZrOA&oe=68C0B588" alt="Product 6">
+                <div class="delivery-info">
+                    <h3>Fruit Juice Combo Pack</h3>
+                    <p><strong>Customer:</strong> Sunita Mehra</p>
+                    <p><strong>Address:</strong> 89, MG Road, Pune</p>
+                    <span class="status delivered">Delivered</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="delivery-tracker.js"></script>
+</body>
+
+</html>
