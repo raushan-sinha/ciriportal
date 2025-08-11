@@ -588,3 +588,10 @@ document.querySelectorAll('.referral-btns .referral-btn').forEach((btn) => {
         referralBox.style.display = 'none';
     });
 });
+
+//todo: Nav Logo link - Home Pa
+document.querySelector('.nav-logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('index.html', '_self');
+});
+

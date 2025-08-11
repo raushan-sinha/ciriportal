@@ -58,3 +58,9 @@ window.addEventListener('resize', () => {
         dropdowns.forEach(d => d.classList.remove('open'));
     }
 });
+
+//todo: Nav Logo link - Home Pa
+document.querySelector('.nav-logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('index.html', '_self');
+});

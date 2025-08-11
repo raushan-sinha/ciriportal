@@ -747,12 +747,12 @@ select:hover {
 /* Toggle button */
 .sidebar-toggle {
     position: absolute;
-    top: 60px;
+    top: 45px;
     left: 20px;
     z-index: 1001;
     width: 50px;
     height: 50px;
-    background: #FFA41C;
+    background: #1c51ff;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -789,10 +789,10 @@ select:hover {
 /* Sidebar */
 .sidebar {
     position: absolute;
-    top: 110px;
+    top: 100px;
     left: -300px;
-    width: 290px;
-    height: fit-content;
+    width: 320px;
+    padding: 2px 3px;
     background: linear-gradient(135deg, #2c3e50, #1a2530);
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -836,16 +836,16 @@ select:hover {
 
 /* Navigation links */
 .sidebar-nav {
-    padding: 20px 0;
+    padding: 2px 30px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 1px;
 }
 
 .sidebar-link {
     display: flex;
     align-items: center;
-    padding: 16px 25px;
+    padding: 16px 30px;
     color: #ecf0f1;
     text-decoration: none;
     font-size: 18px;
@@ -864,7 +864,7 @@ select:hover {
 
 .sidebar-link:hover {
     background: rgba(52, 152, 219, 0.2);
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 .sidebar-link:hover i {
@@ -973,7 +973,7 @@ select:hover {
 
 @media (max-width: 480px) {
     .sidebar {
-        width: 280px;
+        width: 300px;
         top: 170px;
     }
 
