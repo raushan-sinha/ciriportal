@@ -1023,7 +1023,7 @@ select:hover {
     align-items: center;
     padding: 10px 10px;
     flex-wrap: wrap;
-    gap: 150px;
+    gap: 50px;
     background: #232F3E;
 }
 
@@ -1047,7 +1047,6 @@ select:hover {
     height: 40px;
     transition: background 0.3s;
 }
-
 .product-filter {
     display: flex;
     flex-direction: row;
@@ -1058,19 +1057,48 @@ select:hover {
 }
 
 #priceFilter {
+    border-radius: 6px;
+    padding: 6px 2px;
+    background-color: #cc0c39;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
     width: 120px;
 }
 
-@media (max-width: 900px) {
+select {
+    border-radius: 6px;
+    padding: 6px 10px;
+    background-color: black;
+    color: #fff;
+    border: 1px solid #ddd;
+    width: 110px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    border-color: #999;
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
     .search-box {
-        flex-direction: column;
-        gap: 30px;
-        padding: 10px 5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     #searchBox {
-        min-width: 300px;
-        width: 100%;
+        width: 220px;
     }
 }
 
@@ -1097,22 +1125,6 @@ select:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .search-box {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 20px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    #searchBox {
-        max-width: 230px;
-    }
-}
-
 @media (max-width: 480px) {
     .search-box {
         display: flex;
@@ -1125,7 +1137,7 @@ select:hover {
     }
 
     #searchBox {
-        max-width: 220px;
+        width: 220px;
     }
 }
 
