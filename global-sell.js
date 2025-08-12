@@ -134,3 +134,9 @@ window.addEventListener('resize', () => {
         });
     }
 });
+
+//todo: Nav Logo link - Home Page
+document.querySelector('.nav-logo').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('index.html', '_self');
+});

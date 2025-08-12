@@ -182,7 +182,8 @@ document.querySelectorAll('footer .explore-links a').forEach((link, idx) => {
 const makeMoneyLinks = [
     'sell-on-ciriportal.html',
     'build-product.html',
-    'global-sell.html'
+    'global-sell.html',
+    'supply-ciriportal.html'
 ];
 
 document.querySelectorAll('footer .make-moneyLinks a').forEach((link, idx) => {
