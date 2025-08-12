@@ -178,6 +178,21 @@ document.querySelectorAll('footer .explore-links a').forEach((link, idx) => {
 });
 
 
+//todo: Footer Make Money Links - 
+const makeMoneyLinks = [
+    'sell-on-ciriportal.html'
+];
+
+document.querySelectorAll('footer .make-moneyLinks a').forEach((link, idx) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        open(makeMoneyLinks[idx], '_self');
+    });
+});
+
+
+
+
 //todo: Login Portal -
 const loginPages = [
     'distributor.html',

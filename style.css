@@ -1059,9 +1059,9 @@ select:hover {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 100px;
     max-width: 1200px;
     margin: auto;
 }
