@@ -916,7 +916,7 @@ h2 {
     .announcement-cards img,
     .bazar-grid img,
     .final-cta img {
-        max-width: 380px;
+        max-width: 400px;
         height: auto;
     }
 }
@@ -927,7 +927,7 @@ h2 {
     .announcement-cards img,
     .bazar-grid img,
     .final-cta img {
-        max-width: 300px;
+        max-width: 400px;
         height: auto;
     }
 }
