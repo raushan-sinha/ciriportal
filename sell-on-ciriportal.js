@@ -140,3 +140,10 @@ document.querySelector('.nav-logo').addEventListener('click', (e) => {
     e.preventDefault();
     window.open('index.html', '_self');
 });
+
+
+//todo: Signup button -
+document.querySelector('#signup-btn').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.open('signup.html', '_self');
+});

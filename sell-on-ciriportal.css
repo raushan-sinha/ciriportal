@@ -806,6 +806,7 @@ h2 {
     background: #fafafa;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 2px 8px black;
 }
 
 .step span {
@@ -840,9 +841,11 @@ h2 {
 
 /* Feedback */
 .feedback-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 .feedback .card {
@@ -850,6 +853,9 @@ h2 {
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 8px black;
+    width: 450px;
+    height: 100px;
 }
 
 /* Final CTA */
@@ -897,7 +903,6 @@ h2 {
 .bazar-grid img,
 .final-cta img {
     width: 100%;
-    max-width: 500px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
