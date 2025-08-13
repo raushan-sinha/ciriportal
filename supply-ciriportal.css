@@ -835,7 +835,7 @@ select:hover {
 
 /* Call to Action */
 .supply-cta {
-    background: linear-gradient(to right, #ff9900, #e68a00);
+    background: #101923;
     color: white;
     text-align: center;
     padding: 60px 20px;
