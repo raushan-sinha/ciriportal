@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiriPortal - Manufacturer Dashboard</title>
+    <meta name="description" content="Professional manufacturer portal for managing products, inventory, and orders">
+    <link rel="stylesheet" href="manufacturerCiriPortal.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>CiriPortal Manufacturer</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Profile" class="profile-img">
+                        <span>John Manufacturer</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="sidebar-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="#dashboard" class="nav-link active" data-section="dashboard">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#products" class="nav-link" data-section="products">
+                                <i class="fas fa-box"></i>
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#inventory" class="nav-link" data-section="inventory">
+                                <i class="fas fa-warehouse"></i>
+                                <span>Inventory</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#orders" class="nav-link" data-section="orders">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Orders</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#analytics" class="nav-link" data-section="analytics">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Analytics</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#customers" class="nav-link" data-section="customers">
+                                <i class="fas fa-users"></i>
+                                <span>Customers</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#settings" class="nav-link" data-section="settings">
+                                <i class="fas fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- Dashboard Section -->
+                <section id="dashboard" class="content-section active">
+                    <div class="section-header">
+                        <h2>Dashboard Overview</h2>
+                        <p>Welcome back! Here's what's happening with your business today.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>$45,230</h3>
+                                <p>Total Revenue</p>
+                                <span class="stat-change positive">+12.5%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>1,234</h3>
+                                <p>Total Orders</p>
+                                <span class="stat-change positive">+8.2%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>856</h3>
+                                <p>Products</p>
+                                <span class="stat-change neutral">+2.1%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>5,678</h3>
+                                <p>Customers</p>
+                                <span class="stat-change positive">+15.3%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <h3>Recent Orders</h3>
+                            <div class="order-list">
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <span class="order-id">#ORD-001</span>
+                                        <span class="order-customer">John Smith</span>
+                                    </div>
+                                    <span class="order-status pending">Pending</span>
+                                    <span class="order-amount">$299.99</span>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <span class="order-id">#ORD-002</span>
+                                        <span class="order-customer">Sarah Johnson</span>
+                                    </div>
+                                    <span class="order-status completed">Completed</span>
+                                    <span class="order-amount">$149.50</span>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <span class="order-id">#ORD-003</span>
+                                        <span class="order-customer">Mike Wilson</span>
+                                    </div>
+                                    <span class="order-status processing">Processing</span>
+                                    <span class="order-amount">$599.99</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <h3>Top Products</h3>
+                            <div class="product-list">
+                                <div class="product-item">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=60&h=60&fit=crop" alt="Headphones" class="product-thumb">
+                                    <div class="product-info">
+                                        <span class="product-name">Wireless Headphones</span>
+                                        <span class="product-sales">234 sold</span>
+                                    </div>
+                                    <span class="product-revenue">$11,970</span>
+                                </div>
+                                <div class="product-item">
+                                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=60&h=60&fit=crop" alt="Smartphone" class="product-thumb">
+                                    <div class="product-info">
+                                        <span class="product-name">Smartphone Pro</span>
+                                        <span class="product-sales">156 sold</span>
+                                    </div>
+                                    <span class="product-revenue">$93,600</span>
+                                </div>
+                                <div class="product-item">
+                                    <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=60&h=60&fit=crop" alt="Laptop" class="product-thumb">
+                                    <div class="product-info">
+                                        <span class="product-name">Gaming Laptop</span>
+                                        <span class="product-sales">89 sold</span>
+                                    </div>
+                                    <span class="product-revenue">$133,500</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Products Section -->
+                <section id="products" class="content-section">
+                    <div class="section-header">
+                        <h2>Product Management</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Add New Product
+                        </button>
+                    </div>
+
+                    <div class="products-controls">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search products...">
+                        </div>
+                        <div class="filter-controls">
+                            <select class="filter-select">
+                                <option>All Categories</option>
+                                <option>Electronics</option>
+                                <option>Clothing</option>
+                                <option>Books</option>
+                            </select>
+                            <select class="filter-select">
+                                <option>All Status</option>
+                                <option>Active</option>
+                                <option>Inactive</option>
+                                <option>Out of Stock</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=200&fit=crop" alt="Wireless Headphones">
+                                <div class="product-badge">Best Seller</div>
+                            </div>
+                            <div class="product-details">
+                                <h3>Wireless Headphones Pro</h3>
+                                <p class="product-description">Premium noise-cancelling wireless headphones with 30-hour battery life</p>
+                                <div class="product-meta">
+                                    <span class="product-price">$199.99</span>
+                                    <span class="product-stock">Stock: 245</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-secondary">Edit</button>
+                                    <button class="btn btn-outline">View</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=200&fit=crop" alt="Smartphone">
+                                <div class="product-badge new">New</div>
+                            </div>
+                            <div class="product-details">
+                                <h3>Smartphone Pro Max</h3>
+                                <p class="product-description">Latest flagship smartphone with advanced camera system and 5G connectivity</p>
+                                <div class="product-meta">
+                                    <span class="product-price">$899.99</span>
+                                    <span class="product-stock">Stock: 89</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-secondary">Edit</button>
+                                    <button class="btn btn-outline">View</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=300&h=200&fit=crop" alt="Gaming Laptop">
+                            </div>
+                            <div class="product-details">
+                                <h3>Gaming Laptop Elite</h3>
+                                <p class="product-description">High-performance gaming laptop with RTX graphics and RGB keyboard</p>
+                                <div class="product-meta">
+                                    <span class="product-price">$1,499.99</span>
+                                    <span class="product-stock low-stock">Stock: 12</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-secondary">Edit</button>
+                                    <button class="btn btn-outline">View</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop" alt="Running Shoes">
+                            </div>
+                            <div class="product-details">
+                                <h3>Athletic Running Shoes</h3>
+                                <p class="product-description">Comfortable running shoes with advanced cushioning technology</p>
+                                <div class="product-meta">
+                                    <span class="product-price">$129.99</span>
+                                    <span class="product-stock">Stock: 156</span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn btn-secondary">Edit</button>
+                                    <button class="btn btn-outline">View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Inventory Section -->
+                <section id="inventory" class="content-section">
+                    <div class="section-header">
+                        <h2>Inventory Management</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-upload"></i>
+                            Import Inventory
+                        </button>
+                    </div>
+
+                    <div class="inventory-alerts">
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>5 products are running low on stock</span>
+                            <button class="alert-close">&times;</button>
+                        </div>
+                    </div>
+
+                    <div class="inventory-table-container">
+                        <table class="inventory-table">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>SKU</th>
+                                    <th>Current Stock</th>
+                                    <th>Reserved</th>
+                                    <th>Available</th>
+                                    <th>Reorder Level</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+                                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=40&h=40&fit=crop" alt="Headphones">
+                                            <span>Wireless Headphones Pro</span>
+                                        </div>
+                                    </td>
+                                    <td>WHP-001</td>
+                                    <td>245</td>
+                                    <td>23</td>
+                                    <td>222</td>
+                                    <td>50</td>
+                                    <td><span class="status-badge in-stock">In Stock</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Restock">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+                                            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=40&h=40&fit=crop" alt="Laptop">
+                                            <span>Gaming Laptop Elite</span>
+                                        </div>
+                                    </td>
+                                    <td>GLE-002</td>
+                                    <td>12</td>
+                                    <td>8</td>
+                                    <td>4</td>
+                                    <td>20</td>
+                                    <td><span class="status-badge low-stock">Low Stock</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Restock">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-cell">
+                                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=40&h=40&fit=crop" alt="Smartphone">
+                                            <span>Smartphone Pro Max</span>
+                                        </div>
+                                    </td>
+                                    <td>SPM-003</td>
+                                    <td>89</td>
+                                    <td>15</td>
+                                    <td>74</td>
+                                    <td>30</td>
+                                    <td><span class="status-badge in-stock">In Stock</span></td>
+                                    <td>
+                                        <button class="btn-icon" title="Edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="btn-icon" title="Restock">
+                                            <i class="fas fa-plus-circle"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Orders Section -->
+                <section id="orders" class="content-section">
+                    <div class="section-header">
+                        <h2>Order Management</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            Export Orders
+                        </button>
+                    </div>
+
+                    <div class="orders-filters">
+                        <div class="filter-group">
+                            <label>Status:</label>
+                            <select class="filter-select">
+                                <option>All Orders</option>
+                                <option>Pending</option>
+                                <option>Processing</option>
+                                <option>Shipped</option>
+                                <option>Delivered</option>
+                                <option>Cancelled</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Date Range:</label>
+                            <input type="date" class="date-input">
+                            <span>to</span>
+                            <input type="date" class="date-input">
+                        </div>
+                    </div>
+
+                    <div class="orders-grid">
+                        <div class="order-card">
+                            <div class="order-header">
+                                <span class="order-id">#ORD-001</span>
+                                <span class="order-status pending">Pending</span>
+                            </div>
+                            <div class="order-customer">
+                                <i class="fas fa-user"></i>
+                                <span>John Smith</span>
+                                <span class="customer-email">john.smith@email.com</span>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=50&h=50&fit=crop" alt="Product">
+                                    <div class="item-details">
+                                        <span class="item-name">Wireless Headphones Pro</span>
+                                        <span class="item-quantity">Qty: 1</span>
+                                    </div>
+                                    <span class="item-price">$199.99</span>
+                                </div>
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=50&h=50&fit=crop" alt="Product">
+                                    <div class="item-details">
+                                        <span class="item-name">Athletic Running Shoes</span>
+                                        <span class="item-quantity">Qty: 1</span>
+                                    </div>
+                                    <span class="item-price">$129.99</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">
+                                    <span>Total: $329.98</span>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn btn-secondary">View Details</button>
+                                    <button class="btn btn-primary">Process</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="order-card">
+                            <div class="order-header">
+                                <span class="order-id">#ORD-002</span>
+                                <span class="order-status processing">Processing</span>
+                            </div>
+                            <div class="order-customer">
+                                <i class="fas fa-user"></i>
+                                <span>Sarah Johnson</span>
+                                <span class="customer-email">sarah.j@email.com</span>
+                            </div>
+                            <div class="order-items">
+                                <div class="order-item">
+                                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=50&h=50&fit=crop" alt="Product">
+                                    <div class="item-details">
+                                        <span class="item-name">Smartphone Pro Max</span>
+                                        <span class="item-quantity">Qty: 1</span>
+                                    </div>
+                                    <span class="item-price">$899.99</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-total">
+                                    <span>Total: $899.99</span>
+                                </div>
+                                <div class="order-actions">
+                                    <button class="btn btn-secondary">View Details</button>
+                                    <button class="btn btn-primary">Ship</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Analytics Section -->
+                <section id="analytics" class="content-section">
+                    <div class="section-header">
+                        <h2>Analytics & Reports</h2>
+                        <div class="date-range-selector">
+                            <select class="filter-select">
+                                <option>Last 7 days</option>
+                                <option>Last 30 days</option>
+                                <option>Last 3 months</option>
+                                <option>Last year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="analytics-grid">
+                        <div class="analytics-card">
+                            <h3>Revenue Trends</h3>
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <p>Revenue chart would be displayed here</p>
+                            </div>
+                        </div>
+
+                        <div class="analytics-card">
+                            <h3>Top Categories</h3>
+                            <div class="category-list">
+                                <div class="category-item">
+                                    <span class="category-name">Electronics</span>
+                                    <div class="category-bar">
+                                        <div class="category-progress" style="width: 85%"></div>
+                                    </div>
+                                    <span class="category-percentage">85%</span>
+                                </div>
+                                <div class="category-item">
+                                    <span class="category-name">Clothing</span>
+                                    <div class="category-bar">
+                                        <div class="category-progress" style="width: 65%"></div>
+                                    </div>
+                                    <span class="category-percentage">65%</span>
+                                </div>
+                                <div class="category-item">
+                                    <span class="category-name">Books</span>
+                                    <div class="category-bar">
+                                        <div class="category-progress" style="width: 45%"></div>
+                                    </div>
+                                    <span class="category-percentage">45%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analytics-card">
+                            <h3>Customer Demographics</h3>
+                            <div class="demographics-chart">
+                                <div class="demographic-item">
+                                    <span class="demographic-label">18-24</span>
+                                    <span class="demographic-value">15%</span>
+                                </div>
+                                <div class="demographic-item">
+                                    <span class="demographic-label">25-34</span>
+                                    <span class="demographic-value">35%</span>
+                                </div>
+                                <div class="demographic-item">
+                                    <span class="demographic-label">35-44</span>
+                                    <span class="demographic-value">28%</span>
+                                </div>
+                                <div class="demographic-item">
+                                    <span class="demographic-label">45+</span>
+                                    <span class="demographic-value">22%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Customers Section -->
+                <section id="customers" class="content-section">
+                    <div class="section-header">
+                        <h2>Customer Management</h2>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i>
+                            Add Customer
+                        </button>
+                    </div>
+
+                    <div class="customers-controls">
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search customers...">
+                        </div>
+                        <div class="filter-controls">
+                            <select class="filter-select">
+                                <option>All Customers</option>
+                                <option>VIP Customers</option>
+                                <option>New Customers</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="customers-grid">
+                        <div class="customer-card">
+                            <div class="customer-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Customer">
+                            </div>
+                            <div class="customer-info">
+                                <h3>John Smith</h3>
+                                <p>john.smith@email.com</p>
+                                <span class="customer-badge vip">VIP Customer</span>
+                            </div>
+                            <div class="customer-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Orders</span>
+                                    <span class="stat-value">23</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Total Spent</span>
+                                    <span class="stat-value">$2,340</span>
+                                </div>
+                            </div>
+                            <div class="customer-actions">
+                                <button class="btn btn-secondary">View Profile</button>
+                                <button class="btn btn-outline">Contact</button>
+                            </div>
+                        </div>
+
+                        <div class="customer-card">
+                            <div class="customer-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b75c?w=60&h=60&fit=crop&crop=face" alt="Customer">
+                            </div>
+                            <div class="customer-info">
+                                <h3>Sarah Johnson</h3>
+                                <p>sarah.j@email.com</p>
+                                <span class="customer-badge new">New Customer</span>
+                            </div>
+                            <div class="customer-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Orders</span>
+                                    <span class="stat-value">3</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Total Spent</span>
+                                    <span class="stat-value">$456</span>
+                                </div>
+                            </div>
+                            <div class="customer-actions">
+                                <button class="btn btn-secondary">View Profile</button>
+                                <button class="btn btn-outline">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Settings Section -->
+                <section id="settings" class="content-section">
+                    <div class="section-header">
+                        <h2>Settings</h2>
+                        <p>Manage your account and business preferences</p>
+                    </div>
+
+                    <div class="settings-grid">
+                        <div class="settings-card">
+                            <h3>Business Information</h3>
+                            <form class="settings-form">
+                                <div class="form-group">
+                                    <label>Company Name</label>
+                                    <input type="text" value="CiriPortal Manufacturing">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="contact@ciriportal.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input type="tel" value="+1 (555) 123-4567">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update Information</button>
+                            </form>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Notification Preferences</h3>
+                            <div class="notification-settings">
+                                <div class="notification-item">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <div class="notification-info">
+                                        <span class="notification-title">Order Notifications</span>
+                                        <span class="notification-desc">Get notified when you receive new orders</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                    <div class="notification-info">
+                                        <span class="notification-title">Low Stock Alerts</span>
+                                        <span class="notification-desc">Alert when inventory is running low</span>
+                                    </div>
+                                </div>
+                                <div class="notification-item">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <div class="notification-info">
+                                        <span class="notification-title">Marketing Updates</span>
+                                        <span class="notification-desc">Receive promotional and marketing emails</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Security Settings</h3>
+                            <div class="security-settings">
+                                <button class="btn btn-secondary full-width">Change Password</button>
+                                <button class="btn btn-secondary full-width">Enable Two-Factor Authentication</button>
+                                <button class="btn btn-outline full-width">Download Account Data</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="manufacturerCiriPortal.js"></script>
+</body>
+</html>
