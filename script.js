@@ -193,19 +193,10 @@ document.querySelectorAll('footer .make-moneyLinks a').forEach((link, idx) => {
     });
 });
 
-
-
-
-//todo: Login Portal -
-const loginPages = [
-    'distributor.html',
-    'retailer.html'
-];
-
-document.querySelectorAll('.login-btn ul a').forEach((link, idx) => {
+document.querySelectorAll('.login-btn .btn').forEach((link) => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        open(loginPages[idx], '_self');
+        window.open('retailer.html', '_self');
     });
 });
 
